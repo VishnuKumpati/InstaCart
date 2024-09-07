@@ -1,15 +1,19 @@
-package com.instacart.enties;
+package com.instacart.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "retailers")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonIgnoreProperties({"password", "email", "contactNumber"})
 public class Retailer {
 
     @Id
@@ -39,8 +43,7 @@ public class Retailer {
     public boolean isBlocked() {
         return !isActive;
     }
-
+     @JsonIgnore
     @OneToMany(mappedBy = "retailer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Product> product;
+    private List<Product> products;
 }
-

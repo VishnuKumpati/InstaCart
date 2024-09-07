@@ -1,4 +1,4 @@
-package com.instacart.enties;
+package com.instacart.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -8,7 +8,6 @@ import jakarta.validation.constraints.Size;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-
 
 import java.time.LocalDateTime;
 
@@ -43,7 +42,7 @@ public class Buyer {
 
     private String city;
 
-    private String userType; 
+    private String userType;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
@@ -54,16 +53,11 @@ public class Buyer {
     @Column(name = "status")
     private String status = "active"; // Default status
 
-  
-
-    // Check if user is blocked based on status
     public boolean isBlocked() {
         return "blocked".equalsIgnoreCase(this.status);
     }
 
-    // Return current status
     public String getStatus() {
         return this.status;
     }
 }
-
