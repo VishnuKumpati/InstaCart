@@ -1,4 +1,4 @@
-package com.instacart.enties;
+package com.instacart.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -15,7 +15,9 @@ public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private int quantity;
+
     private BigDecimal price;
 
     @ManyToOne
@@ -31,6 +33,5 @@ public class OrderItem {
         this.product = product;
         this.quantity = quantity;
         this.price = price;
-
     }
 }

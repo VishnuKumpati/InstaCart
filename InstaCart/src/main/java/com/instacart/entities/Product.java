@@ -1,27 +1,22 @@
-package com.instacart.enties;
-
-
+package com.instacart.entities;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Entity
+@Table(name = "products")
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
-	@Id
+
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long productId;
 
@@ -30,8 +25,6 @@ public class Product {
 
     private String productBrand;
 
-    private String productCategory;
-
     private BigDecimal productPrice;
 
     private BigDecimal productDiscount;
@@ -39,14 +32,13 @@ public class Product {
     private BigDecimal productPriceAfterDiscount;
 
     private String description;
+
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "category_id")
+    @JoinColumn(name = "category_id", nullable = false)
+    @JsonIgnore
     private Category category;
-    
 
+    @ManyToOne
+    @JoinColumn(name = "retailer_id") // Ensure this column matches the primary key of Retailer
+    private Retailer retailer;
 }
-
-
-	
-
-
