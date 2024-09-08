@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,9 +16,9 @@
 <body>
     <div class="container">
         <div class="error-code">${statusCode}</div>
-        <div class="error-message">${errorMessage}</div>
-        <div class="error-description">${errorDescription}</div>
-        <a href="${homeUrl}" class="home-link">Go to Home Page</a>
+        <div class="error-message">${exception.message}</div>
+        <div class="error-description">An error occurred while processing your request. Please try again later.</div>
+        <a href="/" class="home-link">Go to Home Page</a>
     </div>
 </body>
 </html>

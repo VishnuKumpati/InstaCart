@@ -38,7 +38,7 @@ public class Buyer {
     private int age;
 
     @Column(unique = true)
-    private Long contactNo;
+    private Long contactNumber;
 
     private String city;
 
