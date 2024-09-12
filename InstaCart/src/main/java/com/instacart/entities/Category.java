@@ -14,7 +14,9 @@ import java.util.List;
 @AllArgsConstructor
 public class Category {
 
-    @Id
+   
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -22,4 +24,7 @@ public class Category {
 
     @OneToMany(mappedBy = "category", fetch = FetchType.EAGER)
     private List<Product> products;
+    public Category(String name) {
+        this.name = name;  // Set the name properly here
+    }
 }
