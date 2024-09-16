@@ -26,6 +26,8 @@ public class Admin {
 
     @Column(nullable = false)
     private String password;
+    
+    private String userType;
 
     @Column(name="contact_no")
     private Long contactNumber;

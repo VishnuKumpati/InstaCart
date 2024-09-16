@@ -1,6 +1,11 @@
 package com.instacart.dao;
 
 import com.instacart.entities.Retailer;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+import jakarta.transaction.Transactional;
+
 import org.springframework.stereotype.Repository;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -13,6 +18,9 @@ public class RetailerDaoImplementation implements RetailerDaoInterface {
 
     @Autowired
     private SessionFactory sessionFactory;
+    @Autowired
+    private HttpServletRequest request;
+    Session session;
 
     @Override
     public boolean existsByDetails(String email, Long contactNumber) {
@@ -34,6 +42,7 @@ public class RetailerDaoImplementation implements RetailerDaoInterface {
             transaction = session.beginTransaction();
             session.persist(retailer);
             transaction.commit();
+            
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
@@ -50,4 +59,59 @@ public class RetailerDaoImplementation implements RetailerDaoInterface {
         query.setParameter("password", password);
         return query.uniqueResult();
     }
+
+    @Override
+	public boolean passRecoverymail(String email) {
+    	 session=sessionFactory.openSession();
+    	 System.out.println("inside the retailer to check"+email);
+    	String hql = "SELECT COUNT(*),userType,id FROM Retailer WHERE email = :email ";
+        Query<Object[]> query = session.createQuery(hql, Object[].class);
+        query.setParameter("email", email);
+        Object[] object = query.uniqueResult();
+        if(object!=null && (Long) object[0] > 0) {
+        	HttpSession session=request.getSession();
+        	String userType=(String) object[1];
+        	Long retailerId=(Long)object[2];
+        	session.setAttribute("userType",userType);
+        	session.setAttribute("userId",retailerId);
+        	System.out.println(userType);
+        	System.out.println(retailerId);
+        	return true;
+        }
+        return false;
+	}
+
+    @Override
+    public String updatePassword(String password, Long userId) {
+        Session session = sessionFactory.getCurrentSession();
+        Transaction transaction = null;
+        try {
+            // Begin the transaction manually
+            transaction = session.beginTransaction();
+            
+            System.out.println("Trying to update password");
+            System.out.println(password);
+            System.out.println(userId);
+
+            Query<String>query = session.createQuery("UPDATE Retailer SET password = :password WHERE id = :userId",String.class);
+            query.setParameter("password", password);
+            query.setParameter("userId", userId);
+            
+            int result = query.executeUpdate();  
+
+            transaction.commit();
+            
+            return result > 0 ? "success" : "failure";
+            
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+
+            e.printStackTrace();
+            return "failure";
+        }
+    }
+
+		
 }

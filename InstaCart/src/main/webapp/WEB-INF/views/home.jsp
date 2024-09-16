@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -149,7 +151,7 @@ footer .footer-links a:hover {
 <header>
     <h1>InstaCart</h1>
     <nav>
-        <a href="#">Login</a>
+        <a href="/login">Login</a>
         <a href="/register">Sign Up</a>
         <a href="#">Contact Us</a>
     </nav>

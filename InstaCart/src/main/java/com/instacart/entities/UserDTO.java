@@ -11,13 +11,14 @@ public class UserDTO {
 	private String userType;
 	private String name;
 	private String email;
-	private Long contactNumber;
+	private Long contactNo;
 	private Integer age;
 	private String password;
 	private String city;
 	private Long aadharNumber;
-	private Long panNumber;
+	private String panNumber;
 	private Long gstNumber;
+	private String status;
 	private long adminPassword;
 	
 	

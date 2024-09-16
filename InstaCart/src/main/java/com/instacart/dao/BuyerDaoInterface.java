@@ -12,4 +12,8 @@ public interface BuyerDaoInterface {
 
 	Buyer findByEmailAndPassword(String email, String password);
 
+	boolean passRecoverymail(String email);
+
+	String updatePassword(String password, Long userId);
+
 }

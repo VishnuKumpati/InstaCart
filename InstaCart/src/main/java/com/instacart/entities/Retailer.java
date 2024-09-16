@@ -29,9 +29,11 @@ public class Retailer {
 
     private Long aadharNumber;
 
-    private Long panNumber;
+    private String panNumber;
 
     private Long gstNumber;
+    
+    private String userType;
 
     private String city;
 
