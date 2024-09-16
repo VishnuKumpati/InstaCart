@@ -2,10 +2,17 @@ package com.instacart.entities;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Admin {
 
     @Id
@@ -19,9 +26,11 @@ public class Admin {
 
     @Column(nullable = false)
     private String password;
+    
+    private String userType;
 
     @Column(name="contact_no")
-    private Long contactNo;
+    private Long contactNumber;
 
     @CreationTimestamp
     private LocalDateTime createdAt;

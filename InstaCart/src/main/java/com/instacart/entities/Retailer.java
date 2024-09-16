@@ -27,23 +27,47 @@ public class Retailer {
 
     private Long contactNumber;
 
+    private Long aadharNumber;
+
+    private String panNumber;
+
+    private Long gstNumber;
+    
+    private String userType;
+
     private String city;
 
     private String password;
-    
+
     @Column(name = "is_active")
     private boolean isActive = true;
-    
+
+    @Column(name = "status", nullable = false)
+    private String status = "Under Review"; // Initial status set to "Under Review"
+
     // Method to check status
     public String getStatus() {
-        return isActive ? "active" : "blocked";
+        return this.status;
     }
 
-    // Check if user is blocked based on status
-    public boolean isBlocked() {
-        return !isActive;
+    // Set status to active after admin approval
+    public void approve() {
+        this.status = "Active";
+        this.isActive = true;
     }
-     @JsonIgnore
+
+    // Block retailer
+    public void block() {
+        this.status = "Blocked";
+        this.isActive = false;
+    }
+
+    // Check if retailer is blocked
+    public boolean isBlocked() {
+        return "Blocked".equalsIgnoreCase(this.status);
+    }
+
+    @JsonIgnore
     @OneToMany(mappedBy = "retailer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Product> products;
 }
