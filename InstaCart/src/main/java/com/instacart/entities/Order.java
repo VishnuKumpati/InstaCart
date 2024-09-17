@@ -4,6 +4,11 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.instacart.enums.OrderStatus;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,18 +30,20 @@ public class Order {
 
     @Enumerated(EnumType.STRING) // Maps the enum to a string in the database
     private OrderStatus orderStatus;
-
+   
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private Set<OrderItem> orderItems = new HashSet<>();
 
     @ManyToOne
     @JoinColumn(name = "buyer_id")
     private Buyer buyer;
 
-    public enum OrderStatus {
-        PROCESSING,
-        SHIPPED,
-        DELIVERED,
-        CANCELLED
-    }
+    
+//    public enum OrderStatus {
+//        PROCESSING,
+//        SHIPPED,
+//        DELIVERED,
+//        CANCELLED
+//    }
 }

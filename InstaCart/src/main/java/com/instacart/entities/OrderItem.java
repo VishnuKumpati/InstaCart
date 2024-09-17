@@ -7,6 +7,9 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -22,12 +25,13 @@ public class OrderItem {
 
     @ManyToOne
     @JoinColumn(name = "order_id")
+   @JsonIgnore
     private Order order;
 
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
-
+ 
     public OrderItem(Order order, Product product, int quantity, BigDecimal price) {
         this.order = order;
         this.product = product;

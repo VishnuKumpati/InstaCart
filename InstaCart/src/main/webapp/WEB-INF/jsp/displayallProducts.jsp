@@ -36,7 +36,8 @@
                      
                     <button type="submit" class="btn btn-cart">Add to Cart</button>
                 </form>
-
+ <!-- Add to Cart Button (Using AJAX) -->
+            <button class="btn btn-cart" onclick="addToCart(${product.productId}, 1)">Add to Cart</button>
                 <!-- Form for Buy Now -->
                 <form action="order.jsp" method="post">
                    <input type="hidden" name="imagePath" value="${product.imagePath}" /> <!-- Product image path -->

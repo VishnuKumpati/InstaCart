@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>All Products </title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/displayAllProducts.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 document.addEventListener('DOMContentLoaded', function() {
     const productPrice = parseFloat(document.querySelector('input[name="productPrice"]').value);
@@ -26,6 +27,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.getElementById('priceAfterDiscount').value = priceAfterDiscount.toFixed(2);
 });
+function addToCart(productId, quantity) {
+	console.log("hello")
+    $.ajax({
+        type: "POST",
+        url: "/buyer/addtocart/5",  // URL of your backend endpoint
+        data: {
+            productId: productId,
+            quantity: quantity
+        },
+        success: function(response) {
+        	 // Redirect to cart page
+        	 console.log("hello requesting is coming when click on placeorder")
+        	window.location.href = "/cart/getbuyercart/" + 5;
+        },
+        error: function(xhr, status, error) {
+            // Show error message
+            alert("Failed to add product to cart: " + xhr.responseText);
+        }
+    });
+}
 </script>
 </head>
 <body>
@@ -49,30 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
 
                     <!-- Form for Add to Cart -->
-                    <form action="addToCart" method="post">
-                        <input type="hidden" name="imagePath" value="<%= product.getImagePath() %>" />
-                        <input type="hidden" name="productId" value="<%= product.getProductId() %>" />
-                        <input type="hidden" name="productName" value="<%= product.getProductName() %>" />
-                        <input type="hidden" name="productDescription" value="<%= product.getDescription() %>" />
-                        <input type="hidden" name="productPrice" value="<%= product.getProductPrice() %>" />
-                        <input type="hidden" name="productDiscount" value="<%= product.getProductDiscount() %>" />
-                        <input type="hidden" name="productPriceAfterDiscount" value="<%= product.getProductPriceAfterDiscount() %>" />
-                        <input type="hidden" name="retailerName" value="<%= product.getName() %>" />
-                        <button type="submit" class="btn btn-cart">Add to Cart</button>
-                    </form>
-
                     <!-- Form for Buy Now -->
-                    <form action="order.jsp" method="post">
-                        <input type="hidden" name="imagePath" value="<%= product.getImagePath() %>" />
-                        <input type="hidden" name="productId" value="<%= product.getProductId() %>" />
-                        <input type="hidden" name="productName" value="<%= product.getProductName() %>" />
-                        <input type="hidden" name="productDescription" value="<%= product.getDescription() %>" />
-                        <input type="hidden" name="productPrice" value="<%= product.getProductPrice() %>" />
-                        <input type="hidden" name="productDiscount" value="<%= product.getProductDiscount() %>" />
-                        <input type="hidden" name="productPriceAfterDiscount" value="<%= product.getProductPriceAfterDiscount() %>" />
-                        <input type="hidden" name="retailerName" value="<%= product.getName() %>" />
-                        <button type="submit" class="btn btn-cart">Buy</button>
-                    </form>
+                    <button class="btn btn-cart" onclick="addToCart(<%= product.getProductId() %>, 1)">Add to Cart</button>
+                
                 </div>
     <%
             }

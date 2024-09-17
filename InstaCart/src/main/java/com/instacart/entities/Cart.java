@@ -3,6 +3,9 @@ package com.instacart.entities;
 import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -14,7 +17,8 @@ public class Cart {
     private Long id;
 
     private BigDecimal totalAmount = BigDecimal.ZERO;
-
+    // Manage the reference from Cart to CartItems
+    @JsonManagedReference
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<CartItem> items = new HashSet<>();
 

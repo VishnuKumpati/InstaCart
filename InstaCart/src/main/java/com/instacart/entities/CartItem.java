@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Getter
@@ -23,7 +24,7 @@ public class CartItem {
 //    private BigDecimal price;
   private BigDecimal unitPrice;
   private BigDecimal totalPrice;
-
+    @JsonBackReference //// Prevents recursion from CartItem back to Cart
     @ManyToOne
     @JoinColumn(name = "cart_id")
     private Cart cart;
