@@ -1,0 +1,182 @@
+{
+  "$comment": "Time budget per topic = READING seat time only. Quizzes do NOT count toward delivery time — they are question-bank feedstock pooled into module/course-level assessments, not per-topic seat time. Weekly target = 90 min of reading across all topics in a week. Reading WPM = 200 (lower-end college reader). Hands-on artifact is NOT produced in this phase.",
+  "weekly_budget_minutes": 90,
+  "reading_wpm": 200,
+  "quiz_seconds_per_mcq": 60,
+  "quiz_seconds_per_short_answer": 90,
+  "audience": {
+    "id": "fresher-zero-background",
+    "$comment": "CANONICAL audience definition. Every builder writes FOR this learner; every critic checks AGAINST it. Do NOT redefine the audience inside individual skills — reference this block by name ('the artifact-mix audience baseline').",
+    "who": "Absolute beginners ('freshers'). Assume NO background in programming, computer science, AI, machine learning, LLMs, or GenAI. Many learners come from non-CS or non-technical backgrounds. For most of them, every concept in this curriculum is brand new.",
+    "baseline_assumption": "Assume the learner knows nothing about the topic, and nothing about its prerequisites beyond what EARLIER topics in this exact sequence already taught. When in doubt, explain it rather than assume it.",
+    "mandates": [
+      "Define every non-everyday term in plain language the FIRST time it appears — a short, concrete meaning before any formal/technical phrasing.",
+      "Introduce one new idea at a time. Never stack two brand-new concepts in a single sentence.",
+      "Lead with a concrete everyday example or analogy, THEN give the abstract definition — never the reverse.",
+      "Spell out every acronym on first use, e.g. 'LLM (Large Language Model)'. Never use an unexplained acronym.",
+      "Short sentences (target under 20 words). Active voice. Address the learner as 'you'.",
+      "A term defined in an EARLIER topic of this sequence may be reused without re-defining — but never assume knowledge from OUTSIDE this curriculum."
+    ],
+    "prohibitions": [
+      "No assumed prior knowledge of math, code, CS, or AI beyond earlier topics in this sequence.",
+      "No jargon dumps — a paragraph that introduces 3+ new terms at once is a defect.",
+      "No hedging ('it is generally considered', 'many experts believe') — beginners need plain, confident statements.",
+      "No leaps into advanced material (see scope_discipline)."
+    ],
+    "readability_target": "A motivated adult with zero technical background can read a section once and explain it back in their own words. If a sentence has to be re-read to be parsed, simplify it."
+  },
+  "formatting_standards": {
+    "$comment": "Applies to learner-facing prose — the reading artifact above all, and the corpus where natural. Goal: scannable, chunked, example-rich. A wall of text is a defect, not a style choice. Critics check these.",
+    "rules": [
+      "Break any explanation longer than ~4 sentences into a bulleted or numbered list.",
+      "Render any procedure, sequence, or ordered set of steps as a NUMBERED list — never a run-on paragraph.",
+      "Present definitions as a bold term followed by a plain-English meaning, e.g. '**Token** — a chunk of text the model reads, roughly a word or part of a word.'",
+      "Put a small concrete example right next to the concept it illustrates (inline), not deferred to one example section at the end.",
+      "Where a learner would naturally ask a question, pose it and answer it inline, e.g. 'Why does this matter? Because ...'.",
+      "Use a table for any comparison or contrast (X vs Y, do vs don't).",
+      "Maximum paragraph length ~4 sentences."
+    ]
+  },
+  "scope_discipline": {
+    "$comment": "Web search and external resources routinely pull in adjacent or more-advanced concepts. That depth must NOT leak into this topic. The topic TITLE is the boundary. Builders obey it; critics enforce it. This is the guard against artifacts that jump into advanced material 'out of nowhere'.",
+    "boundary": "The topic title / headline defines the scope. Teach exactly that concept, at the depth profile's level — no more.",
+    "rules": [
+      "A resource that goes deeper or wider than the topic title is a SOURCE for this topic's slice only — do not import its advanced sections.",
+      "Mention-and-defer: a downstream or more-advanced concept may be NAMED in at most one sentence with a 'you'll cover this later' pointer. Never teach or define it here.",
+      "Mention-and-defer form: the deferred concept appears as a BARE name plus the topic pointer — never bolded, never followed by a defining clause or appositive ('— systems that ...'). Bolding or defining a deferred concept IS teaching it; critics flag it as scope_creep even inside a single sentence.",
+      "No forward references (already enforced): use only this topic's concepts plus concepts introduced by EARLIER topics in the sequence.",
+      "No premature depth: do not jump from the topic's level into expert detail just because a source did. Hold the depth profile.",
+      "If material genuinely cannot be explained without an undefined advanced concept, that is a SEQUENCING problem — flag it; do not paper over it by teaching the advanced concept inline."
+    ],
+    "critic_finding_code": "scope_creep"
+  },
+  "gold_examples": {
+    "$comment": "Author-provided 'this is what PASSING looks like' references, populated by the content lead over time — see .claude/references/gold-examples/README.md. When a matching example exists, builders MATCH its structure/depth/tone/formatting and critics use it as the concrete pass bar. When a slot is empty, fall back to the written standards in this config + the skill. NEVER fabricate an example to fill an empty slot.",
+    "dir": ".claude/references/gold-examples/",
+    "by_artifact": {
+      "corpus": ".claude/references/gold-examples/corpus/",
+      "reading": ".claude/references/gold-examples/reading/",
+      "quiz": ".claude/references/gold-examples/quiz/",
+      "diagram": ".claude/references/gold-examples/diagram/"
+    },
+    "usage": "Before generating, check the matching by_artifact dir. If an example file is present, treat it as the gold standard for THIS artifact type — match its sectioning, beginner tone, formatting density, and depth. If the dir is empty, use the written standards. Absence of an example is never a reason to invent one."
+  },
+  "profiles": {
+    "atomic": {
+      "description": "Tightly scoped topic (e.g. '6.2 Scalars — a single number representing one property'). Concept is foundational but small; padding the reading hurts quality.",
+      "reading": {
+        "target_min_minutes": 4,
+        "target_max_minutes": 6,
+        "target_word_range": [800, 1200],
+        "notes": "200 wpm × 4–6 min = 800–1200 words"
+      },
+      "quiz": {
+        "min_questions": 5,
+        "max_questions": 7,
+        "include_short_answer": true,
+        "$comment": "Quiz time excluded from delivery budget — question-bank feedstock only."
+      },
+      "diagram": {
+        "default": false,
+        "override_when": "topic introduces a visual primitive that benefits from a single hand-drawn glyph (rare for atomic topics)"
+      },
+      "total_minutes_estimate": 5
+    },
+    "standard": {
+      "description": "Mid-depth concept that needs context, an example, and a counter-example (e.g. '1.4 Why AI gives different answers to the same question').",
+      "reading": {
+        "target_min_minutes": 6,
+        "target_max_minutes": 8,
+        "target_word_range": [1200, 1600],
+        "notes": "200 wpm × 6–8 min = 1200–1600 words"
+      },
+      "quiz": {
+        "min_questions": 5,
+        "max_questions": 6,
+        "include_short_answer": false,
+        "$comment": "Quiz time excluded from delivery budget — question-bank feedstock only."
+      },
+      "diagram": {
+        "default": "if_visual",
+        "override_when": "concept is purely textual"
+      },
+      "total_minutes_estimate": 7
+    },
+    "deep": {
+      "description": "System-level or multi-part concept that needs a worked example end-to-end (e.g. '4.3 RAG — query → embed → retrieve → inject → respond').",
+      "reading": {
+        "target_min_minutes": 9,
+        "target_max_minutes": 11,
+        "target_word_range": [1800, 2200],
+        "notes": "200 wpm × 9–11 min = 1800–2200 words"
+      },
+      "quiz": {
+        "min_questions": 5,
+        "max_questions": 7,
+        "include_short_answer": true,
+        "$comment": "Quiz time excluded from delivery budget — question-bank feedstock only."
+      },
+      "diagram": {
+        "default": true,
+        "intent": "architecture or pipeline diagram showing the full flow"
+      },
+      "total_minutes_estimate": 10
+    }
+  },
+  "delivery_minutes_formula": {
+    "$comment": "expected_delivery_minutes = READING minutes only, written into topic.manifest.json. Quizzes are NOT seat time (question-bank feedstock), so quiz_minutes is no longer summed in.",
+    "reading_minutes": "ceil(word_count / reading_wpm)",
+    "total": "reading_minutes"
+  },
+  "weekly_balance_rule": {
+    "$comment": "course-drift critic enforces sum(topic.expected_delivery_minutes) per week. Soft warn at ±15%; fail at ±25%.",
+    "target_minutes": 90,
+    "soft_warn_pct": 15,
+    "hard_fail_pct": 25
+  },
+  "classification_signals": {
+    "$comment": "Heuristics the corpus-builder uses to pick a profile before HITL confirmation.",
+    "atomic_signals": [
+      "title is a single noun or compound noun under 8 words",
+      "Core Concepts section is one tight paragraph",
+      "no Implementation section warranted",
+      "no Real-World Patterns section warranted",
+      "topic ID maps to a single line in the xlsx source"
+    ],
+    "deep_signals": [
+      "title contains 'pipeline', 'framework', 'system', 'workflow', 'stack'",
+      "Core Concepts has 3+ sub-concepts",
+      "Implementation section warranted",
+      "Real-World Patterns section warranted",
+      "topic spans multiple technologies (cross_refs non-empty)",
+      "topic appears in a week with a 'Lab' Lab/Activity"
+    ],
+    "diagram_signals": [
+      "$comment: requires_diagram should be TRUE when ANY of these hold — a good diagram drives the reading's point home; default-false is the failure mode, not over-diagramming. 'Purely textual' is only topics that are genuinely definitional with no structure to draw.",
+      "the concept IS a structure: tree, hierarchy, layers, nesting (e.g. task tree, decomposition levels)",
+      "the concept IS a flow: input→process→output, stage→stage pipeline, request/response round trip",
+      "the concept involves a branch or decision: IF/OTHERWISE paths, gate that passes/fails, retry loop",
+      "the concept contrasts two paths or systems side-by-side (deterministic vs probabilistic, before vs after)",
+      "the concept is a cycle or state machine: draft→review→revise, states with transitions",
+      "the corpus Implementation section describes 3+ ordered steps a learner must hold in their head at once"
+    ],
+    "default_profile": "standard"
+  },
+  "hitl_confirmation": {
+    "$comment": "After the corpus passes its critic, the orchestrator computes a WEEK-AWARE recommended depth profile (intrinsic topic complexity + remaining budget for the week) and surfaces it via AskUserQuestion. The user either accepts the recommendation or overrides; there is no 'choose from scratch' path.",
+    "question_template": "Recommended: {profile} (~{minutes} min). Week running total would be {week_total}/90 min. Accept?",
+    "header": "Depth profile",
+    "options": [
+      {"label": "Accept {profile}",            "action": "accept"},
+      {"label": "Override → atomic (~5 min)",  "action": "override:atomic"},
+      {"label": "Override → standard (~7 min)", "action": "override:standard"},
+      {"label": "Override → deep (~10 min)",   "action": "override:deep"}
+    ],
+    "recommendation_inputs": [
+      "topic-corpus-builder's intrinsic suggestion (from atomic_signals / deep_signals)",
+      "sum of expected_delivery_minutes for already-approved topics in this week",
+      "count of topics in the week still to be processed",
+      "90-minute weekly target"
+    ]
+  }
+}

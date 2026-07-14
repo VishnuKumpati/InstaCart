@@ -1,0 +1,55 @@
+$CATEGORY: CIT/M1/week-1/1.8-flowcharts
+
+::1.8-Q1:: Flowcharts are drawn with a small set of standard shapes, each with one fixed meaning. Why use standard shapes instead of free-form drawings?
+{
+~Because drawing tools such as Excalidraw only provide a limited menu of shapes, so chart authors have no other choice#Tools offer many shapes; the convention exists for readers, not because software limits what you can draw.
+~So the finished chart takes up less room on the page than one drawn with clouds, stars, and other free-form doodles#Standard shapes are not chosen to save space — they are chosen so every reader interprets each shape the same way.
+~So the chart looks tidier and more professional when it is shared with other people inside a formal document or slide deck#Tidiness is a side benefit; the real reason is shared meaning — any reader can decode the chart without a private key.
+=So anyone who knows the shapes can read anyone else's chart without guessing — the shape itself carries the meaning#Correct — like road signs, a diamond means "the path splits here" to every reader, before they read a word inside it.
+#### Tests why flowcharts use standardised symbols (corpus §Why standard shapes?). Shapes work like road signs\: one fixed meaning each, so the shape communicates before the text is read.
+}
+
+::1.8-Q2:: In a tea-making chart, one step asks the guest "Do you want milk?" and takes in their answer. Which shape should hold this step, and why?
+{
+~A diamond — any step whose text contains a question of any kind must always be drawn as a decision with two exit arrows#Tempting, but the diamond is for the chart's own yes/no split (e.g. "Guest said yes?"); asking a person is an information exchange.
+=A parallelogram — the process is exchanging information with the outside world, which makes this an input/output step#Correct — asking a person a question and receiving the answer is information coming in, so it belongs in a parallelogram.
+~A rectangle — asking the guest is simply an action the tea-maker performs, so it counts as an ordinary process step#Close, but a rectangle is for work being done; here the process is exchanging information, which has its own special shape.
+~An oval — the process pauses to wait for the guest's answer, and ovals mark where a process stops or starts#Ovals are terminators marking Start and End only; waiting for an answer is not the start or end of the process.
+#### Tests symbol identification, especially the input/output vs decision confusion (corpus §The five core shapes). Talking to the outside world is a parallelogram; the diamond is where the path itself splits.
+}
+
+::1.8-Q3:: You are tracing an unfamiliar flowchart with your finger and arrive at a diamond. Before reading the text inside it, what do you already know?
+{
+=The path is about to split — the diamond holds a yes/no question with two labelled exits, one for each answer#Correct — the diamond is the only shape where the path splits, so its presence alone tells you a branch is coming.
+~Information is about to be shown to the user — the process is sending a result out to the outside world at this step#Output to the outside world goes in a parallelogram; the diamond signals a yes/no split, not an exchange of information.
+~You have reached the end of the process — your trace is finished here and you can lift your finger off the page at this point#Endings are marked by an oval terminator, not a diamond; a diamond means the route is splitting, not stopping.
+~One single action is about to be performed here — something gets done before the trace continues along the next arrow#One action per box describes the rectangle (process shape); a diamond asks a question rather than doing work.
+#### Tests reading and tracing through decisions (corpus §Decisions create branches, §Reading a flowchart you did not draw). The shape itself tells you a branch is coming before you read a word.
+}
+
+::1.8-Q4:: In a kettle chart, the "No" arrow leaves the diamond "Water boiled?", passes through the rectangle "Wait 30 seconds", and then points back up to the same diamond. What does this drawing represent?
+{
+~A dead end — the chart is broken because the reader gets stranded at the rectangle with nowhere left to travel onward#A dead end is a shape with no outgoing arrow; this rectangle does have an exit — it leads back up to the diamond.
+~A drawing mistake — arrows in a flowchart must always flow from the top of the page downward and may never point back up#Top-to-bottom is a readability convention, not a rule; an arrow pointing back up is exactly how a loop is drawn.
+=A loop — the check-and-wait steps repeat, circling around until the answer to the question finally becomes Yes#Correct — an arrow that returns to an earlier shape draws repetition; your finger circles until the answer flips to Yes.
+~A three-way decision — the diamond now has three exits, which breaks the rule that every question must stay yes/no#The diamond still has only two exits, Yes and No; the returning arrow is the No path coming back, not a third exit.
+#### Tests recognising loops (corpus §Loops — arrows that go back). An arrow returning to an earlier shape is the picture version of pseudocode's REPEAT — and every loop needs a way out.
+}
+
+::1.8-Q5:: A classmate's chart has a diamond whose two exit arrows carry no labels at all. Why is this a problem when someone else tries to follow the chart?
+{
+=The reader cannot tell which arrow means Yes and which means No, so following the decision becomes a coin flip#Correct — an unlabelled branch forces the reader to guess, which defeats the whole purpose of drawing the logic out.
+~A diamond is only ever allowed to have one exit arrow, so one of the two arrows must be deleted before the chart is valid#Backwards — a decision diamond needs exactly two exits; the defect here is the missing Yes/No labels, not the arrow count.
+~Arrows are required to carry the text of the next action to perform, so every arrow in the chart needs a step description#Actions belong inside the shapes, not on arrows; only the branch arrows leaving a diamond need Yes/No labels.
+~Questions belong in rectangles rather than diamonds, so the shape itself is wrong and should be redrawn as a process box#The diamond is the correct shape for a yes/no question; the rectangle holds actions, not questions.
+#### Tests drawing best practices (corpus §Best Practices). "Label every branch arrow" — a diamond with unlabelled exits is a coin flip, not a decision.
+}
+
+::1.8-Q6:: You must explain a refund-approval process to an audience that includes non-technical staff, and the key thing they need to see is where requests can be rejected. Which form fits best, and why?
+{
+~Pseudocode — plain-English lines are quicker to write and edit, which makes them the better choice for any audience#Speed of writing helps the author, not this audience; in text, the rejection points stay hidden until every line is read.
+~Pseudocode — IF / OTHERWISE lines express each decision precisely, so the rejection points will be clearer than any picture#IF / OTHERWISE is precise, but you must read every line to find the splits; a diamond shows the split across the room.
+~A flowchart — charts hold detailed step-by-step instructions better than text, so long processes always belong in diagrams#Right form, wrong reason — charts get crowded with many detailed steps; their strength is showing structure, not fine detail.
+=A flowchart — branches appear as diamonds you can spot at a glance, and almost anyone can follow shapes and arrows#Correct — flowcharts shine at making branches visible instantly, and non-technical readers can follow them easily.
+#### Tests choosing between flowcharts and pseudocode (corpus §Flowcharts vs pseudocode). The chart shows structure at a glance and suits non-technical readers; text carries fine detail.
+}

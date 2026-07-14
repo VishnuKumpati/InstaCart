@@ -1,0 +1,41 @@
+---
+title: "Temperature: the knob on the lottery"
+config:
+  theme: base
+  themeVariables:
+    primaryColor: "#a5d8ff"
+    primaryBorderColor: "#4a9eed"
+    lineColor: "#555"
+  flowchart:
+    htmlLabels: true
+    curve: basis
+    nodeSpacing: 50
+    rankSpacing: 70
+---
+flowchart LR
+    SCORE["<b>Score every token</b><br/><span style='font-size:11px;color:#6d28d9'>deterministic —<br/>same scores every run</span>"]:::start
+    TEMP["<b>Apply temperature</b><br/><span style='font-size:11px;color:#6d28d9'>reshapes percentages,<br/>never the ranking</span>"]:::auto
+
+    subgraph LOW ["Low temperature (0.2)"]
+        SHARP["<b>Sharp distribution</b><br/><span style='font-size:11px;color:#6d28d9'>chai 93% · tea 5% · soup &lt;1%<br/>favourite nearly always wins</span>"]:::act
+    end
+
+    subgraph HIGH ["High temperature (1.5)"]
+        FLAT["<b>Flat distribution</b><br/><span style='font-size:11px;color:#6d28d9'>chai 44% · tea 24% · soup 5%<br/>long shots win more often</span>"]:::act
+    end
+
+    DRAW["<b>Weighted draw</b><br/><span style='font-size:11px;color:#6d28d9'>sampling — one ticket<br/>pulled from the raffle</span>"]:::auto
+    APPEND["<b>Append token</b><br/><span style='font-size:11px;color:#6d28d9'>answer grows<br/>by one token</span>"]:::done
+
+    SCORE --> TEMP
+    TEMP --> SHARP
+    TEMP --> FLAT
+    SHARP --> DRAW
+    FLAT --> DRAW
+    DRAW --> APPEND
+    APPEND -- "repeat until stop signal" --> SCORE
+
+    classDef start fill:#a5d8ff,stroke:#4a9eed,color:#1e3a5f
+    classDef auto fill:#d0bfff,stroke:#8b5cf6,color:#3b2a63
+    classDef act fill:#a5d8ff,stroke:#4a9eed,color:#1e3a5f
+    classDef done fill:#b2f2bb,stroke:#22c55e,color:#14532d

@@ -1,0 +1,53 @@
+{
+  "topic_id": "4.3",
+  "generated_at": "2026-06-11T00:00:00Z",
+  "format": "gift",
+  "question_count": 7,
+  "$bias_defense_applied": true,
+  "$shuffle_seed": "sha256('4.3') % 2^32 = 341518115; salt=4 (XOR-redraw until max_share <= 0.40 and all 4 positions used)",
+  "correct_position_distribution": [3, 0, 2, 3, 0, 1],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "objective_ref": "Explain the knowledge problem that RAG solves: a trained model's knowledge is frozen at training time and cannot see your private or recent information.",
+      "correct_position": 3
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "objective_ref": "Define Retrieval-Augmented Generation in plain language and unpack each of its three words.",
+      "correct_position": 0
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "objective_ref": "Describe the five steps of the RAG flow — query, embed, retrieve, inject, respond — and state what each step produces.",
+      "correct_position": 2
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "objective_ref": "Trace a concrete question end-to-end through a RAG system, identifying what the model sees at each stage.",
+      "correct_position": 3
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "objective_ref": "Compare RAG and fine-tuning, and pick the right one for a given scenario (fresh facts vs. new behavior).",
+      "correct_position": 0
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "objective_ref": "Identify what RAG does and does not fix — including why it reduces, but does not eliminate, wrong answers.",
+      "correct_position": 1
+    },
+    {
+      "id": "q7",
+      "type": "short_answer",
+      "objective_ref": "Describe the five steps of the RAG flow — query, embed, retrieve, inject, respond — and state what each step produces.",
+      "correct_position": null
+    }
+  ]
+}

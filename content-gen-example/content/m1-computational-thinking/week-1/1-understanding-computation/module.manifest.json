@@ -1,0 +1,20 @@
+{
+  "type": "module",
+  "position": 1,
+  "title": "Understanding Computation",
+  "slug": "1-understanding-computation",
+  "course_code": "M1",
+  "course_slug": "m1-computational-thinking",
+  "week_nums": [
+    1
+  ],
+  "session_name_by_week": {
+    "1": "How Machines Think"
+  },
+  "narrative_seed_by_week": {
+    "1": "What is computation — deterministic vs probabilistic systems / Why AI gives different answers to the same question / Decomposition — breaking a big problem into smaller solvable parts / Abstraction — hiding complexity at the right level / Pseudocode and flowcharts — writing logic before writing code / Algorithmic thinking — recipes, GPS routes, sorting queues"
+  },
+  "lab_activity_seed_by_week": {
+    "1": "Draw flowcharts for 2 real-world tasks using Excalidraw / Swap with a partner — can they follow it exactly? / Choose your domain — the problem area you will build toward all semester. Write a 3-sentence problem statement. / Decompose the problem into a task tree using Excalidraw / AI Decision Journal — Entry #1: what does solving this problem currently require of a human?"
+  }
+}

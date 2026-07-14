@@ -1,0 +1,57 @@
+$CATEGORY: CIT/M2/week-3/3-4-how-llms-work-tokens-training-and-inference
+
+::q1:: Which statement best explains why LLMs use subword tokens rather than whole words as vocabulary units? {
+~Whole-word vocabularies are slower to look up, so subword units improve inference speed significantly.#No — lookup speed is not the reason; the issue is vocabulary size and coverage of all possible text.
+~Subword units allow the model to process punctuation and numbers as part of adjacent word tokens.#No — punctuation and numbers have their own token representations; this is not the motivation for subword tokenization.
+=A fixed whole-word vocabulary would be impossibly large; subword units cover all text with a bounded set.#Correct — subword tokenization limits vocabulary size (typically 32k–128k tokens) while still representing any word as a sequence of known fragments.
+~Whole words cannot be converted to integer IDs, but subword fragments map directly to numeric values.#No — whole words can and do map to integer IDs; many common words are single tokens. The issue is vocabulary coverage, not ID mapping.
+#### Tests understanding of why tokenization uses subword units rather than whole words, and the role of bounded vocabulary size (corpus §5.1).
+}
+
+::q2:: What is the correct sequence of the three phases that transform a random-weight base model into a deployed assistant? {
+=Pre-training on a large text corpus, then fine-tuning on curated prompt-response pairs, then RLHF alignment.#Correct — pre-training builds base knowledge via next-token prediction; fine-tuning shapes instruction-following; RLHF aligns outputs to human preferences.
+~RLHF on human-preference data, then fine-tuning on internet text, then pre-training on curated prompts.#No — this reverses the order entirely; pre-training on raw text must come first, before the model has any base knowledge to steer.
+~Fine-tuning on prompt-response pairs, then pre-training on a large corpus, then RLHF for safety alignment.#No — fine-tuning requires a pre-trained foundation; you cannot fine-tune a randomly initialized model effectively.
+~Pre-training on curated prompts, then RLHF using preference comparisons, then fine-tuning on internet text.#No — pre-training uses raw internet text, not curated prompts; fine-tuning comes after RLHF in this incorrect ordering.
+#### Tests understanding of the three LLM training phases and their correct sequence (corpus §5.2, §5.3).
+}
+
+::q3:: During LLM inference, what is the main purpose of the KV cache built during the prefill stage? {
+~It stores the model's weight matrices in GPU memory so they can be reused across multiple user requests.#No — weights are resident in GPU memory independently of the KV cache; the KV cache holds per-request intermediate computations, not weights.
+=It stores computed key-value representations of input tokens, avoiding redundant recomputation in each decode step.#Correct — by caching these representations from prefill, the decode loop only needs to process the single new token per step rather than the entire input.
+~It caches the final probability distribution over the vocabulary so token selection is faster during decoding.#No — a new probability distribution is computed at every decode step; the KV cache stores intermediate transformer representations, not the final output distribution.
+~It records the sequence of generated tokens so the model can detect and avoid repeating itself during generation.#No — repetition avoidance is handled by sampling strategies, not the KV cache; the cache stores computed attention keys and values, not the token sequence itself.
+#### Tests understanding of the prefill stage, KV cache function, and why it is critical for efficient autoregressive decoding (corpus §5.4).
+}
+
+::q4:: An LLM is queried about an event that occurred after its training data was collected. What is the most accurate explanation of why the model has no information about that event? {
+~The context window was too short to include recent documents, so the event was automatically excluded at inference time.#No — context window limits apply to what fits in a single prompt, not to the model's trained knowledge; these are separate constraints.
+~The RLHF process filtered out recent events as potentially unreliable and removed them from the weights.#No — RLHF shapes output preferences and alignment; it does not filter specific events from the weights by recency.
+~The model's fine-tuning data was deliberately limited to historical records to ensure factual accuracy.#No — fine-tuning trains instruction-following behaviour, not factual coverage; limiting fine-tuning data would not explain gaps in pre-trained world knowledge.
+=Events after training ended are absent from the weights because the weights encode only what the training corpus contained.#Correct — knowledge is baked into the frozen weights during pre-training; anything after the data collection cutoff was never seen and never learned.
+#### Tests the distinction between the frozen weights, training cutoff, and context window in how an LLM's knowledge is bounded (corpus §5.2, §5.6).
+}
+
+::q5:: Why does generating a 500-token response take roughly five times as long as generating a 100-token response from the same LLM? {
+~Longer outputs require proportionally more GPU memory, causing the hardware to throttle generation speed noticeably.#No — the KV cache grows with output length but throttling is not the primary cause of linear time scaling; the decode loop structure is.
+~A separate prefill stage runs for every output token, and prefill cost scales linearly with total output length.#No — prefill runs only once for the entire input; it is the decode loop, not repeated prefill stages, that scales with output length.
+=The decode loop generates one token per forward pass, and each step must wait for the previous token before starting.#Correct — autoregressive generation is inherently sequential; 500 tokens require 500 sequential decode steps, so time scales linearly with output length.
+~The KV cache fills up during long generations, forcing the model to recompute all earlier tokens from scratch.#No — the KV cache is designed to avoid recomputation; it grows to accommodate new tokens rather than expiring and forcing recomputation.
+#### Tests understanding of why the sequential decode loop makes inference time scale linearly with output length (corpus §5.4, §6.4).
+}
+
+::q6:: A user submits a prompt to an LLM and a response is streamed back word by word. Briefly describe the two stages the inference system moves through after tokenizing the input, and explain why the response cannot be generated all at once in the second stage. {
+=prefill
+=decode
+=prefill and decode
+=The system first runs a prefill stage, processing all input tokens in a single parallel forward pass to build the KV cache and produce an initial next-token probability distribution. It then enters the decode stage, which generates one output token at a time. Each new token is conditioned on all previously generated tokens, making generation inherently sequential — token N cannot be selected until token N-1 exists, because the model's probability distribution for each step depends on the full sequence so far.
+#### Tests the ability to trace the inference pipeline from prompt to streamed output and explain the autoregressive constraint that prevents parallel generation (corpus §5.4).
+}
+
+::q7:: A product team needs the lowest possible time-to-first-token (TTFT) for a customer-facing chat feature, even if that means higher per-query cost and no control over the model weights. Which deployment pattern best fits this requirement? {
+~Self-hosted open-weight model on dedicated GPU servers, batching requests to maximize throughput.#No — self-hosting maximises throughput and cost control but adds infrastructure latency; it trades TTFT for ownership and lower marginal cost at scale.
+=Proprietary API (e.g., OpenAI, Anthropic) where the provider operates highly optimised, low-latency serving infrastructure.#Correct — proprietary APIs offer purpose-built, globally distributed inference infrastructure tuned for low TTFT, at the cost of higher per-token pricing and no weight access.
+~Edge inference with a quantised small model running on the end-user device, eliminating network round-trips entirely.#No — edge inference removes network latency but quantised small models sacrifice capability; it suits constrained devices, not general-purpose chat requiring full model quality.
+~Batch inference pipeline that queues requests overnight and returns completions asynchronously the next morning.#No — batch pipelines maximise throughput for offline workloads; they have no concept of TTFT and are the wrong pattern for interactive, real-time chat.
+#### LO6 — real-world deployment patterns; corpus §7.1–7.2
+}

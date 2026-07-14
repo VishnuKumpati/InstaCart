@@ -1,0 +1,46 @@
+---
+title: Two ways to get a rule
+config:
+  theme: base
+  themeVariables:
+    primaryColor: "#a5d8ff"
+    primaryBorderColor: "#4a9eed"
+    lineColor: "#555"
+  flowchart:
+    htmlLabels: true
+    curve: basis
+    nodeSpacing: 50
+    rankSpacing: 38
+---
+flowchart LR
+  subgraph HUMAN["Human writes the rule"]
+    direction TB
+    H1["<b>Person writes rule</b><br/><span style='font-size:11px;color:#6d28d9'>thinks it up, writes it down</span>"]:::hitl
+    H2["<b>Written-out rule</b><br/><span style='font-size:11px;color:#6d28d9'>readable, like pseudocode</span>"]:::act
+    H3["<b>New case</b>"]:::start
+    H4["<b>Output</b><br/><span style='font-size:11px;color:#6d28d9'>same every time</span>"]:::done
+    H1 --> H2
+    H2 --> H3
+    H3 --> H4
+  end
+  subgraph MACHINE["Machine finds the rule"]
+    direction TB
+    M1["<b>Many repeated examples</b><br/><span style='font-size:11px;color:#6d28d9'>one is never enough</span>"]:::start
+    M2["<b>Machine spots repeats</b><br/><span style='font-size:11px;color:#6d28d9'>rule lives inside, often unreadable</span>"]:::auto
+    M3["<b>New case</b>"]:::start
+    M4["<b>Output</b><br/><span style='font-size:11px;color:#6d28d9'>a likelihood, not a certainty</span>"]:::done
+    M1 --> M2
+    M2 --> M3
+    M3 --> M4
+  end
+
+  HUMAN ~~~ MACHINE
+
+  style HUMAN fill:#f8f9fa,stroke:#adb5bd,color:#343a40
+  style MACHINE fill:#f8f9fa,stroke:#adb5bd,color:#343a40
+
+  classDef start fill:#a5d8ff,stroke:#4a9eed,color:#1a1a1a
+  classDef hitl fill:#fff3bf,stroke:#f59e0b,stroke-width:3px,color:#1a1a1a
+  classDef auto fill:#d0bfff,stroke:#8b5cf6,color:#1a1a1a
+  classDef act fill:#a5d8ff,stroke:#4a9eed,color:#1a1a1a
+  classDef done fill:#b2f2bb,stroke:#22c55e,color:#1a1a1a

@@ -1,0 +1,11 @@
+# Session checkpoints — local to each teammate's working session.
+# Lifecycle is tracked via the PENDING/CONSUMED frontmatter in each file
+# and purged by /critic-course-drift on pass. Never commit them.
+checkpoints/
+
+# Local caveman state (if caveman drops session flags inside .claude/)
+.caveman/
+
+# Python cache that may end up under .claude/scripts/
+__pycache__/
+*.pyc

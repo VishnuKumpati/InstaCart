@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "checks": {
+    "prerequisites": {
+      "passed": true,
+      "meta_sidecar_present": true,
+      "bias_defense_applied": true,
+      "meta_gift_desync": false,
+      "derived_positions": [0, 1, 2, 2, 1, 3],
+      "sidecar_positions": [0, 1, 2, 2, 1, 3]
+    },
+    "positional_bias": {
+      "passed": true,
+      "distribution": [1, 2, 2, 1],
+      "max_share": 0.333,
+      "threshold": 0.40,
+      "mcq_count": 6,
+      "short_answer_skipped": ["q7"]
+    },
+    "length_bias": {
+      "passed": true,
+      "longest_correct_rate": 0.0,
+      "baseline": 0.25,
+      "threshold": 0.40,
+      "per_question": {
+        "q1": { "correct_len": 108, "distractor_mean": 99.0, "longest_correct": false },
+        "q2": { "correct_len": 106, "distractor_mean": 100.3, "longest_correct": false },
+        "q3": { "correct_len": 105, "distractor_mean": 99.7, "longest_correct": false },
+        "q4": { "correct_len": 113, "distractor_mean": 105.0, "longest_correct": false },
+        "q5": { "correct_len": 136, "distractor_mean": 116.0, "longest_correct": false },
+        "q6": { "correct_len": 121, "distractor_mean": 109.0, "longest_correct": false }
+      }
+    },
+    "distractor_plausibility": {
+      "passed": true,
+      "absurd_rate": 0.0,
+      "total_distractors": 18,
+      "scores_1_count": 0,
+      "weakest_questions": [],
+      "notes": "All 18 distractors are corpus-grounded beginner misconceptions (memory-between-chats, shifting parameters, unstable scored list, whole-answer pre-planning, prompt-driven auto temperature, temp-0-means-truth, etc.). Scores 3-4 throughout."
+    },
+    "objective_coverage": {
+      "passed": true,
+      "learning_objectives_count": 6,
+      "uncovered_objectives": [],
+      "orphan_questions": [],
+      "mapping": {
+        "q1": "LO1 (probability distribution / sampling / temperature explanation)",
+        "q2": "LO2 (single token-picking step)",
+        "q3": "LO3 (greedy vs sampling, strength/weakness)",
+        "q4": "LO4 (temperature per task)",
+        "q5": "LO5 (sharp vs flat distributions)",
+        "q6": "LO6 (two temperature misunderstandings)",
+        "q7": "LO3 (greedy decoding recall — duplicate coverage, allowed)"
+      }
+    },
+    "beginner_fairness_scope": {
+      "passed": true,
+      "out_of_scope_question": [],
+      "jargon_in_stem": [],
+      "unfair_distractor": [],
+      "notes": "All 7 questions test the temperature/sampling headline. No week-4 material. Hallucination (topic 3.9) is not tested: q6 tests temperature-vs-correctness, taught in corpus §5.6/§8, without invoking the deferred 3.9 concept. 'Greedy decoding' glossed inline in q3/q7 stems; 'inference' is prior vocab (3.4). All distractors answerable from this corpus + weeks 1-2 / 3.1-3.5 vocab."
+    },
+    "gift_strict": {
+      "passed": true,
+      "notes": "Valid $CATEGORY line; 6 MCQ blocks with exactly one '=' each; q7 short-answer with only '=' lines; per-answer feedback via '#'; general feedback via '####'; no unescaped GIFT special characters in stems or answers; no stray files in artifacts/."
+    },
+    "profile_conformance": {
+      "passed": true,
+      "profile": "deep",
+      "question_count": 7,
+      "allowed_range": [5, 7],
+      "short_answer_required": true,
+      "short_answer_present": true
+    }
+  },
+  "auto_correction_applied": { "shuffle_round_2": false },
+  "verdict": "Pass — all bias, coverage, scope, and STRICT GIFT checks clean; deep-profile conformant (7 questions incl. short answer); zero out-of-scope questions.",
+  "at": "2026-06-11T00:00:00Z"
+}

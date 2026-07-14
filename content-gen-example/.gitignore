@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+.lms-feature/
+.content-gen/
+*.log
+.env
+.env.*
+!.env.example

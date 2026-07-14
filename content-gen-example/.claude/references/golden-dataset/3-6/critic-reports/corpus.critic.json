@@ -1,0 +1,50 @@
+{
+  "artifact": "corpus",
+  "topic_id": "3.6",
+  "cycle": 2,
+  "corpus_path": "/Users/jestercharles/Foundations-of-Responsible-AI-Engineering/tmp/eval-run-3/3-6/new/topic_corpus.md",
+  "passed": true,
+  "checks": {
+    "required_sections": {
+      "passed": true,
+      "detail": "Sections 3 (156w), 4 (194w), 5 (2601w), 10 (178w) all present and above floors (>=50 / >=100 for section 5). No placeholder strings in required sections."
+    },
+    "citation_density": {
+      "passed": true,
+      "mode": "narrative_seed_only",
+      "detail": "resources_source=narrative_seed_only (resource_count: 0). Citation-density hard check skipped per skill. Zero [N] markers present, so no fabricated citations.",
+      "findings": [
+        {
+          "code": "low_grounding",
+          "severity": "soft",
+          "detail": "Corpus built from narrative seed only, no external citations. Surface at HITL #3; rolls up at HITL #4."
+        }
+      ]
+    },
+    "sequence_drift": {
+      "passed": true,
+      "forward_referenced_terms": [],
+      "detail": "Cycle-1 hard finding RESOLVED. The fabricated 'you met hallucination in topic 1.4' anchor is gone; line 182 now reads '(This failure mode, called hallucination, is topic 3.9.)' — bare name, unbolded, single parenthetical with downstream pointer, no defining clause after the name; the surrounding 'confidently consistent != correct' material is in-headline temperature content. Prior-topic callbacks verified against sources: 1.4 corpus (eval-run-2) explicitly names 'temperature, sampling, or tokens' and defers them to week 3, matching this corpus's claim ('named but deliberately not explained'); 1.3 / 3.4 / 3.5 callbacks match their sequence-index titles and scope (probabilistic systems; tokens/training/inference/one-token-at-a-time; parameters as billions of internal numbers). No fabricated callbacks. All remaining technical vocabulary is either prior (deterministic/probabilistic 1.2-1.3, LLM 3.2, token/training/inference 3.4, parameters 3.5) or this topic's headline (probability distribution, sampling, greedy decoding, temperature, seed, random number generator, top-p). API is spelled out and plain-defined on first use. Zero week-4 terms: fine-tuning, RAG, retrieval, embeddings, agents, foundation models, multimodal, tool use all absent."
+    },
+    "length_sanity": {
+      "passed": true,
+      "word_count": 4883,
+      "profile": "deep",
+      "range": [5000, 6000],
+      "detail": "4883 words net of frontmatter — 2.3% below the deep floor after the cycle-1 trim (was 5030), well inside the 30% tolerance. Pass."
+    },
+    "topic_scope": {
+      "passed": true,
+      "out_of_scope_concepts": [],
+      "findings": [],
+      "detail": "Cycle-1 top-p FORM finding RESOLVED: the deferral framing was removed and top-p is now owned as an in-headline sibling sampling control ('Temperature remains the main dial in this topic, but when you see top-p beside it, you now know what it is doing') — bolding + definition are therefore legitimate teaching, not a deferred-concept violation. Temperature, sampling, greedy decoding, seed, sharp/flat distributions, temperature-division arithmetic, top-p: all headline at deep depth. Hallucination is the only deferred concept and is in compliant bare-name + pointer form. No assessment references (grep hits on 'exam' were the word 'example'). No premature depth beyond the headline."
+    },
+    "beginner_readability": {
+      "passed": true,
+      "findings": [],
+      "detail": "Avg sentence length 15.4 words across Introduction + Core Concepts (12% over 25w, mostly compound bullet items); zero hedging phrases. Every new term gets a plain meaning at first use (probability distribution, sampling, greedy decoding, temperature, random number generator, seed, top-p); acronyms spelled out (LLM, API); concrete examples inline (chai table, raffle drum, two-token arithmetic, three-step stall-name walkthrough); learner questions posed and answered inline; comparison tables for sharp-vs-flat, temperature columns, task-temperature pairs. No paragraph introduces 3+ new terms. Strong match to the artifact-mix audience baseline."
+    }
+  },
+  "verdict": "PASS — both cycle-1 findings resolved. (1) forward_reference/hallucination: fabricated 1.4 callback removed; now a compliant bare-name mention-and-defer to topic 3.9 (unbolded, one parenthetical, pointer only). (2) scope_creep/top-p FORM: deferral framing dropped; top-p owned as in-headline sampling control, so its definition is legitimate teaching. All prerequisite callbacks (1.3, 1.4, 3.4, 3.5) verified accurate against the generated 1.4 corpus and sequence-index titles — no fabricated prior-topic claims. No week-4 leakage, no assessment references. Remaining soft findings for HITL #3: low_grounding (narrative_seed_only, zero citations, no fakes — expected for this mode) and a length note (4883 words, 2.3% under the 5000 deep floor, within tolerance). Beginner readability strong (avg 15.4 w/sentence, zero hedges, terms defined on first use).",
+  "at": "2026-06-11T00:00:00Z"
+}

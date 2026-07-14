@@ -1,0 +1,32 @@
+{
+  "verdict": "pass",
+  "findings": [
+    {
+      "code": "looks_good",
+      "where": "whole canvas",
+      "detail": "Clean side-by-side two-column contrast exactly matching intent: 'Human writes the rule' (Person writes rule -> Written-out rule -> New case -> Output) beside 'Machine finds the rule' (Many repeated examples -> Machine spots repeats -> New case -> Output). Columns are height-balanced with parallel ranks, no node overlap, no label truncation, no edge crossings. Subtitles ('same every time' vs 'a likelihood, not a certainty') carry the deterministic-vs-probabilistic contrast straight from the corpus table."
+    },
+    {
+      "code": "looks_good",
+      "where": "concept-drift check",
+      "detail": "No week-3 ML terms in any label or subtitle: 'model', 'training', 'neural', 'learn' all absent. Machine column stays at corpus-level language ('Machine spots repeats', 'rule lives inside, often unreadable')."
+    }
+  ],
+  "preflight": {
+    "mermaid_parses": true,
+    "node_count_ok": true,
+    "label_discipline_ok": true,
+    "concept_fidelity_ok": true,
+    "title_in_config": true,
+    "single_path_per_column": true
+  },
+  "stats": {
+    "nodes": 8,
+    "edges": 6,
+    "layout": "flowchart LR (two direction-TB subgraphs, side-by-side)",
+    "labels": ["Person writes rule", "Written-out rule", "New case", "Output", "Many repeated examples", "Machine spots repeats", "New case", "Output"],
+    "png_path": "/Users/jestercharles/Foundations-of-Responsible-AI-Engineering/tmp/eval-run-3/2-4/new/artifacts/diagram.png",
+    "png_dims": "637x606",
+    "notes": "637x606 is the diagram's natural render size; mmdc -w 1400 produces identical dims (intrinsic SVG cap). Subtitles legible at this scale."
+  }
+}

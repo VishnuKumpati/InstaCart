@@ -1,0 +1,55 @@
+$CATEGORY: CIT/M1/week-2/2.4-pattern-recognition
+
+::2.4-Q1:: The chai stall near your bus stop has been crowded at 8 a.m. on twenty weekdays in a row. According to this topic, why is this a pattern, while one crowded morning is not?
+{
+~Twenty observations make the rule certain, and patterns must be guaranteed to hold#No — a pattern is a strong tendency, not a guarantee; certainty is not what defines a pattern.
+~A crowd at the same place counts as a pattern because patterns are about locations#No — patterns are about repetition across many observations, not about where something happens.
+~One crowded morning can only be explained by a rule that a person wrote down in advance#No — written rules are a separate idea; a single event simply gives no repetition to work from.
+=A pattern only exists across repeated observations — a single event is not repetition#Correct — repetition is what makes a pattern; one busy morning is just a busy day.
+#### Tests the definition of a pattern (corpus §What is a pattern?). The word "repeated" is doing the real work — one example is never enough.
+}
+
+::2.4-Q2:: A spam filter moves a message to junk because it looks like thousands of junk emails seen before. How does this rule differ from a rule a person writes down?
+{
+~An engineer studied all the junk emails one by one and then typed the matching rule out line by line#No — that would be a person-written rule; here no one wrote the rule out at all.
+~The found rule behaves deterministically, so the same message always gets exactly the same verdict#No — found rules typically behave probabilistically, giving likelihoods like "92% likely spam".
+=The machine spotted what repeats across many examples, and the rule often cannot be read as steps#Correct — found rules emerge from repetition and usually live in internal patterns, not on paper.
+~The found rule can only handle the specific cases that its human author thought of in advance#No — that is how person-written rules fail; found rules generalise to cases nobody anticipated.
+#### Tests the contrast between person-written and machine-found rules (corpus §Two ways a machine can get a rule).
+}
+
+::2.4-Q3:: You watch the sequence 3, 6, 9, 12, decide the rule is "add 3", and predict the next number will be 15. Which part of this move is generalisation?
+{
+=Applying the rule found in past examples to a new case you have never seen before#Correct — generalisation is the third step, using an old rule on a brand-new case.
+~Collecting enough repeated examples before you start looking for anything that repeats#No — collecting examples is the first step of the loop, before any rule exists.
+~Noticing what repeats across the examples and turning it into a candidate rule#No — that is the middle step, forming the rule; generalisation comes after it.
+~Writing the rule down precisely enough that another person could follow it as steps#No — writing rules out is the person-written approach, not a step in the loop.
+#### Tests the three-step loop and the term generalisation (corpus §Pattern recognition — something you already do).
+}
+
+::2.4-Q4:: Which of these systems is behaving according to a rule found in repeated data, rather than a rule a person wrote down?
+{
+=A keyboard suggesting "morning" after "good", because that word pair repeats hugely in typed text#Correct — no one wrote a "good morning" rule; the suggestion is a generalisation from repetition.
+~An inbox rule that flags any sender who is not already in the owner's saved contact list#No — the owner thought this rule up and wrote it down; nothing was found from examples.
+~A calculator that adds two numbers by following the fixed steps an engineer wrote into it#No — fixed steps written by a person are an explicit, written rule, not a found one.
+~A traffic light that changes every 60 seconds on a fixed timer an engineer set up in advance#No — a timer set by a person is a written rule; no repeated data was involved.
+#### Tests recognising everyday systems driven by found rules (corpus §Real-World Patterns). Autocomplete is the classic case from the corpus.
+}
+
+::2.4-Q5:: You buy one baby gift online, and the shopping app starts recommending baby products everywhere. Which failure of found rules does this show?
+{
+~A stale rule — the world changed after the rule was found, so it no longer holds#No — nothing in the world changed here; the rule was stretched from too little evidence.
+~An unobservable output — the recommendations cannot be directly inspected or compared#No — you can see the recommendations plainly; visibility is not the problem here.
+=Overgeneralisation — a rule stretched beyond the examples that actually justify it#Correct — one purchase is far too little repetition to justify a rule about you.
+~A written-rule failure — the author never imagined a customer buying just one gift#No — no person wrote this rule; it was found from repeated purchase data.
+#### Tests overgeneralisation via the corpus's own recommendation example (corpus §When found rules go wrong, §Real-World Patterns).
+}
+
+::2.4-Q6:: A pattern-based system gives you a fluent, confident answer. According to this topic, why must you still check the output against your specification?
+{
+~The system will only ask you for clarification when your specification is fully testable#No — these systems never stop to ask; they fill every gap with their most typical pattern.
+=Found rules fail silently — the system sounds equally confident whether its pattern truly applies or not#Correct — the answer looks the same either way, so only checking against your spec catches a failed pattern.
+~Confident answers are usually longer, and longer outputs are much more likely to be wrong#No — length says nothing about correctness; tone and length are not evidence either way.
+~A pattern-based system behaves deterministically, so one careful check is enough to confirm all of its future runs#No — these systems are typically probabilistic, so one good run proves nothing about the next.
+#### Tests why machine output needs checking against a specification (corpus §Why this matters for specifying, §Best Practices). Confident output is not verified output.
+}

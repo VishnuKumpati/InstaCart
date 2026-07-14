@@ -1,0 +1,67 @@
+{
+  "critic": "drift-critic",
+  "schema_version": "1.0",
+  "module": {
+    "slug": "1-understanding-computation",
+    "course_code": "M1",
+    "week_num": 1,
+    "topic_ids": ["1.1", "1.2", "1.3", "1.4"]
+  },
+  "generated_at": "2026-06-22T00:00:00Z",
+  "passed": true,
+  "findings_count": 4,
+  "hard_fails": [],
+  "soft_findings": [
+    {
+      "check": "terminology_consistency",
+      "severity": "soft",
+      "topic": "1.1",
+      "finding": "Topic 1.1 uses the term 'deterministic' as a descriptive adjective in section 5.4 (traffic light example: 'The process is deterministic') and section 8 (Best Practices: 'Distinguish deterministic from probabilistic early') before topic 1.2 formally defines the term. Section 5.5 of 1.1 does signal the forward reference ('You will explore deterministic systems and probabilistic systems in topics 1.2 and 1.3'), which partially mitigates the issue. No synonym drift; same word used. Soft flag only — forward use is intentional scaffolding, but authors should ensure the reading artifact does not over-rely on the undefined term before HITL #3."
+    },
+    {
+      "check": "no_duplicated_core_concepts",
+      "severity": "soft",
+      "topic_pair": ["1.3", "1.4"],
+      "finding": "Jaccard similarity of domain-specific nouns across topics 1.3 and 1.4 core concept sections is approximately 0.42, below the 0.6 hard threshold. However, topic 1.4 re-explains 'temperature' (section 5.3) and 'sampling' (section 5.1) at substantial length — both concepts were formally introduced in topic 1.3 (sections 5.4 and 5.7 respectively). Topic 1.4 does use the forward reference phrase 'In Topic 1.3 you were introduced to temperature,' which is correct attribution. The re-teaching is justified by 1.4's goal of applying these concepts mechanistically to LLMs, but authors should verify that the reading artifact for 1.4 does not duplicate the 1.3 reading's temperature or sampling explanations verbatim — it should apply them rather than re-teach them."
+    },
+    {
+      "check": "lab_activity_alignment",
+      "severity": "soft",
+      "topics": ["1.3", "1.4"],
+      "finding": "Both topics 1.3 (section 9) and 1.4 (section 9) assign work to 'AI Decision Journal — Entry #1.' Topic 1.3 asks for one sentence; topic 1.4 asks for two sentences using the terms 'probabilistic,' 'sampling,' and 'temperature.' These are additive contributions to the same journal entry, but the corpora do not make explicit that 1.4's task extends 1.3's rather than replaces it. In the reading artifacts, the instructions should clarify sequencing (e.g., 'add to your Entry #1') to avoid learner confusion about whether they are overwriting or appending."
+    },
+    {
+      "check": "audience_level_consistency",
+      "severity": "soft",
+      "topic": "1.4",
+      "finding": "Topic 1.4 uses the term 'prompt' (sections 5.1 intro, 5.4, 6, and 7) without a formal in-line definition. 'Prompt' does not appear in the concepts_introduced list of any prior topic in this module (1.1–1.3). Learners at the absolute-beginner level may understand the term colloquially, but it is not defined in the corpus and was not listed as a concept introduced by an earlier topic. This is a minor cold-term usage. Recommendation: add a one-sentence definition on first use in 1.4 ('a prompt is the question or instruction you type to an AI tool'), or add 'prompt' to the concepts_introduced list in the sequence index entry for 1.4."
+    }
+  ],
+  "checks": {
+    "terminology_consistency": {
+      "result": "pass_with_findings",
+      "detail": "Core terms (input/process/output, computation, defined steps, deterministic, probabilistic, sampling, temperature, output variation) are used consistently across all four topics. One soft finding: 'deterministic' used in 1.1 before its formal definition in 1.2. No synonym drift detected."
+    },
+    "prerequisites_respected": {
+      "result": "pass",
+      "detail": "1.1 has no prerequisites (position 1). 1.2 lists [1.1] (position 2). 1.3 lists [1.1, 1.2] (positions 1, 2). 1.4 lists [1.1, 1.2, 1.3] (positions 1, 2, 3). All prerequisite references point only to earlier-positioned topics. Each corpus section 2 correctly names the prerequisite topics and states which concepts it assumes known."
+    },
+    "learning_arc": {
+      "result": "pass",
+      "detail": "The union of LOs across 1.1–1.4 covers the full scope of the 'Understanding Computation' module for these four topics: (a) what computation is and the I/P/O model (1.1), (b) deterministic systems — predictability and reproducibility (1.2), (c) probabilistic systems — randomness, sampling, output variation, temperature (1.3), (d) the concrete AI mechanism — LLMs, token sampling, probability distribution, and temperature in practice (1.4). The arc progresses from abstract concept to concrete AI application, matching the narrative seed 'What is computation — deterministic vs probabilistic / Why AI gives different answers.' No uncovered facets within this module's scope."
+    },
+    "no_duplicated_core_concepts": {
+      "result": "pass_with_findings",
+      "detail": "All pairings except 1.3/1.4 are clearly distinct. The 1.3/1.4 Jaccard of domain nouns is ~0.42 (below the 0.6 threshold). However, 'temperature' and 'sampling' are re-explained in 1.4 after being introduced in 1.3. The re-explanation is mechanistically justified (applying to LLMs specifically) and uses attribution back to 1.3, but should not be reproduced verbatim in the reading artifacts."
+    },
+    "lab_activity_alignment": {
+      "result": "pass_with_findings",
+      "detail": "All four topic hands-on exercises align to the week-1 lab activities scoped to this module: 1.1 and 1.2 support 'draw flowcharts / swap with partner'; 1.3 and 1.4 support 'AI Decision Journal Entry #1.' The 'choose your domain / task tree / problem statement' lab activities are correctly handled by later topics (module 5) and are not expected here. One soft finding: dual assignment to Entry #1 across 1.3 and 1.4 without explicit sequencing language."
+    },
+    "audience_level_consistency": {
+      "result": "pass_with_findings",
+      "detail": "All four topics maintain an absolute-beginner register throughout. Depth profiles are all 'standard.' Topic 1.4 introduces the most technical content (LLM, token, probability distribution) but does so with clear in-line definitions and relatable analogies (text message autocomplete, card-drawing bag). One soft finding: 'prompt' used cold in 1.4 without formal definition or prior introduction in this module."
+    }
+  },
+  "verdict": "Module 1 passes drift review — coherent arc, consistent terminology, prerequisites respected, no hard duplications, lab alignment confirmed; 4 soft findings (1 terminology pre-use in 1.1, 1 concept re-teaching boundary in 1.3/1.4, 1 dual journal-entry assignment, 1 cold term 'prompt' in 1.4) require author attention before artifact generation."
+}

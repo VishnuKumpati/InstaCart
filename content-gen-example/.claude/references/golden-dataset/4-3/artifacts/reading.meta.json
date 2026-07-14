@@ -1,0 +1,10 @@
+{
+  "topic_id": "4.3",
+  "title": "Retrieval-Augmented Generation (RAG) — Giving AI Access to External Knowledge at Query Time",
+  "estimated_read_minutes": 11,
+  "word_count": 2194,
+  "generated_at": "2026-06-11T00:00:00Z",
+  "embeds_diagram": true,
+  "citations_used": [],
+  "sections": ["Overview", "Key Concepts", "Worked Example", "In Practice", "Key Takeaways"]
+}

@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "prerequisites": {
+    "meta_sidecar_present_and_valid": true,
+    "bias_defense_applied": true,
+    "meta_gift_desync": false,
+    "derived_positions": [3, 0, 2, 3, 0, 1],
+    "sidecar_positions": [3, 0, 2, 3, 0, 1]
+  },
+  "checks": {
+    "positional_bias": {
+      "passed": true,
+      "distribution": [2, 1, 1, 2],
+      "max_share": 0.333,
+      "threshold": 0.40,
+      "mcq_count": 6,
+      "short_answer_skipped": ["q7"]
+    },
+    "length_bias": {
+      "passed": true,
+      "longest_correct_rate": 0.0,
+      "baseline": 0.25,
+      "threshold": 0.40,
+      "per_question": {
+        "q1": { "correct_len": 90, "distractor_mean": 90.7, "longest_correct": false },
+        "q2": { "correct_len": 88, "distractor_mean": 84.3, "longest_correct": false },
+        "q3": { "correct_len": 40, "distractor_mean": 40.0, "longest_correct": false },
+        "q4": { "correct_len": 89, "distractor_mean": 84.3, "longest_correct": false },
+        "q5": { "correct_len": 94, "distractor_mean": 94.3, "longest_correct": false },
+        "q6": { "correct_len": 97, "distractor_mean": 90.0, "longest_correct": false }
+      }
+    },
+    "distractor_plausibility": {
+      "passed": true,
+      "absurd_rate": 0.0,
+      "threshold": 0.25,
+      "total_distractors": 18,
+      "weakest_questions": [],
+      "notes": "All 18 distractors map to corpus-named misconceptions: fine-tuning vs RAG confusion (q2, q5), search-engine-of-links (q4), whole-KB-in-prompt (q4), RAG-as-learning (q6), RAG-as-truth-machine (q6), step-order permutations (q3), temperature/context-window misattribution (q1 — both terms taught weeks 3). Scores 3-4 throughout; lowest is q2 'answer is lengthened' at 2-3."
+    },
+    "objective_coverage": {
+      "passed": true,
+      "learning_objectives_found": 6,
+      "uncovered_objectives": [],
+      "orphan_questions": [],
+      "mapping": {
+        "LO1_knowledge_problem": ["q1"],
+        "LO2_define_unpack_RAG": ["q2"],
+        "LO3_five_step_flow": ["q3", "q7"],
+        "LO4_trace_end_to_end": ["q4"],
+        "LO5_rag_vs_finetuning": ["q5"],
+        "LO6_what_rag_does_not_fix": ["q6"]
+      }
+    },
+    "beginner_fairness_scope": {
+      "passed": true,
+      "out_of_scope_question": [],
+      "jargon_in_stem": [],
+      "unfair_distractor": [],
+      "scope_probes": {
+        "agents_4_4": "absent — no question or option references agents",
+        "tool_use_4_5": "absent — no question or option references tool use",
+        "vector_db_internals": "absent — corpus mention-and-defers to Week 14; quiz stays at 'similarity matching' level taught in this topic"
+      },
+      "vocab_audit": "All stem/option vocabulary from this corpus or prior topics: temperature (3.6), context window (3.4), foundation model (4.1), fine-tuning (4.2), hallucination (3.9 via corpus framing). RAG, knowledge base, chunk, inject, grounding all defined in this corpus."
+    },
+    "gift_strict": {
+      "passed": true,
+      "notes": "Clean importable GIFT: $CATEGORY header matches gold-example pattern, ::id:: stem {..} blocks, single '=' per MCQ, per-answer '#' feedback, '####' general feedback, no unescaped special characters. Short-answer q7 conforms (=-only block with accepted variants: inject/injection/injecting), matching gold-example short-answer form (3-4 q6)."
+    },
+    "profile_conformance": {
+      "passed": true,
+      "profile": "deep",
+      "question_count": 7,
+      "allowed_range": [5, 7],
+      "include_short_answer_required": true,
+      "short_answer_present": true
+    }
+  },
+  "auto_correction_applied": { "shuffle_round_2": false },
+  "stray_files": "none — target dir contains only expected artifacts (quiz.gift, quiz.meta.json, reading.*, diagram.*)",
+  "verdict": "Pass — all bias / coverage / scope checks clean; max positional share 0.333, longest-correct rate 0.0, absurd rate 0.0, all 6 LOs covered, no out-of-scope content (agents/tool-use/vector-DB internals absent), strict GIFT valid, deep profile conformant (7 q incl. short answer).",
+  "at": "2026-06-11T00:00:00Z"
+}

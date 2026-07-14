@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "topic_id": "2.4",
+  "artifact": "artifacts/quiz.gift",
+  "sidecar": "artifacts/quiz.meta.json",
+  "prerequisites": {
+    "meta_sidecar_present_and_valid": true,
+    "bias_defense_applied": true,
+    "meta_gift_desync": false,
+    "notes": "Re-derived correct positions from .gift [3,2,0,0,2,1] match sidecar correct_position_distribution and per-question correct_position fields exactly."
+  },
+  "gift_strict": {
+    "passed": true,
+    "notes": "Clean importable GIFT: $CATEGORY header, ::id:: stems, exactly one '=' per MCQ, '#' per-answer feedback, '####' general feedback inside braces. No unescaped special characters (:, =, ~, #, {, }) in stems or answer text. 6 MCQ, 0 short-answer — matches standard profile (5-6 MCQ, include_short_answer=false)."
+  },
+  "checks": {
+    "positional_bias": {
+      "passed": true,
+      "per_question_positions": [3, 2, 0, 0, 2, 1],
+      "distribution": [2, 1, 2, 1],
+      "max_share": 0.333,
+      "threshold": 0.40
+    },
+    "length_bias": {
+      "passed": true,
+      "longest_correct_rate": 0.0,
+      "baseline": 0.25,
+      "threshold": 0.40,
+      "notes": "No question has correct answer > 1.20x mean distractor length (feedback stripped). Closest: Q6 correct 104 chars vs 1.2x distractor mean 116."
+    },
+    "distractor_plausibility": {
+      "passed": true,
+      "absurd_rate": 0.0,
+      "threshold": 0.25,
+      "weakest_questions": [],
+      "notes": "All 18 distractors score 3-4: each encodes a corpus-grounded beginner misconception (certainty=pattern, written-vs-found confusion, loop-step confusion, determinism of found rules, stale-rule vs overgeneralisation, length=correctness)."
+    },
+    "objective_coverage": {
+      "passed": true,
+      "uncovered_objectives": [],
+      "orphan_questions": [],
+      "mapping": {
+        "LO1 pattern definition": ["2.4-Q1"],
+        "LO2 written vs found rules": ["2.4-Q2"],
+        "LO3 three-step loop / generalisation": ["2.4-Q3"],
+        "LO4 everyday found-rule systems": ["2.4-Q4"],
+        "LO5 found rules can be wrong -> check against spec": ["2.4-Q5", "2.4-Q6"]
+      }
+    },
+    "beginner_fairness_scope": {
+      "passed": true,
+      "jargon_in_stem": [],
+      "out_of_scope_question": [],
+      "unfair_distractor": [],
+      "notes": "No ML/training/neural/model mechanism language anywhere (week-3 boundary respected — quiz stays in the corpus's 'rules found in repeated data' framing). Prior-vocab usage limited to week-1 (deterministic/probabilistic, algorithm) and 2.1-2.3 (specification, testable, failure conditions). 'Generalisation' and 'overgeneralisation' defined in this corpus. All stems plain-language, answerable from this topic alone."
+    }
+  },
+  "auto_correction_applied": { "shuffle_round_2": false },
+  "gold_reference": ".claude/references/gold-examples/quiz/2-1-what-makes-a-good-specification.quiz.gift — structure, feedback density, and misconception-grade distractors match the gold bar.",
+  "verdict": "Pass — all bias / plausibility / coverage / scope checks clean.",
+  "at": "2026-06-11T00:00:00Z"
+}

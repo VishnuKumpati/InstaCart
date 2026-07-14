@@ -1,0 +1,89 @@
+{
+  "$comment": "Per-step context cost estimates (main-context tokens). Subagent-dispatched steps split cost into 'main' (dispatch + return-summary that stays in the parent session) and 'subagent' (consumed in the child task, does NOT count against main). Adjust as we learn from real runs.",
+  "thresholds": {
+    "green_max_pct": 25,
+    "yellow_max_pct": 40,
+    "red_min_pct": 60,
+    "$comment": "Below green_max_pct = safe. Between green and yellow = recommend /save-session at next HITL gate. Above red_min_pct = block subagent dispatch until /save-session."
+  },
+  "context_window_total_tokens": 200000,
+  "steps": {
+    "curriculum_ingest": {
+      "main": 2000,
+      "subagent": 0,
+      "notes": "Pure Python script run via Bash; agent only reads summary."
+    },
+    "topic_resources_capture": {
+      "main": 1500,
+      "subagent": 0,
+      "notes": "AskUserQuestion exchange + small JSON write."
+    },
+    "topic_corpus_build": {
+      "main": 8000,
+      "subagent": 35000,
+      "notes": "Subagent reads sequence.md + prior corpora + external resources, generates 11-section markdown. Main session sees only the summary + section IDs."
+    },
+    "corpus_critic": {
+      "main": 6000,
+      "subagent": 18000,
+      "notes": "Reads corpus + sequence.md + topic.resources.json, emits structured critic report."
+    },
+    "topic_corpus_review": {
+      "main": 5000,
+      "subagent": 0,
+      "notes": "Section-by-section HITL via AskUserQuestion. Main context burns proportional to number of sections needing revision."
+    },
+    "generate_reading": {
+      "main": 6000,
+      "subagent": 30000,
+      "notes": "Reading subagent writes 10\u201330 min reading grounded in corpus + resources. Main sees only headline + file path."
+    },
+    "reading_critic": {
+      "main": 5000,
+      "subagent": 16000
+    },
+    "generate_quiz": {
+      "main": 4000,
+      "subagent": 12000
+    },
+    "quiz_critic": {
+      "main": 4000,
+      "subagent": 8000,
+      "notes": "Runs positional + length bias checks; defensively reshuffles correct-answer positions."
+    },
+    "generate_diagram": {
+      "main": 5000,
+      "subagent": 14000,
+      "notes": "Via Excalidraw MCP \u2014 creates view + checkpoint; PNG export is part of MCP response."
+    },
+    "diagram_critic": {
+      "main": 3000,
+      "subagent": 6000
+    },
+    "module_drift_critic": {
+      "main": 3000,
+      "subagent": 25000,
+      "notes": "Parallel pass across all topics in the just-completed module. Returns a compact diff/summary."
+    },
+    "course_drift_critic": {
+      "main": 4000,
+      "subagent": 40000,
+      "notes": "Runs across all modules in a course (potentially spanning multiple weeks). Checks weekly time-budget compliance (90 min target per week) plus cross-module terminology consistency."
+    }
+  },
+  "recommendations_at_gate": {
+    "$comment": "When the user hits a HITL gate, the context-budget-advisor picks a recommendation based on (current_pct + projected_next_step.main / context_window_total_tokens * 100).",
+    "below_green": {
+      "action": "continue",
+      "message": "Plenty of headroom."
+    },
+    "in_yellow": {
+      "action": "soft_checkpoint",
+      "message": "Approaching 40%. /save-session here would let you resume cleanly in a new session if needed."
+    },
+    "above_red": {
+      "action": "hard_checkpoint",
+      "message": "Past 60%. /save-session now \u2014 next subagent dispatch could push us past where the main session can recover."
+    }
+  }
+}

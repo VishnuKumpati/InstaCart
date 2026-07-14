@@ -1,0 +1,10 @@
+{
+  "topic_id": "2.4",
+  "title": "Pattern recognition — how machines find rules in repeated data",
+  "estimated_read_minutes": 8,
+  "word_count": 1592,
+  "generated_at": "2026-06-11T00:00:00Z",
+  "embeds_diagram": true,
+  "citations_used": [],
+  "sections": ["Overview", "Key Concepts", "Worked Example", "In Practice", "Key Takeaways"]
+}

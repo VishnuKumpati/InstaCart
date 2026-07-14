@@ -1,0 +1,15 @@
+{
+  "type": "course",
+  "code": "M1",
+  "title": "Computational Thinking",
+  "slug": "m1-computational-thinking",
+  "weeks_range": "1–2",
+  "total_hours": "6 hrs",
+  "scope": "Decomposition, abstraction, pseudocode, specification writing.",
+  "source_label": "M1 – Computational Thinking",
+  "week_nums": [
+    1,
+    2
+  ],
+  "assessments": []
+}

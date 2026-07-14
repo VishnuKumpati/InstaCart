@@ -1,0 +1,46 @@
+$CATEGORY: CIT/M1/week-2/2.1-what-makes-a-good-specification-testable-bounded-observable
+
+::2.1-Q1:: A student writes the specification "Make this article easier to read." Which property does this specification most clearly violate?
+{
+=Testable — there is no measurable criterion you can check after the task runs#Correct — "easier to read" is subjective and unmeasured, so you cannot decide pass or fail.
+~Bounded — the specification does not set any limits on scope or format#Plausible, but the primary failure is the absence of a success criterion, not missing scope limits.
+~Actionable — the specification gives the system no concrete starting point#Plausible, but the spec does name a direction (easier); the deeper failure is nothing to check against.
+~Observable — the output cannot be directly inspected#The revised article can be read, so output is visible; the problem is there is nothing to compare it against.
+#### Tests identification of the testable property (corpus §Testable). A spec that names no criterion cannot be evaluated regardless of how visible the output is.
+}
+
+::2.1-Q2:: A developer writes\: "Translate only the first two paragraphs of this document into French; do not translate headings." Which property does this specification most clearly satisfy?
+{
+~Testable — it includes a measurable success criterion that can be checked after the task runs#A word-count or content check is still needed; limiting scope alone does not create a testable criterion.
+=Bounded — it sets explicit limits on scope by position and element type#Correct — the spec restricts translation to two paragraphs and excludes headings, preventing scope creep.
+~Actionable — it gives the system enough concrete detail to begin executing without assumptions#Actionable relates to detail for execution; scope limits are the defining feature of boundedness, not actionability.
+~Observable — it produces output that can be directly inspected and compared#Observable describes output format; this spec's key strength is limiting what gets processed, not how output is presented.
+#### Tests identification of the bounded property (corpus §Bounded). Naming position and element type prevents the system from wandering outside the intended task.
+}
+
+::2.1-Q3:: Which statement best explains why testability matters specifically for probabilistic AI systems?
+{
+~A deterministic system always produces the same output, so testing any single run is enough to confirm the spec works#This describes deterministic systems, not probabilistic AI — the very distinction that makes testability critical.
+~Testability prevents the AI from asking the user for clarification when the instruction is unclear#AI systems do not ask for clarification; they fill gaps silently. Testability is about checking output, not preventing questions.
+=Because a probabilistic AI may produce a different output on every run, you need a repeatable criterion to judge each result independently#Correct — without a fixed criterion, a good run looks identical to a lucky run, and you cannot detect when the spec fails.
+~Testability ensures the specification is short enough for the AI to process without exceeding its context limit#Length limits relate to context windows, not testability; testability is about success criteria, not prompt length.
+#### Tests understanding of why testability matters for probabilistic AI (corpus §Testable, §Common Misconceptions). One good result does not confirm a good spec.
+}
+
+::2.1-Q4:: A specification reads\: "Rewrite this support reply at a Grade 8 reading level; limit the response to 60 words; output only the rewritten text with no explanation." Which property is still missing?
+{
+~Testable — the specification has no measurable criterion you can check after the task runs#Word count (60 words) and reading level (Grade 8) are both checkable criteria, so testability is present.
+~Observable — the output format is not specified clearly enough to compare against the criterion#"Output only the rewritten text" makes the output directly inspectable; observability is satisfied.
+~Actionable — the system does not have enough detail to begin executing immediately#Grade 8 level, 60-word limit, and output-only format give a clear starting condition; actionability is present.
+=Bounded — the specification sets no explicit limit on what content can be changed or preserved#Correct — nothing prevents the AI from altering the deadline, removing an apology, or changing other critical content.
+#### Tests evaluation of a multi-property spec (corpus §Actionable worked example). Passing three properties does not mean the fourth is free; each must be addressed explicitly.
+}
+
+::2.1-Q5:: A colleague argues\: "If the AI gives me a great result the first time, my specification must be good enough." Which response is most accurate?
+{
+=A single good result does not confirm the specification is sound — a probabilistic AI may produce a different output on the next run with the same input#Correct — good results can occur by chance; only a testable spec lets you verify success consistently across runs.
+~One good result is sufficient evidence that the specification satisfies all four properties, since the AI met the intended goal#This confuses a lucky output with a reliable spec; probabilistic systems vary between runs, so one success is not proof.
+~The specification is probably good if the output is long and detailed, since longer outputs indicate the AI understood the task#Output length is not evidence of spec quality; a verbose but wrong output still fails the task.
+~The specification is adequate as long as the AI did not ask for clarification, confirming it understood the instruction#AI systems never ask for clarification — they silently fill any gaps, so the absence of questions proves nothing about quality.
+#### Tests the misconception that one good result validates a spec (corpus §Common Misconceptions). Probabilistic AI (1.3) means variance is expected; a good spec must produce acceptable outputs consistently.
+}

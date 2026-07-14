@@ -1,0 +1,47 @@
+{
+  "artifact": "corpus",
+  "topic_id": "4.3",
+  "passed": true,
+  "checks": {
+    "required_sections": {
+      "passed": true,
+      "detail": "Sections 3 (Learning Objectives, 6 verb-led bullets), 4 (Introduction, 3 paragraphs), 5 (Core Concepts, ~2900 words with per-concept sub-headers), 10 (Key Takeaways, 6 bullets) all present and non-trivial. Section 11 (Next Steps) placeholder is system-derived and optional — allowed."
+    },
+    "citation_density": {
+      "passed": true,
+      "mode": "narrative_seed_only",
+      "detail": "resources_source=narrative_seed_only (resource_count: 0). Hard citation-density check skipped per skill rule. Zero [N] markers present, so no fabricated citations.",
+      "soft_findings": [
+        {
+          "code": "low_grounding",
+          "severity": "soft",
+          "message": "Corpus built from narrative seed only, no external citations. Surface at HITL #3; rolls up at HITL #4."
+        }
+      ]
+    },
+    "sequence_drift": {
+      "passed": true,
+      "forward_referenced_terms": [],
+      "detail": "All reused vocabulary resolves to prior topics: tokens/training/inference/context window (3.4), embeddings (3.4), parameters/weights (3.5), temperature note (3.6, explicitly optional in Prerequisites), hallucination (3.9), foundation models (4.1), fine-tuning (4.2). New terms (RAG, retrieval, knowledge base, chunk, similarity matching, inject, grounding, query) are all introduced and defined within this topic's headline. Deferred names — agents (4.4), tool use (4.5), vector databases (Week 14) — appear only as bare names with explicit pointers."
+    },
+    "length_sanity": {
+      "passed": true,
+      "word_count": 5065,
+      "profile": "deep",
+      "range": [5000, 6000],
+      "detail": "5065 words, inside the deep range."
+    },
+    "topic_scope": {
+      "passed": true,
+      "out_of_scope_concepts": [],
+      "detail": "Headline (the five-step RAG flow) carries every section: knowledge problem -> prompt-as-door -> knowledge base/chunking -> meaning-based retrieval -> five-step flow -> grounding -> misconceptions -> RAG vs fine-tuning -> stack placement. Mention-and-defer FORM verified: 'vector databases' (Core Concepts, 'its own subject... Week 14') and 'agents and tool use' ('those are Topics 4.4 and 4.5, so leave them there for now') are bare names + pointers — never bolded, no defining clause or appositive. Vector-database internals (storage, indexing, efficient search) are explicitly cut and deferred. Chunk-size trade-off and per-step failure-mode table stay at the conceptual level appropriate to the deep profile. No assessment references; 'open-book exam' / 'bring the textbook into the exam' are analogies, not assessment mentions."
+    },
+    "beginner_readability": {
+      "passed": true,
+      "findings": [],
+      "detail": "Average sentence length 15.4 words across Introduction + Core Concepts (target <25). Every non-everyday term gets a plain-language meaning at first use, analogy-first per the audience baseline (librarian/filing-cabinet/meaning-map/open-book-exam). Acronyms spelled out (RAG, LLM re-expanded in Prerequisites). No paragraph introduces 3+ new terms — the three-word RAG unpack is a formatted list with each word defined sequentially. Hedging count 1 ('arguably', Real-World Patterns) — under threshold. Borderline cold terms ('anti-pattern' in Best Practices, 'vetted corpus' in Real-World Patterns) total 2, within the ~2 allowance — not escalated."
+    }
+  },
+  "verdict": "PASS. Deep-profile corpus for 4.3 lands inside the 5000-6000 word band (5065), all four required sections present and substantive, zero forward references, and the headline RAG flow (query -> embed -> retrieve -> inject -> respond) carries the entire corpus. Defer discipline is exemplary: agents (4.4), tool use (4.5), and vector databases (Week 14) appear only as bare names with topic/week pointers — no bolding, no defining clauses. Readability is strong (15.4-word average sentences, analogy-first definitions, no jargon dumps). One soft finding only: low_grounding — corpus built from narrative seed with zero external citations, which is EXPECTED in narrative_seed_only mode and carries no fake [N] markers; it must surface at HITL #3 and roll up at HITL #4.",
+  "at": "2026-06-11T00:00:00Z"
+}

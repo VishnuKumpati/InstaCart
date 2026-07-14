@@ -1,0 +1,54 @@
+{
+  "topic_id": "1.8",
+  "generated_at": "2026-06-11T05:47:42.945475+00:00",
+  "format": "gift",
+  "question_count": 6,
+  "$bias_defense_applied": true,
+  "$shuffle_seed": "sha256('1.8')[:8]=0xa97b042d xor salt=1",
+  "correct_position_distribution": [
+    3,
+    1,
+    0,
+    2,
+    0,
+    3
+  ],
+  "questions": [
+    {
+      "id": "1.8-Q1",
+      "type": "mcq",
+      "objective_ref": "Explain what a flowchart is and why it uses standard shapes instead of free-form drawings.",
+      "correct_position": 3
+    },
+    {
+      "id": "1.8-Q2",
+      "type": "mcq",
+      "objective_ref": "Identify the five core flowchart symbols \u2014 terminator, process, input/output, decision, and arrow \u2014 and state what each one means.",
+      "correct_position": 1
+    },
+    {
+      "id": "1.8-Q3",
+      "type": "mcq",
+      "objective_ref": "Read an unfamiliar flowchart and trace the path from Start to End, including through decisions and loops.",
+      "correct_position": 0
+    },
+    {
+      "id": "1.8-Q4",
+      "type": "mcq",
+      "objective_ref": "Read an unfamiliar flowchart and trace the path from Start to End, including through decisions and loops.",
+      "correct_position": 2
+    },
+    {
+      "id": "1.8-Q5",
+      "type": "mcq",
+      "objective_ref": "Draw a flowchart for an everyday task, with exactly one Start, at least one decision, and labelled branch arrows.",
+      "correct_position": 0
+    },
+    {
+      "id": "1.8-Q6",
+      "type": "mcq",
+      "objective_ref": "Compare flowcharts and pseudocode, and choose which form fits a given situation.",
+      "correct_position": 3
+    }
+  ]
+}

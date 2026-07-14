@@ -1,0 +1,53 @@
+{
+  "artifact": "corpus",
+  "topic_id": "2.4",
+  "cycle": 2,
+  "corpus_path": "/Users/jestercharles/Foundations-of-Responsible-AI-Engineering/tmp/eval-run-3/2-4/new/topic_corpus.md",
+  "passed": true,
+  "checks": {
+    "required_sections": {
+      "passed": true,
+      "detail": "Sections 3 (109w), 4 (204w), 5 (1590w), 10 (126w) all present and above thresholds (>=50 / >=100 for section 5). No placeholder strings in required sections."
+    },
+    "citation_density": {
+      "passed": true,
+      "mode": "narrative_seed_only",
+      "detail": "resources_source=narrative_seed_only (resource_count: 0); citation-density hard check skipped per policy. Zero [N] markers found, so no fabricated citations.",
+      "findings": [
+        {
+          "code": "low_grounding",
+          "severity": "soft",
+          "detail": "Corpus built from narrative seed only, no external citations. Surface at HITL #3; rolls up at HITL #4."
+        }
+      ]
+    },
+    "sequence_drift": {
+      "passed": true,
+      "forward_referenced_terms": [],
+      "detail": "All reused technical terms trace to prior topics: deterministic (1.2), probabilistic (1.3), AI (1.4), pseudocode (1.7), algorithm/finite/definite/input/output (1.9, 1.11), everyday-algorithm examples incl. autocomplete/spam/recommendations (1.10), specification/testable/bounded/observable (2.1), 'make it better' bad-spec example (2.2), inputs/expected outputs/failure conditions (2.3). New terms defined here (pattern, pattern recognition, generalisation, overgeneralisation) sit inside this topic's headline. Forward pointers — 'machine learning' (Week 3, line 93) and 'returns in topic 2.8' (line 158) — are one-sentence named-and-deferred pointers, allowed form."
+    },
+    "length_sanity": {
+      "passed": true,
+      "word_count": 2980,
+      "profile": "standard",
+      "range": [3000, 4400],
+      "detail": "2980 words is 0.7% below the standard floor of 3000 — well inside the 30% tolerance (hard floor 2100). Marginal shortfall caused by the cycle-1 revision trimming the line-93 sentence; pass."
+    },
+    "topic_scope": {
+      "passed": true,
+      "out_of_scope_concepts": [],
+      "detail": "Cycle-1 scope_creep finding RESOLVED: line 93 is now the bare-name-plus-pointer form ('You'll meet machine learning properly in Week 3.') — no defining clause, no bolding, exactly the mandated mention-and-defer form. Strict week-3 mechanism sweep: zero occurrences of training/model/weights/features/classifier/dataset/neural network/deep learning/LLM/GenAI vocabulary. The rule-from-repetition mechanism ('How repeated data becomes a rule') and the held-back-case test (Implementation step 4) are taught generically, in everyday terms, squarely inside the headline 'how machines find rules in repeated data' — no ML technique is named or defined. 'Learned' appears only in colloquial everyday use (lines 132, 167), not as a technical term. No assessment references anywhere in the corpus."
+    },
+    "beginner_readability": {
+      "passed": true,
+      "findings": [],
+      "detail": "Every new term bolded and plain-defined on first use (pattern, pattern recognition, generalisation, overgeneralisation), concrete example before abstraction throughout (2-4-6-8 sequence, chai stall, junk-mail pile). No paragraph introduces 3+ new terms. Avg sentence length 15.4 words across Introduction + Core Concepts (109 sentences); 0 hedging phrases. 0 distinct soft findings — no escalation."
+    }
+  },
+  "findings_summary": {
+    "hard": [],
+    "soft": ["low_grounding (1)"]
+  },
+  "verdict": "PASS — cycle-2 revision resolves the single cycle-1 hard finding: the line-93 'machine learning' mention is now the bare-name-plus-Week-3-pointer form with no defining clause, satisfying scope_discipline's mention-and-defer rule. Strict mechanism sweep confirms zero ML/week-3 vocabulary leakage (no training/model/weights/neural/LLM terms; mechanism taught generically within the headline 'how machines find rules in repeated data'). No assessment references. Zero forward references; readability clean (avg 15.4 w/sentence, 0 hedges, all new terms defined on first use). Word count 2980 is 0.7% under the standard 3000 floor — inside the 30% tolerance, noted only. One soft finding carries forward: low_grounding (narrative_seed_only, zero citations — expected for this mode) for HITL #3/#4 visibility.",
+  "at": "2026-06-11T00:00:00Z"
+}

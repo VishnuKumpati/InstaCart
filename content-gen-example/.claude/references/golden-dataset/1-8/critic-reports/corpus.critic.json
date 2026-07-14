@@ -1,0 +1,55 @@
+{
+  "artifact": "corpus",
+  "topic_id": "1.8",
+  "corpus_path": "/Users/jestercharles/Foundations-of-Responsible-AI-Engineering/tmp/eval-run-3/1-8/new/topic_corpus.md",
+  "passed": true,
+  "checks": {
+    "required_sections": {
+      "passed": true,
+      "detail": "Learning Objectives, Introduction, Core Concepts, Key Takeaways all present and non-trivial; Core Concepts well over the 100-word floor. No placeholder strings in required sections."
+    },
+    "citation_density": {
+      "passed": true,
+      "mode": "narrative_seed_only",
+      "detail": "resources_source=narrative_seed_only (resource_count: 0) — citation-density hard check skipped per skill. Zero [N] markers present, so no fabricated citations. Soft finding low_grounding emitted for HITL #3/#4 visibility.",
+      "findings": [
+        {
+          "code": "low_grounding",
+          "severity": "soft",
+          "detail": "Corpus built from narrative seed only; no external citations. Expected for this mode; surfaces at HITL #3 and rolls up at HITL #4."
+        }
+      ]
+    },
+    "sequence_drift": {
+      "passed": true,
+      "forward_referenced_terms": [],
+      "detail": "All new technical terms (flowchart, terminator, process, input/output, decision, flowline, branch, loop, tracing) are introduced by this topic. Reused vocab — decomposition (1.5), abstraction (1.6), pseudocode/IF-OTHERWISE/REPEAT (1.7) — is prior-sequence vocab. No algorithm-property vocabulary (1.9-1.11): the word 'algorithm' never appears; loop-exit discussion stays in chart-reading framing. No programming-language syntax anywhere."
+    },
+    "length_sanity": {
+      "passed": true,
+      "word_count": 3199,
+      "profile": "standard",
+      "range": [3000, 4400],
+      "detail": "3199 words, inside the standard 3000-4400 band."
+    },
+    "topic_scope": {
+      "passed": true,
+      "out_of_scope_concepts": [],
+      "detail": "Every Core Concepts / Implementation / Real-World Patterns subsection serves the headline (shapes, arrows, reading, drawing, flowchart-vs-pseudocode). Branch/loop content is taught strictly as flowchart notation, not as algorithm properties. Mention-and-defer FORM clean: no bolded or appositive-defined deferred concepts (the Excalidraw appositive names a lab tool, not a downstream concept). No assessment IDs, due weeks, or weights in prose."
+    },
+    "beginner_readability": {
+      "passed": true,
+      "findings": [
+        {
+          "code": "undefined_terms",
+          "severity": "info",
+          "terms": ["bugs (line 76)", "anti-patterns (line 194)"],
+          "detail": "Two near-everyday technical terms used without explicit definition — at, not over, the ~2 cold-term threshold, so no soft-fail. Optional polish for the builder."
+        }
+      ],
+      "detail": "Every load-bearing term gets a plain-language definition on first use (flowchart, branch, tracing, all five shapes). Five-shape introduction uses the mandated table + per-term plain-language list, not a jargon dump. Register is plain and confident; sentences short; zero hedging phrases; analogies (road signs, board game, map) lead before abstractions. 0 distinct soft findings — well under the 3-finding hard-fail escalation."
+    }
+  },
+  "verdict": "PASS. Corpus stays exactly on the 1.8 headline (flowchart shapes + arrows) at standard depth (3199 words, in band). No forward references into algorithm properties (1.9-1.11) and no programming-language syntax. Mention-and-defer form is clean — no bolded or clause-defined deferred concepts. No assessment references in prose. narrative_seed_only mode: zero citations expected, none fabricated; soft low_grounding finding carried forward to HITL #3/#4. Readability is strong for the fresher-zero-background baseline; only info-level note is two borderline cold terms ('bugs', 'anti-patterns').",
+  "at": "2026-06-11T00:00:00Z"
+}

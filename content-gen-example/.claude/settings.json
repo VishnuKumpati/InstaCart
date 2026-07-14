@@ -1,0 +1,49 @@
+{
+  "$schema_note": "Project-level Claude Code settings for the CIT content-generation workflow. Loaded for every teammate who opens this repo. REQUIRES Python 3.8+ reachable on PATH as `python` — every hook/statusline/script below is launched that way. There is no python3/py fallback; if `python` is missing the hooks fail silently (open), so the HITL gate-router stops enforcing without warning. If your machine only ships python3, alias or symlink it to `python`. See CLAUDE.md 'Runtime prerequisite'.",
+  "statusLine": {
+    "type": "command",
+    "command": "python .claude/statusline.py"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/session_start.py"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python .claude/hooks/pre_command_router.py"
+          }
+        ]
+      }
+    ]
+  },
+  "env": {
+    "CIT_CONTENT_ROOT": "content",
+    "CIT_CURRICULUM_SEQUENCE": "content/curriculum/sequence.md",
+    "CIT_CURRICULUM_INDEX": "content/curriculum/sequence.index.json",
+    "CIT_CONTEXT_BUDGET_CONFIG": ".claude/config/context-budget.json",
+    "CIT_ARTIFACT_MIX_CONFIG": ".claude/config/artifact-mix.json",
+    "CIT_CHECKPOINTS_DIR": ".claude/checkpoints",
+    "CIT_CAVEMAN_CHECK": ".claude/scripts/caveman_check.py",
+    "CIT_SESSION_CHECKPOINT": ".claude/scripts/session_checkpoint.py"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(python .claude/statusline.py)",
+      "Bash(python .claude/scripts/*)",
+      "Bash(python .claude/hooks/*)",
+      "Bash(python tools/curriculum_ingest.py:*)"
+    ]
+  }
+}

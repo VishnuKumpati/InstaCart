@@ -1,0 +1,69 @@
+{
+  "artifact": "reading",
+  "topic_id": "1.8",
+  "reading_path": "/Users/jestercharles/Foundations-of-Responsible-AI-Engineering/tmp/eval-run-3/1-8/new/artifacts/reading.md",
+  "corpus_path": "/Users/jestercharles/Foundations-of-Responsible-AI-Engineering/tmp/eval-run-3/1-8/new/topic_corpus.md",
+  "profile": "standard",
+  "mode": "narrative_seed_only",
+  "passed": true,
+  "checks": {
+    "format_discipline": {
+      "passed": true,
+      "frontmatter_present": false,
+      "meta_sidecar": "present and valid (word_count, estimated_read_minutes, citations_used, sections)",
+      "sections": "Overview, Key Concepts, Worked Example, In Practice, Key Takeaways — References correctly omitted (zero citations, narrative_seed_only)"
+    },
+    "length": {
+      "passed": true,
+      "sidecar_word_count": 1599,
+      "raw_wc_with_markup": 1681,
+      "target_word_range": [1200, 1600],
+      "read_minutes_at_230wpm": 7.0,
+      "target_minute_range": [6, 8],
+      "note": "At the top edge of the standard band; prose count (sidecar 1599) is in range — the 1681 raw figure includes table markup, alt text, and headings. Watch on revision: any added prose tips it over."
+    },
+    "citations": {
+      "passed": true,
+      "note": "resource_count=0, citations_used=[], References omitted — correct for narrative_seed_only mode."
+    },
+    "forward_references": {
+      "passed": true,
+      "note": "Only prior vocab used: decomposition (1.5), abstraction (1.6), pseudocode/IF-OTHERWISE/REPEAT (1.7). No algorithm properties (1.9+), no code syntax. 'Bug' avoided — dead end glossed inline as 'a mistake in your logic'. Excalidraw introduced with a plain gloss."
+    },
+    "faithfulness": {
+      "passed": true,
+      "sampled_assertions": 11,
+      "unsupported": 0,
+      "note": "Five-shape table, road-signs analogy, branch/loop/tracing definitions, vs-pseudocode table, 8-step drawing method, In Practice items, and Key Takeaways all trace to corpus. Worked Example trace (Start → Switch kettle on → Water boiled? → Wait 30s loop → Pour → Serve → End) verified against diagram.mmd node-for-node."
+    },
+    "beginner_readability": {
+      "passed": true,
+      "findings": [],
+      "note": "Every term bold-defined at first use (flowchart, branch, tracing, dead end); five shape names introduced via table per formatting standards, each with plain meaning. Concrete-first throughout (tea chart, milk-in-fridge, road signs). No hedging, short sentences, 'you' register."
+    },
+    "formatting": {
+      "passed": true,
+      "findings": [],
+      "note": "No wall-of-text (max ~3-sentence paragraphs). Procedures numbered (reading method, 8-step drawing method). Inline examples inside Key Concepts, not deferred. Comparison tables for shapes, vs-pseudocode, and Do/Don't. Why-does-this-matter posed-and-answered inline."
+    },
+    "assessment_reference": {
+      "passed": true,
+      "occurrences": [],
+      "note": "Grep for assessment IDs, due weeks, grade weights: zero hits."
+    },
+    "diagram_embed": {
+      "passed": true,
+      "inline_in_key_concepts": true,
+      "embed_line": 25,
+      "png_exists": true,
+      "sidecar_embeds_diagram": true
+    },
+    "scope": {
+      "passed": true,
+      "findings": [],
+      "note": "Stays on the headline (flowchart shapes, reading, drawing). No algorithm properties, no code, no tool-depth beyond a one-line Excalidraw pointer. Abstraction reuse ('collapse a sub-task into one rectangle') is prior-topic vocab, not new teaching."
+    }
+  },
+  "findings": [],
+  "verdict": "PASS. All hard and soft checks clear with zero findings. Clean H1 (no frontmatter), exact six-section template with References correctly omitted under narrative_seed_only (zero citations). Length in band at the upper edge (sidecar 1599 words / 1200-1600; ~7.0 min at 230 wpm vs 6-8 target). Diagram embedded inline in Key Concepts (line 25), ./diagram.png exists, sidecar embeds_diagram=true, and the Worked Example trace matches the rendered chart node-for-node. No forward references beyond 1.1-1.7 vocab, no assessment IDs/weeks/weights in prose, 11/11 sampled assertions corpus-supported. Meets the gold bar set by 2-1-what-makes-a-good-specification (define-then-example structure, inline good/bad concreteness, beginner register); notably it avoids the assessment-reference defect flagged in gold notes."
+}

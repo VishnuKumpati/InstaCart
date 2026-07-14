@@ -1,0 +1,53 @@
+{
+  "topic_id": "3.6",
+  "generated_at": "2026-06-11T00:00:00Z",
+  "format": "gift",
+  "question_count": 7,
+  "$bias_defense_applied": true,
+  "$shuffle_seed": "sha256('3.6') mod 2^32 XOR salt 3 = 2763389757",
+  "correct_position_distribution": [0, 1, 2, 2, 1, 3],
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "objective_ref": "Explain in plain language why an LLM can give two different answers to the exact same question, using the words probability distribution, sampling, and temperature correctly.",
+      "correct_position": 0
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "objective_ref": "Describe what happens in a single token-picking step: scores in, percentages out, one token drawn.",
+      "correct_position": 1
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "objective_ref": "Contrast greedy decoding (always pick the top token) with sampling (draw a token by weighted chance), and state one strength and one weakness of each.",
+      "correct_position": 2
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "objective_ref": "Predict how raising or lowering the temperature setting changes a model's output, and pick a sensible temperature for a given task (for example: a legal summary versus a poem).",
+      "correct_position": 2
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "objective_ref": "Explain why factual questions tend to get consistent answers while creative questions vary widely, using the idea of sharp versus flat probability distributions.",
+      "correct_position": 1
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "objective_ref": "Identify two common misunderstandings about temperature — that low temperature guarantees truth, and that temperature 0 guarantees perfectly identical answers.",
+      "correct_position": 3
+    },
+    {
+      "id": "q7",
+      "type": "short_answer",
+      "objective_ref": "Contrast greedy decoding (always pick the top token) with sampling (draw a token by weighted chance), and state one strength and one weakness of each.",
+      "correct_position": null
+    }
+  ]
+}

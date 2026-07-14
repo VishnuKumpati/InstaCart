@@ -1,0 +1,56 @@
+$CATEGORY: CIT/M2/week-4/4.3-retrieval-augmented-generation
+
+::q1:: A foundation model is asked about a company policy that was updated last week. Why can it not answer correctly on its own? {
+~It is built to refuse questions that involve private company information for privacy reasons.#No — the model does not detect or refuse private topics; it simply never learned them, so it may guess instead.
+~Its temperature setting makes recently changed topics too unlikely to appear in answers.#No — temperature affects how varied the wording is, not which facts the model knows.
+~Its context window is too small to hold any document that was written after training ended.#No — the context window limits how much text fits in one prompt; it says nothing about when a document was written.
+=Its knowledge was fixed when training ended, so a change made last week was never learned.#Correct — training happens once and then the parameters are frozen; anything after that cutoff is simply not in the model.
+#### Tests the knowledge problem RAG solves — frozen training-time knowledge that cannot see recent or private information (corpus, The knowledge problem).
+}
+
+::q2:: In the name Retrieval-Augmented Generation, what exactly does the word "augmented" refer to? {
+=The prompt is enriched — the model receives the question plus retrieved supporting text.#Correct — the model never gets the bare question; retrieved passages are added to the prompt before it answers.
+~The model's parameters are expanded by extra training on the company's own documents.#No — that describes fine-tuning; RAG never touches the model's parameters.
+~The answer is lengthened so that it repeats every chunk stored in the knowledge base.#No — only a few relevant chunks are used, and the answer is a direct response, not a dump of the knowledge base.
+~The knowledge base is enlarged automatically every time a user asks a new question.#No — the knowledge base is prepared ahead of time; asking questions does not add documents to it.
+#### Tests the definition of RAG by unpacking "augmented" — the prompt, not the model or the knowledge base, is what gets enriched (corpus, the key insight and RAG definition).
+}
+
+::q3:: Which option lists the five steps of the RAG flow in the correct order? {
+~Query, retrieve, embed, inject, respond.#No — embedding comes before retrieval; the question must become an embedding before similarity matching can find the closest chunks.
+~Query, inject, embed, retrieve, respond.#No — injection is the second-to-last step; chunks cannot be inserted into the prompt before they have been retrieved.
+=Query, embed, retrieve, inject, respond.#Correct — the question is asked, converted to an embedding, matched against stored chunks, injected into the prompt, and then answered.
+~Embed, query, retrieve, respond, inject.#No — the flow starts with the user's query, and the model responds last; nothing is injected after the answer is generated.
+#### Tests the headline five-step RAG flow and its ordering (corpus, The five-step RAG flow).
+}
+
+::q4:: Priya asks a RAG system, "Can I carry unused leave into next year?" At the respond step, what does the model actually read before generating its answer? {
+~A list of links to the matching documents, which it opens one by one while answering.#No — that is how a search engine works; RAG injects the chunk text itself into the prompt, not links.
+~The entire 1,200-chunk knowledge base, pasted in full directly ahead of her question.#No — the context window is finite; only the few most similar chunks are injected, never the whole library.
+~Only her bare question, because the leave policy was memorized during its training.#No — the policy was never in the training data; without injected chunks the model would have to guess.
+=One assembled prompt holding her question plus the few chunks that retrieval pulled back.#Correct — the augmented prompt contains the top retrieved chunks, her question, and an instruction to answer only from that context.
+#### Tests tracing a concrete question end-to-end and identifying what the model sees at the respond step (corpus, Implementation Phase B).
+}
+
+::q5:: A company's model answers accurately but in the wrong tone — every reply must use the firm's brand voice. Which adaptation should the team choose, and why? {
+=Fine-tuning, because the gap is behavior — no retrieved document changes how the model writes.#Correct — style and tone are behavior, which lives in the parameters; fine-tuning is the tool that changes behavior.
+~Fine-tuning, because it lets the model cite the brand guidelines as a source in every reply.#No — fine-tuning is the right choice here, but it cannot cite sources; knowledge blended into weights is invisible.
+~RAG, because injecting a style-guide document at query time rewrites the model's writing habits.#No — injected text gives the model new facts to read; it does not change how the model itself writes.
+~RAG, because it is always cheaper and faster to update than any other form of model adaptation.#No — cheap updates matter for changing facts; this problem is about behavior, where RAG does not help.
+#### Tests choosing between RAG and fine-tuning for a scenario — new facts versus new behavior (corpus, RAG vs. fine-tuning).
+}
+
+::q6:: A RAG system's knowledge base still contains a returns policy that was replaced months ago. What will the system most likely do? {
+~Permanently learn the correct policy once a user points out the mistake in a single chat.#No — RAG involves no learning; chunks live in the prompt for one exchange and the model keeps nothing afterward.
+=Retrieve the old policy and cite it confidently — similarity matching does not check correctness.#Correct — retrieval finds the chunks closest in meaning, not the truest ones; an outdated document is retrieved and cited like any other.
+~Refuse to answer, because grounding requires every retrieved chunk to be verified as current.#No — grounding ties the answer to a source; nothing in the flow verifies that the source is up to date.
+~Detect that the retrieved chunk is outdated and answer from its training memory instead.#No — the system cannot tell the chunk is stale, and falling back on training memory is the failure RAG tries to prevent.
+#### Tests what RAG does not fix — the knowledge base sets the quality ceiling, and similarity is not correctness (corpus, What RAG is not; Best Practices).
+}
+
+::q7:: In the five-step RAG flow, the step that inserts the retrieved chunks into the prompt before the model reads it is called ____ (one word). {
+=inject
+=injection
+=injecting
+#### Tests recall of the inject step in the five-step flow — retrieved text is inserted into the prompt at query time (corpus, The five-step RAG flow).
+}

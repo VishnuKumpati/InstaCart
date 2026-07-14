@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "prerequisites": {
+    "meta_sidecar_present_and_valid": true,
+    "bias_defense_applied": true,
+    "meta_gift_desync": false,
+    "note": "Re-derived correct positions from .gift ([3,1,0,2,0,3]) match sidecar exactly."
+  },
+  "checks": {
+    "strict_gift": {
+      "passed": true,
+      "stem_level_feedback": [],
+      "note": "Nothing between any stem and '{'. Gold 2-1 stem-# defect (flagged in gold notes, not the bar) is absent here. $CATEGORY scoped CIT/M1/week-1/1.8-flowcharts. Special chars escaped on #### lines (e.g. 'road signs\\:'). 6 MCQs, each exactly one '=' + three '~'."
+    },
+    "positional_bias": {
+      "passed": true,
+      "distribution": [2, 1, 1, 2],
+      "max_share": 0.333,
+      "threshold": 0.40
+    },
+    "length_bias": {
+      "passed": true,
+      "longest_correct_rate": 0.0,
+      "baseline": 0.25,
+      "threshold": 0.40,
+      "per_question_ratio": { "Q1": 0.97, "Q2": 1.03, "Q3": 0.91, "Q4": 0.94, "Q5": 0.91, "Q6": 0.95 }
+    },
+    "distractor_plausibility": {
+      "passed": true,
+      "absurd_rate": 0.0,
+      "total_distractors": 18,
+      "weakest_questions": [],
+      "note": "All distractors are corpus-grounded beginner misconceptions (diamond-for-any-question, waiting=terminator, upward-arrow=mistake, unlabelled-exits, right-form-wrong-reason). No score-1 absurd options."
+    },
+    "objective_coverage": {
+      "passed": true,
+      "uncovered_objectives": [],
+      "orphan_questions": [],
+      "mapping": {
+        "LO1 what/why standard shapes": ["1.8-Q1"],
+        "LO2 five core symbols": ["1.8-Q2"],
+        "LO3 read/trace incl. decisions+loops": ["1.8-Q3", "1.8-Q4"],
+        "LO4 draw with labelled branch arrows": ["1.8-Q5"],
+        "LO5 flowcharts vs pseudocode": ["1.8-Q6"]
+      }
+    },
+    "beginner_fairness_scope": {
+      "passed": true,
+      "jargon_in_stem": [],
+      "out_of_scope_question": [],
+      "unfair_distractor": [],
+      "note": "All stems plain-language scenarios. No code syntax, no 1.9+ concepts. Refund-approval (Q6), Excalidraw (Q1), tea/kettle scenarios, IF/OTHERWISE/REPEAT references all taught in this corpus or earlier topics (1.7)."
+    },
+    "artifacts_dir_hygiene": {
+      "passed": true,
+      "stray_files": [],
+      "note": "artifacts/ contains only quiz.gift, quiz.meta.json, diagram.mmd, diagram.png, reading.md, reading.meta.json — all sanctioned artifact files; no build scripts or strays."
+    },
+    "profile_conformance": {
+      "passed": true,
+      "profile": "standard",
+      "question_count": 6,
+      "allowed_range": [5, 6],
+      "short_answer_present": false
+    }
+  },
+  "auto_correction_applied": { "shuffle_round_2": false },
+  "findings": [],
+  "verdict": "Pass — strict GIFT clean (no stem-level feedback), positional bias max_share 0.333, length bias 0.0, absurd_rate 0.0, all 5 LOs covered with no orphans, no out-of-scope questions, artifacts dir clean.",
+  "at": "2026-06-11T00:00:00Z"
+}

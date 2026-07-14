@@ -1,0 +1,56 @@
+$CATEGORY: CIT/M2/week-3/3.6-temperature-and-sampling
+
+::q1:: You ask a chatbot the exact same question twice, in fresh chats, and get two different answers. What is the best explanation? {
+=At each token the model holds a weighted lottery over its scored list, and the draws differ from run to run.#Correct — sampling draws each next token by weighted chance, so a 200-token answer is 200 fresh draws.
+~The model remembers your first chat and deliberately rewords its reply to avoid repeating itself.#No — each fresh chat starts clean; the variation comes from the sampling draw, not from memory of earlier chats.
+~The model's parameters shift slightly between runs, so its knowledge changes from one chat to the next.#No — the parameters are fixed after training; nothing about the model's knowledge changes between runs.
+~The model's scored list of next tokens is unstable, producing different percentages on every run.#No — the scored list is completely deterministic; same text in, same percentages out. The variation happens at the draw.
+#### Tests why the same question can give different answers, via probability distribution + sampling (corpus §5.4).
+}
+
+::q2:: Which sequence correctly describes one token-picking step during inference? {
+~Score the whole answer in advance, split it into tokens, then release the tokens one at a time.#No — the model never plans the whole answer; it scores and picks one next token at a time, in a loop.
+=Score every token in the vocabulary, convert the scores to percentages, then draw one token from the list.#Correct — scores in, percentages out, one token drawn; then the loop repeats on the updated text.
+~Convert the text to percentages, score the top five candidates only, then append the highest scorer.#No — every token in the vocabulary gets a score, not just five, and the standard pick is a draw, not always the top scorer.
+~Draw one token at random, score how well it fits the text so far, then convert that score to a percentage.#No — this reverses the order; scoring comes first, and the draw is weighted by the percentages, not blind.
+#### Tests the single token-picking step in order — scores in, percentages out, one token drawn (corpus §5.1, §6).
+}
+
+::q3:: Which statement gives an accurate strength and weakness of greedy decoding (always taking the top token)? {
+~Its output is always factually correct, but it cannot answer open-ended or creative questions at all.#No — greedy decoding does not guarantee correctness; it just repeats whatever the top tokens are, right or wrong.
+~Its output varies on every run, but the variation makes the text feel more natural and human-like.#No — this describes sampling; greedy decoding produces the same output every run by definition.
+=Its output is repeatable, but it can trap the model in loops that repeat the same phrase again and again.#Correct — same question, same answer, every time; the cost is bland, short-sighted text and repetition traps.
+~Its output is the most creative, but it runs more slowly because it must rank every candidate token.#No — greedy decoding is the least varied option, and every method scores all candidate tokens anyway.
+#### Tests the greedy decoding vs sampling contrast — one strength and one weakness of greedy (corpus §5.3).
+}
+
+::q4:: A travel app drafts engaging trip descriptions and also extracts exact dates and prices from booking emails. Which temperature pairing fits best? {
+~Around 1.5 for both tasks, because a higher temperature makes the model smarter at everything it does.#No — temperature adds variety, not intelligence; pushed too high it produces incoherent output, and extraction needs zero variation.
+~Around 0 for both tasks, because the lowest temperature always produces the highest-quality output.#No — at temperature 0 the descriptions would come out bland and identical; variation is a feature for creative prose.
+=Around 1.0 for the descriptions and around 0 for the extraction, because variation helps prose but corrupts data.#Correct — if two runs differ, that is a feature for creative drafting and a bug for data extraction, so the dial is set per task.
+~Around 0 for the descriptions and around 1.5 for the extraction, because facts need energy while prose needs calm.#No — this is backwards; extraction needs maximum predictability, and creative prose benefits from a warmer setting.
+#### Tests picking a sensible temperature per task — the feature-or-bug heuristic (corpus §5.5, §7, §8).
+}
+
+::q5:: A chatbot gives the same fact ten times in a row but a different tea-stall name on every try, at identical settings. Why? {
+~Factual prompts switch the model into greedy decoding automatically, while creative prompts switch it into sampling.#No — the picking method does not change by prompt type; the same sampling runs in both cases at the same settings.
+=Factual prompts create sharp distributions where one token dominates, while naming prompts create flat ones where many tokens are close.#Correct — on a sharp list the favourite nearly always wins the draw; on a flat list different runs genuinely diverge.
+~Factual answers are stored word-for-word in the parameters, while creative answers must be invented from scratch each run.#No — the model never stores or retrieves whole answers; both kinds of reply are built token by token the same way.
+~Factual prompts lower the temperature on their own, while creative prompts quietly raise it above the default.#No — temperature is set per request, not by the prompt; the difference comes from the shape of the distribution itself.
+#### Tests why facts stay consistent while creative answers vary — sharp vs flat distributions (corpus §5.2).
+}
+
+::q6:: A model answers a question incorrectly at temperature 1. A teammate suggests lowering the temperature to 0 to fix it. What will actually happen? {
+~The model will refuse to answer, because temperature 0 removes the lottery it needs to produce any token.#No — temperature 0 simply skips the lottery and takes the top token; the model still answers normally.
+~The model will give identical output forever without exception, since temperature 0 is a perfect repeatability switch.#No — and beside the point; in practice tiny hardware effects can still vary output, and repeatability would not fix the error anyway.
+~The model will become accurate, because temperature 0 forces it to use only its most reliable knowledge.#No — temperature never changes the model's knowledge or ranking; if the wrong token scores highest, it still wins.
+=The model will repeat the same wrong answer almost every time, because low temperature buys consistency, not correctness.#Correct — wrongness is a knowledge problem and temperature is a variability problem; the dial cannot fix the facts.
+#### Tests the two common misunderstandings — low temperature is not truth, temp 0 is not a perfect repeat switch (corpus §5.6, §8).
+}
+
+::q7:: Choosing the next token by always taking the single highest-scoring candidate, with no lottery at all, is called ____ decoding (one word). {
+=greedy
+=Greedy
+=GREEDY
+#### Tests recall of the name for the always-take-the-top-token rule (corpus §5.3).
+}

@@ -1,0 +1,33 @@
+---
+title: "RAG — fresh knowledge at query time, model unchanged"
+config:
+  theme: base
+  themeVariables:
+    primaryColor: "#a5d8ff"
+    primaryBorderColor: "#4a9eed"
+    lineColor: "#555"
+    edgeLabelBackground: "#ffffff"
+  flowchart:
+    htmlLabels: true
+    curve: basis
+    nodeSpacing: 55
+    rankSpacing: 70
+---
+flowchart LR
+    Q["<b>Query</b><br/><span style='font-size:11px;color:#6d28d9'>user asks a question</span>"]:::start
+    E["<b>Embed</b><br/><span style='font-size:11px;color:#6d28d9'>question → meaning-map point</span>"]:::auto
+    R["<b>Retrieve</b><br/><span style='font-size:11px;color:#6d28d9'>closest chunks win</span>"]:::auto
+    I["<b>Inject</b><br/><span style='font-size:11px;color:#6d28d9'>chunks + question in prompt</span>"]:::auto
+    A["<b>Respond</b><br/><span style='font-size:11px;color:#6d28d9'>answer cites its source</span>"]:::done
+    KB["<b>Knowledge base</b><br/><span style='font-size:11px;color:#6d28d9'>your documents, chunked</span>"]:::act
+    BM["<span style='font-size:12px;color:#6d28d9'><i>vs bare model: frozen memory only</i></span>"]:::ghost
+
+    Q --> E --> R --> I --> A
+    KB -. "chunks by meaning" .-> R
+    A -.- BM
+
+    classDef start fill:#a5d8ff,stroke:#4a9eed,color:#1e293b
+    classDef auto fill:#d0bfff,stroke:#8b5cf6,color:#1e293b
+    classDef act fill:#a5d8ff,stroke:#4a9eed,color:#1e293b
+    classDef done fill:#b2f2bb,stroke:#22c55e,color:#1e293b
+    classDef ghost fill:none,stroke:none,color:#6d28d9

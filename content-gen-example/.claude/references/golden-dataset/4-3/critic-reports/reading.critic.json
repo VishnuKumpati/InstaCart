@@ -1,0 +1,56 @@
+{
+  "artifact": "reading",
+  "topic_id": "4.3",
+  "reading_path": "/Users/jestercharles/Foundations-of-Responsible-AI-Engineering/tmp/eval-run-3/4-3/new/artifacts/reading.md",
+  "corpus_path": "/Users/jestercharles/Foundations-of-Responsible-AI-Engineering/tmp/eval-run-3/4-3/new/topic_corpus.md",
+  "depth_profile": "deep",
+  "mode": "narrative_seed_only",
+  "passed": true,
+  "checks": {
+    "format_discipline": {
+      "passed": true,
+      "notes": "No frontmatter — first non-empty line is the H1 (line 1). Sidecar reading.meta.json present and valid (word_count, estimated_read_minutes, citations_used, sections). Sections present in order: Overview, Key Concepts, Worked Example, In Practice, Key Takeaways; References absent, which is permitted because citations_used is empty (resource_count=0, narrative_seed_only)."
+    },
+    "length": {
+      "passed": true,
+      "word_count": 2194,
+      "target_word_range": [1800, 2200],
+      "estimated_read_minutes": 11,
+      "target_minute_range": [9, 11],
+      "notes": "In range but at the ceiling (2194/2200 words, 11/11 min). No trim required; no headroom for additions."
+    },
+    "citations": {
+      "passed": true,
+      "notes": "Zero primary resources (narrative_seed_only, resource_count=0). No inline markers, no bibliography — consistent. No orphans possible."
+    },
+    "no_forward_references": {
+      "passed": true,
+      "notes": "All reused vocabulary traces to prior topics: hallucination (Wk3, line 5), tokens/context window/inference (3.4, lines 21/25/34), embeddings (Wk3, line 61), parameters/weights (3.4-3.5, line 117), foundation model (4.1), fine-tuning (4.2), decomposition (Wk1, line 90). New terms (query, knowledge base, chunk, similarity matching, grounding) are defined in-topic."
+    },
+    "faithfulness": {
+      "passed": true,
+      "sampled": 12,
+      "unsupported": 0,
+      "notes": "Sampled: frozen-knowledge triad (lines 13-15), chunk definition + size trade-off table (47-55), meaning-map / days-off vs paid-leave mismatch (59-61), per-step failure-mode table (83-88), open-book-exam framing (78), 14-day refund grounded/ungrounded contrast (99), RAG-vs-fine-tuning table (115-121), Priya worked example incl. chunks 412/415/87 and March 31 (140-147), 5-to-8-day update twist (151), 'most deployed LLM pattern' (155), 1.5 days/month accrual (59), 'say so' instruction effect (151). All trace to corpus verbatim or paraphrased."
+    },
+    "beginner_readability": {
+      "passed": true,
+      "notes": "Define-before-use clean: RAG spelled out (line 5), LLM re-spelled (34), query (38), knowledge base (42), chunk (47), similarity matching (67), grounding (94) all bold-term + plain meaning. No jargon dumps — one new term per paragraph. Concrete-first throughout (vacation-days opener, paste-and-summarize, librarian, filing-cabinet trade-off table). Plain register; hedging count 1 ('arguably', line 155) < 3; sentences short."
+    },
+    "formatting": {
+      "passed": true,
+      "notes": "No paragraph exceeds ~5 sentences. Sequences listed: retrieval steps bulleted (63-65), Phase A/B numbered (131-147). Three comparison tables. Inline examples adjacent to every concept introduction (Worked Example is not carrying the load alone). Diagram embedded at line 75 (./diagram.png resolves to artifacts/diagram.png, file exists, captioned) — deep profile requires the pipeline diagram and it is present; the five-step sequence also survives in text via the step-numbered failure table and the Phase B numbered list, so the reading does not depend solely on the image."
+    },
+    "assessment_reference": {
+      "passed": true,
+      "notes": "No assessment IDs, due weeks, or grade weights anywhere in the reading."
+    },
+    "scope": {
+      "passed": true,
+      "notes": "Stays on the RAG headline. Deferred concepts use correct mention-and-defer FORM: 'vector databases' (line 69) and 'agents and tool use' (line 125) appear as bare names — not bolded, no defining clause/appositive — each with an explicit pointer (Week 14; Topics 4.4/4.5). Fine-tuning comparison is in-scope (corpus learning objective). Embedding mechanics held at Week-3 depth; storage/search internals deferred."
+    }
+  },
+  "findings": [],
+  "gold_comparison": "Measured against 3-4-how-llms-work (the deep-depth technical bar): matches it — bold-defined terms at first use, Overview gives the whole idea before detail, one concrete thread (Priya) walked end-to-end in numbered steps, blockquote for the injected prompt, tables for every contrast, self-contained Key Takeaways. Meets the gold bar.",
+  "verdict": "PASS. The reading is faithful to the corpus (12/12 sampled assertions supported), beginner-clean (every new term bold-defined at first use, concrete-first, no jargon dumps, hedging 1/3 allowance), correctly formatted (six-section template with References legitimately absent under zero citations, no walls of text, sequences listed, three comparison tables), and scope-disciplined — vector databases and agents/tool use are deferred in correct bare-name form with pointers, not taught. The deep-profile diagram is embedded (line 75) with a working relative path and the flow remains legible in text without it. No assessment references. Length is in range but at the exact ceiling (2194 words / 11 min vs 1800-2200 / 9-11) — acceptable, but any future revision must trim before adding. Meets the 3-4 gold bar for deep technical topics."
+}

@@ -1,0 +1,15 @@
+{
+  "topic_id": "1.8",
+  "title": "Flowcharts — visualising logic with standard shapes and arrows",
+  "estimated_read_minutes": 8,
+  "word_count": 1599,
+  "generated_at": "2026-06-11T00:00:00Z",
+  "embeds_diagram": true,
+  "citations_used": [],
+  "sections": ["Overview", "Key Concepts", "Worked Example", "In Practice", "Key Takeaways"],
+  "references_omitted_reason": "narrative_seed_only — zero citations",
+  "corpus_findings_resolved": [
+    "'bug' glossed inline as 'a mistake in your logic' (dead end definition)",
+    "'anti-patterns' replaced with Do/Don't table in In Practice"
+  ]
+}

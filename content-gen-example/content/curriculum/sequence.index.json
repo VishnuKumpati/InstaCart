@@ -1,0 +1,5021 @@
+{
+  "version": 3,
+  "topics": [
+    {
+      "id": "1.1",
+      "title": "What is computation",
+      "week_num": 1,
+      "session_name": "How Machines Think",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 1,
+      "module_slug": "1-understanding-computation",
+      "module_title": "Understanding Computation",
+      "topic_slug": "1-1-what-is-computation",
+      "path": "m1-computational-thinking/week-1/1-understanding-computation/1-1-what-is-computation",
+      "concepts_introduced": [
+        "computation",
+        "input / process / output",
+        "computable",
+        "computational thinking",
+        "defined steps"
+      ],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "1.2",
+      "title": "Deterministic systems — same input always gives the same output",
+      "week_num": 1,
+      "session_name": "How Machines Think",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 1,
+      "module_slug": "1-understanding-computation",
+      "module_title": "Understanding Computation",
+      "topic_slug": "1-2-deterministic-systems-same-input-always-gives-the-same-outpu",
+      "path": "m1-computational-thinking/week-1/1-understanding-computation/1-2-deterministic-systems-same-input-always-gives-the-same-outpu",
+      "concepts_introduced": [
+        "deterministic system",
+        "determinism",
+        "predictability",
+        "reproducibility",
+        "hidden inputs"
+      ],
+      "prerequisites": [
+        1.1
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "1.3",
+      "title": "Probabilistic systems — same input can give different outputs",
+      "week_num": 1,
+      "session_name": "How Machines Think",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 1,
+      "module_slug": "1-understanding-computation",
+      "module_title": "Understanding Computation",
+      "topic_slug": "1-3-probabilistic-systems-same-input-can-give-different-outputs",
+      "path": "m1-computational-thinking/week-1/1-understanding-computation/1-3-probabilistic-systems-same-input-can-give-different-outputs",
+      "concepts_introduced": [
+        "probabilistic system",
+        "probability",
+        "uncertainty",
+        "randomness",
+        "sampling",
+        "output variation",
+        "temperature (as a control on randomness)"
+      ],
+      "prerequisites": [
+        1.1,
+        1.2
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "1.4",
+      "title": "Why AI gives different answers to the same question",
+      "week_num": 1,
+      "session_name": "How Machines Think",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 1,
+      "module_slug": "1-understanding-computation",
+      "module_title": "Understanding Computation",
+      "topic_slug": "1-4-why-ai-gives-different-answers-to-the-same-question",
+      "path": "m1-computational-thinking/week-1/1-understanding-computation/1-4-why-ai-gives-different-answers-to-the-same-question",
+      "concepts_introduced": [
+        "LLM (Large Language Model)",
+        "token",
+        "token sampling",
+        "probability distribution"
+      ],
+      "prerequisites": [
+        1.1,
+        1.2,
+        1.3
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "1.5",
+      "title": "Decomposition — breaking a big problem into smaller solvable parts",
+      "week_num": 1,
+      "session_name": "How Machines Think",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 2,
+      "module_slug": "2-problem-solving-foundations",
+      "module_title": "Problem-Solving Foundations",
+      "topic_slug": "1-5-decomposition-breaking-a-big-problem-into-smaller-solvable-p",
+      "path": "m1-computational-thinking/week-1/2-problem-solving-foundations/1-5-decomposition-breaking-a-big-problem-into-smaller-solvable-p",
+      "concepts_introduced": [
+        "decomposition",
+        "task tree",
+        "root (task tree)",
+        "sub-task",
+        "leaf (task tree)",
+        "iterative refinement"
+      ],
+      "prerequisites": [
+        "1.1"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "1.6",
+      "title": "Abstraction — hiding complexity at the right level",
+      "week_num": 1,
+      "session_name": "How Machines Think",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 2,
+      "module_slug": "2-problem-solving-foundations",
+      "module_title": "Problem-Solving Foundations",
+      "topic_slug": "1-6-abstraction-hiding-complexity-at-the-right-level",
+      "path": "m1-computational-thinking/week-1/2-problem-solving-foundations/1-6-abstraction-hiding-complexity-at-the-right-level",
+      "concepts_introduced": [
+        "abstraction",
+        "layer (abstraction layer)",
+        "right level of abstraction",
+        "model (as abstraction output)",
+        "leaky abstraction"
+      ],
+      "prerequisites": [
+        1.1,
+        1.5
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "1.7",
+      "title": "Pseudocode — writing logic in plain English before writing code",
+      "week_num": 1,
+      "session_name": "How Machines Think",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 3,
+      "module_slug": "3-expressing-logic",
+      "module_title": "Expressing Logic",
+      "topic_slug": "1-7-pseudocode-writing-logic-in-plain-english-before-writing-cod",
+      "path": "m1-computational-thinking/week-1/3-expressing-logic/1-7-pseudocode-writing-logic-in-plain-english-before-writing-cod",
+      "concepts_introduced": [
+        "pseudocode",
+        "sequence",
+        "decision (conditional / branch)",
+        "condition",
+        "repetition",
+        "building blocks of logic"
+      ],
+      "prerequisites": [
+        1.1,
+        1.5
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "1.8",
+      "title": "Flowcharts — visualising logic with standard shapes and arrows",
+      "week_num": 1,
+      "session_name": "How Machines Think",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 3,
+      "module_slug": "3-expressing-logic",
+      "module_title": "Expressing Logic",
+      "topic_slug": "1-8-flowcharts-visualising-logic-with-standard-shapes-and-arrows",
+      "path": "m1-computational-thinking/week-1/3-expressing-logic/1-8-flowcharts-visualising-logic-with-standard-shapes-and-arrows",
+      "concepts_introduced": [
+        "flowchart",
+        "terminator (oval)",
+        "process box (rectangle)",
+        "decision diamond",
+        "input/output parallelogram",
+        "flowline (arrow)",
+        "loop (in a flowchart)"
+      ],
+      "prerequisites": [
+        "1.7"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "1.9",
+      "title": "Algorithmic thinking — what makes a set of steps an algorithm",
+      "week_num": 1,
+      "session_name": "How Machines Think",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 4,
+      "module_slug": "4-algorithmic-thinking",
+      "module_title": "Algorithmic Thinking",
+      "topic_slug": "1-9-algorithmic-thinking-what-makes-a-set-of-steps-an-algorithm",
+      "path": "m1-computational-thinking/week-1/4-algorithmic-thinking/1-9-algorithmic-thinking-what-makes-a-set-of-steps-an-algorithm",
+      "concepts_introduced": [
+        "algorithm",
+        "algorithmic thinking",
+        "unambiguous steps",
+        "incomplete instructions",
+        "precision in instructions"
+      ],
+      "prerequisites": [
+        1.1,
+        1.5,
+        1.7,
+        1.8
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "1.10",
+      "title": "Algorithms in everyday life — recipes, GPS routes, sorting queues",
+      "week_num": 1,
+      "session_name": "How Machines Think",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 4,
+      "module_slug": "4-algorithmic-thinking",
+      "module_title": "Algorithmic Thinking",
+      "topic_slug": "1-10-algorithms-in-everyday-life-recipes-gps-routes-sorting-queue",
+      "path": "m1-computational-thinking/week-1/4-algorithmic-thinking/1-10-algorithms-in-everyday-life-recipes-gps-routes-sorting-queue",
+      "concepts_introduced": [
+        "recipe as algorithm",
+        "route-finding",
+        "sorting algorithm",
+        "comparison rule",
+        "stopping condition",
+        "tie-breaking rule"
+      ],
+      "prerequisites": [
+        1.9
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "1.11",
+      "title": "The four properties of a good algorithm — finite, definite, input, output",
+      "week_num": 1,
+      "session_name": "How Machines Think",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 4,
+      "module_slug": "4-algorithmic-thinking",
+      "module_title": "Algorithmic Thinking",
+      "topic_slug": "1-11-the-four-properties-of-a-good-algorithm-finite-definite-inpu",
+      "path": "m1-computational-thinking/week-1/4-algorithmic-thinking/1-11-the-four-properties-of-a-good-algorithm-finite-definite-inpu",
+      "concepts_introduced": [
+        "finiteness",
+        "definiteness",
+        "input (algorithm property)",
+        "output (algorithm property)",
+        "infinite loop",
+        "termination",
+        "well-defined algorithm"
+      ],
+      "prerequisites": [
+        "1.9",
+        "1.10"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "1.12",
+      "title": "Choosing your domain — writing a 3-sentence problem statement",
+      "week_num": 1,
+      "session_name": "How Machines Think",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 5,
+      "module_slug": "5-applying-it-to-your-domain",
+      "module_title": "Applying It to Your Domain",
+      "topic_slug": "1-12-choosing-your-domain-writing-a-3-sentence-problem-statement",
+      "path": "m1-computational-thinking/week-1/5-applying-it-to-your-domain/1-12-choosing-your-domain-writing-a-3-sentence-problem-statement",
+      "concepts_introduced": [
+        "problem domain",
+        "problem statement",
+        "3-sentence format",
+        "context (problem statement component)",
+        "impact (problem statement component)"
+      ],
+      "prerequisites": [
+        "1.5",
+        "1.6"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "2.1",
+      "title": "What makes a good specification — testable, bounded, observable, actionable",
+      "week_num": 2,
+      "session_name": "Specifying for AI",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 1,
+      "module_slug": "1-what-makes-a-good-specification",
+      "module_title": "What Makes a Good Specification",
+      "topic_slug": "2-1-what-makes-a-good-specification-testable-bounded-observable",
+      "path": "m1-computational-thinking/week-2/1-what-makes-a-good-specification/2-1-what-makes-a-good-specification-testable-bounded-observable",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "2.2",
+      "title": "Bad spec vs good spec — 'make it better' vs 'rewrite at Grade 8 level, max 80 words'",
+      "week_num": 2,
+      "session_name": "Specifying for AI",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 1,
+      "module_slug": "1-what-makes-a-good-specification",
+      "module_title": "What Makes a Good Specification",
+      "topic_slug": "2-2-bad-spec-vs-good-spec-make-it-better-vs-rewrite-at-grade-8-l",
+      "path": "m1-computational-thinking/week-2/1-what-makes-a-good-specification/2-2-bad-spec-vs-good-spec-make-it-better-vs-rewrite-at-grade-8-l",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "2.3",
+      "title": "How to identify the inputs, expected outputs, and failure conditions of a task",
+      "week_num": 2,
+      "session_name": "Specifying for AI",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 1,
+      "module_slug": "1-what-makes-a-good-specification",
+      "module_title": "What Makes a Good Specification",
+      "topic_slug": "2-3-how-to-identify-the-inputs-expected-outputs-and-failure-cond",
+      "path": "m1-computational-thinking/week-2/1-what-makes-a-good-specification/2-3-how-to-identify-the-inputs-expected-outputs-and-failure-cond",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "2.4",
+      "title": "Pattern recognition — how machines find rules in repeated data",
+      "week_num": 2,
+      "session_name": "Specifying for AI",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 2,
+      "module_slug": "2-how-machines-recognise-patterns",
+      "module_title": "How Machines Recognise Patterns",
+      "topic_slug": "2-4-pattern-recognition-how-machines-find-rules-in-repeated-data",
+      "path": "m1-computational-thinking/week-2/2-how-machines-recognise-patterns/2-4-pattern-recognition-how-machines-find-rules-in-repeated-data",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "2.5",
+      "title": "The 70/30 rule — AI implements, you specify and verify",
+      "week_num": 2,
+      "session_name": "Specifying for AI",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 3,
+      "module_slug": "3-the-professional-rules-of-ai-use",
+      "module_title": "The Professional Rules of AI Use",
+      "topic_slug": "2-5-the-70-30-rule-ai-implements-you-specify-and-verify",
+      "path": "m1-computational-thinking/week-2/3-the-professional-rules-of-ai-use/2-5-the-70-30-rule-ai-implements-you-specify-and-verify",
+      "concepts_introduced": [
+        "70/30 rule",
+        "implementation (AI role)",
+        "specification (human role)",
+        "verification (human role)",
+        "verification loop",
+        "human oversight",
+        "accountability split"
+      ],
+      "prerequisites": [
+        1.1,
+        1.3,
+        2.1,
+        2.3
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "2.6",
+      "title": "When NOT to use AI — privacy, precision, legal accountability",
+      "week_num": 2,
+      "session_name": "Specifying for AI",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 3,
+      "module_slug": "3-the-professional-rules-of-ai-use",
+      "module_title": "The Professional Rules of AI Use",
+      "topic_slug": "2-6-when-not-to-use-ai-privacy-precision-legal-accountability",
+      "path": "m1-computational-thinking/week-2/3-the-professional-rules-of-ai-use/2-6-when-not-to-use-ai-privacy-precision-legal-accountability",
+      "concepts_introduced": [
+        "sensitive data",
+        "privacy risk (AI data exposure)",
+        "exact precision requirement",
+        "legal accountability",
+        "three-question check (privacy / precision / accountability)"
+      ],
+      "prerequisites": [
+        "2.1",
+        "2.3",
+        "2.4",
+        "2.5"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "2.7",
+      "title": "Writing specifications across five domains — health, transport, education, food, scheduling",
+      "week_num": 2,
+      "session_name": "Specifying for AI",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 4,
+      "module_slug": "4-writing-and-testing-specifications",
+      "module_title": "Writing and Testing Specifications",
+      "topic_slug": "2-7-writing-specifications-across-five-domains-health-transport",
+      "path": "m1-computational-thinking/week-2/4-writing-and-testing-specifications/2-7-writing-specifications-across-five-domains-health-transport",
+      "concepts_introduced": [
+        "domain-specific specification",
+        "four-part spec structure",
+        "domain context",
+        "domain-specific constraint",
+        "domain-specific output format",
+        "explicit exclusion"
+      ],
+      "prerequisites": [
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.5"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "2.8",
+      "title": "Testing a specification — how to verify the AI did exactly what you asked",
+      "week_num": 2,
+      "session_name": "Specifying for AI",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 4,
+      "module_slug": "4-writing-and-testing-specifications",
+      "module_title": "Writing and Testing Specifications",
+      "topic_slug": "2-8-testing-a-specification-how-to-verify-the-ai-did-exactly-wha",
+      "path": "m1-computational-thinking/week-2/4-writing-and-testing-specifications/2-8-testing-a-specification-how-to-verify-the-ai-did-exactly-wha",
+      "concepts_introduced": [
+        "testing a specification",
+        "three-question verification check",
+        "full pass",
+        "partial pass",
+        "full fail",
+        "pass/fail table",
+        "format drift",
+        "constraint overflow",
+        "task drift"
+      ],
+      "prerequisites": [
+        "2.1",
+        "2.3",
+        "2.7"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "2.9",
+      "title": "Iterating a specification based on output gaps",
+      "week_num": 2,
+      "session_name": "Specifying for AI",
+      "course_code": "M1",
+      "course_slug": "m1-computational-thinking",
+      "course_title": "Computational Thinking",
+      "module_position": 4,
+      "module_slug": "4-writing-and-testing-specifications",
+      "module_title": "Writing and Testing Specifications",
+      "topic_slug": "2-9-iterating-a-specification-based-on-output-gaps",
+      "path": "m1-computational-thinking/week-2/4-writing-and-testing-specifications/2-9-iterating-a-specification-based-on-output-gaps",
+      "concepts_introduced": [
+        "iterating a specification",
+        "gap",
+        "iteration cycle",
+        "gap-to-fix mapping",
+        "minimum viable patch",
+        "accept with known limitation"
+      ],
+      "prerequisites": [
+        "2.8",
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.7"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "3.1",
+      "title": "History of AI — symbolic AI to machine learning to deep learning",
+      "week_num": 3,
+      "session_name": "What AI Is — and Isn't",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 1,
+      "module_slug": "1-a-brief-history-of-ai",
+      "module_title": "A Brief History of AI",
+      "topic_slug": "3-1-history-of-ai-symbolic-ai-to-machine-learning-to-deep-learni",
+      "path": "m2-introduction-to-ai-systems/week-3/1-a-brief-history-of-ai/3-1-history-of-ai-symbolic-ai-to-machine-learning-to-deep-learni",
+      "concepts_introduced": [
+        "symbolic AI",
+        "expert system",
+        "AI Winter",
+        "machine learning",
+        "training data",
+        "deep learning",
+        "artificial neural network"
+      ],
+      "prerequisites": [
+        "1.1",
+        "1.4",
+        "2.5"
+      ],
+      "cross_refs": [
+        "neural networks",
+        "LLMs",
+        "GPUs",
+        "Transformer architecture"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "3.2",
+      "title": "The rise of large language models (LLMs)",
+      "week_num": 3,
+      "session_name": "What AI Is — and Isn't",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 1,
+      "module_slug": "1-a-brief-history-of-ai",
+      "module_title": "A Brief History of AI",
+      "topic_slug": "3-2-the-rise-of-large-language-models-llms",
+      "path": "m2-introduction-to-ai-systems/week-3/1-a-brief-history-of-ai/3-2-the-rise-of-large-language-models-llms",
+      "concepts_introduced": [
+        "large language model",
+        "word embedding",
+        "recurrent neural network",
+        "Transformer architecture",
+        "BERT",
+        "GPT",
+        "pre-training and fine-tuning",
+        "hallucination",
+        "few-shot",
+        "prompt"
+      ],
+      "prerequisites": [
+        "3.1"
+      ],
+      "cross_refs": [
+        "Word2Vec",
+        "BERT",
+        "GPT",
+        "LSTMs",
+        "Google Translate"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "3.3",
+      "title": "The move to AI agents",
+      "week_num": 3,
+      "session_name": "What AI Is — and Isn't",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 1,
+      "module_slug": "1-a-brief-history-of-ai",
+      "module_title": "A Brief History of AI",
+      "topic_slug": "3-3-the-move-to-ai-agents",
+      "path": "m2-introduction-to-ai-systems/week-3/1-a-brief-history-of-ai/3-3-the-move-to-ai-agents",
+      "concepts_introduced": [
+        "AI agent",
+        "agent loop",
+        "goal (agent)",
+        "planning",
+        "tool use",
+        "memory (short-term and long-term)",
+        "feedback loop",
+        "orchestration"
+      ],
+      "prerequisites": [
+        "3.1",
+        "3.2"
+      ],
+      "cross_refs": [
+        "LangChain",
+        "AutoGen",
+        "CrewAI"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "3.4",
+      "title": "How LLMs work — tokens, training, and inference",
+      "week_num": 3,
+      "session_name": "What AI Is — and Isn't",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 2,
+      "module_slug": "2-how-llms-work",
+      "module_title": "How LLMs Work",
+      "topic_slug": "3-4-how-llms-work-tokens-training-and-inference",
+      "path": "m2-introduction-to-ai-systems/week-3/2-how-llms-work/3-4-how-llms-work-tokens-training-and-inference",
+      "concepts_introduced": [
+        "token",
+        "tokenisation",
+        "subword tokenisation",
+        "Byte-Pair Encoding (BPE)",
+        "embedding table",
+        "next-token prediction",
+        "parameters (model weights)",
+        "backpropagation",
+        "attention mechanism",
+        "inference",
+        "prefill phase",
+        "decode phase",
+        "autoregressive decoding",
+        "context window"
+      ],
+      "prerequisites": [
+        "3.1",
+        "3.2"
+      ],
+      "cross_refs": [
+        "tiktoken",
+        "Hugging Face",
+        "BPE",
+        "GPT-3",
+        "bert-base-uncased"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "3.5",
+      "title": "What parameters are and why they matter",
+      "week_num": 3,
+      "session_name": "What AI Is — and Isn't",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 2,
+      "module_slug": "2-how-llms-work",
+      "module_title": "How LLMs Work",
+      "topic_slug": "3-5-what-parameters-are-and-why-they-matter",
+      "path": "m2-introduction-to-ai-systems/week-3/2-how-llms-work/3-5-what-parameters-are-and-why-they-matter",
+      "concepts_introduced": [
+        "parameter (weight)",
+        "weight matrix",
+        "bias",
+        "scaling law",
+        "quantisation",
+        "model size (GB)",
+        "parameter count",
+        "emergent capability",
+        "fp16",
+        "int8",
+        "int4"
+      ],
+      "prerequisites": [
+        "3.1",
+        "3.2",
+        "3.4"
+      ],
+      "cross_refs": [
+        "GPT-3",
+        "GPT-4",
+        "LLaMA",
+        "Ollama"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "3.6",
+      "title": "Temperature and sampling — why the same question gives different answers",
+      "week_num": 3,
+      "session_name": "What AI Is — and Isn't",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 2,
+      "module_slug": "2-how-llms-work",
+      "module_title": "How LLMs Work",
+      "topic_slug": "3-6-temperature-and-sampling-why-the-same-question-gives-differe",
+      "path": "m2-introduction-to-ai-systems/week-3/2-how-llms-work/3-6-temperature-and-sampling-why-the-same-question-gives-differe",
+      "concepts_introduced": [
+        "temperature (LLM)",
+        "probability distribution (token)",
+        "greedy decoding",
+        "top-k sampling",
+        "top-p sampling (nucleus)",
+        "logits",
+        "deterministic output",
+        "stochastic output"
+      ],
+      "prerequisites": [
+        "3.2",
+        "3.4"
+      ],
+      "cross_refs": [
+        "OpenAI API",
+        "Anthropic API",
+        "Ollama"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "3.7",
+      "title": "AI in India today — healthcare, agriculture, vernacular translation",
+      "week_num": 3,
+      "session_name": "What AI Is — and Isn't",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 3,
+      "module_slug": "3-ai-in-context",
+      "module_title": "AI in Context",
+      "topic_slug": "3-7-ai-in-india-today-healthcare-agriculture-vernacular-translat",
+      "path": "m2-introduction-to-ai-systems/week-3/3-ai-in-context/3-7-ai-in-india-today-healthcare-agriculture-vernacular-translat",
+      "concepts_introduced": [
+        "computer vision (medical)",
+        "telemedicine",
+        "IndiaAI Mission",
+        "Kisan e-Mitra",
+        "vernacular NLP",
+        "multilingual AI",
+        "BharatGen",
+        "digital divide"
+      ],
+      "prerequisites": [
+        "3.1",
+        "3.2"
+      ],
+      "cross_refs": [
+        "Kisan e-Mitra",
+        "BharatGen",
+        "AIIMS",
+        "eSanjeevani",
+        "IndiaAI Mission"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "3.8",
+      "title": "The jagged frontier — tasks AI is superhuman at vs tasks where it is unreliable",
+      "week_num": 3,
+      "session_name": "What AI Is — and Isn't",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 3,
+      "module_slug": "3-ai-in-context",
+      "module_title": "AI in Context",
+      "topic_slug": "3-8-the-jagged-frontier-tasks-ai-is-superhuman-at-vs-tasks-where",
+      "path": "m2-introduction-to-ai-systems/week-3/3-ai-in-context/3-8-the-jagged-frontier-tasks-ai-is-superhuman-at-vs-tasks-where",
+      "concepts_introduced": [
+        "jagged frontier",
+        "benchmark (AI evaluation)",
+        "capability cliff",
+        "reasoning task (AI)",
+        "spatial reasoning",
+        "calibration (AI confidence)"
+      ],
+      "prerequisites": [
+        "3.2",
+        "3.5"
+      ],
+      "cross_refs": [
+        "AlphaFold",
+        "AlphaGo",
+        "o3",
+        "Gemini 2.5"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "3.9",
+      "title": "Hallucination — what it is and why it happens",
+      "week_num": 3,
+      "session_name": "What AI Is — and Isn't",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 3,
+      "module_slug": "3-ai-in-context",
+      "module_title": "AI in Context",
+      "topic_slug": "3-9-hallucination-what-it-is-and-why-it-happens",
+      "path": "m2-introduction-to-ai-systems/week-3/3-ai-in-context/3-9-hallucination-what-it-is-and-why-it-happens",
+      "concepts_introduced": [
+        "factual hallucination",
+        "attributional hallucination",
+        "faithful-but-wrong hallucination",
+        "RLHF (Reinforcement Learning from Human Feedback)",
+        "overconfidence bias",
+        "grounding",
+        "provenance"
+      ],
+      "prerequisites": [
+        "3.2",
+        "3.4",
+        "3.6"
+      ],
+      "cross_refs": [
+        "RAG"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "3.10",
+      "title": "How to evaluate AI output across five task types — creative, factual, logical, ethical, coding",
+      "week_num": 3,
+      "session_name": "What AI Is — and Isn't",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 4,
+      "module_slug": "4-evaluating-ai-output",
+      "module_title": "Evaluating AI Output",
+      "topic_slug": "3-10-how-to-evaluate-ai-output-across-five-task-types-creative-fa",
+      "path": "m2-introduction-to-ai-systems/week-3/4-evaluating-ai-output/3-10-how-to-evaluate-ai-output-across-five-task-types-creative-fa",
+      "concepts_introduced": [
+        "evaluation rubric (AI output)",
+        "task type (AI evaluation)",
+        "creative output evaluation",
+        "factual output evaluation",
+        "logical output evaluation",
+        "ethical output evaluation",
+        "coding output evaluation"
+      ],
+      "prerequisites": [
+        "3.2",
+        "3.6",
+        "3.8",
+        "3.9"
+      ],
+      "cross_refs": [
+        "BLEU/ROUGE"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "4.1",
+      "title": "Foundation models — trained once at scale, usable for many tasks",
+      "week_num": 4,
+      "session_name": "The 2026 AI Stack",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 1,
+      "module_slug": "1-foundation-models-and-adaptation",
+      "module_title": "Foundation Models and Adaptation",
+      "topic_slug": "4-1-foundation-models-trained-once-at-scale-usable-for-many-task",
+      "path": "m2-introduction-to-ai-systems/week-4/1-foundation-models-and-adaptation/4-1-foundation-models-trained-once-at-scale-usable-for-many-task",
+      "concepts_introduced": [
+        "foundation model",
+        "multimodal model",
+        "trained once at scale",
+        "generalisation from broad training",
+        "adaptation",
+        "narrow AI vs foundation model"
+      ],
+      "prerequisites": [
+        3.2,
+        3.4,
+        3.5
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "4.2",
+      "title": "Fine-tuning — adapting a foundation model on domain-specific data",
+      "week_num": 4,
+      "session_name": "The 2026 AI Stack",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 1,
+      "module_slug": "1-foundation-models-and-adaptation",
+      "module_title": "Foundation Models and Adaptation",
+      "topic_slug": "4-2-fine-tuning-adapting-a-foundation-model-on-domain-specific-d",
+      "path": "m2-introduction-to-ai-systems/week-4/1-foundation-models-and-adaptation/4-2-fine-tuning-adapting-a-foundation-model-on-domain-specific-d",
+      "concepts_introduced": [
+        "fine-tuning",
+        "pre-trained model",
+        "domain-specific data",
+        "labelled data",
+        "zero-shot use",
+        "catastrophic forgetting",
+        "hallucination",
+        "overfitting",
+        "epoch"
+      ],
+      "prerequisites": [
+        4.1
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "4.3",
+      "title": "Retrieval-Augmented Generation (RAG) — giving AI access to external knowledge at query time",
+      "week_num": 4,
+      "session_name": "The 2026 AI Stack",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 2,
+      "module_slug": "2-retrieval-agents-and-tools",
+      "module_title": "Retrieval, Agents and Tools",
+      "topic_slug": "4-3-retrieval-augmented-generation-rag-giving-ai-access-to-exter",
+      "path": "m2-introduction-to-ai-systems/week-4/2-retrieval-agents-and-tools/4-3-retrieval-augmented-generation-rag-giving-ai-access-to-exter",
+      "concepts_introduced": [
+        "RAG (Retrieval-Augmented Generation)",
+        "knowledge cutoff",
+        "knowledge source",
+        "query (user question)",
+        "prompt augmentation",
+        "retrieve-augment-generate pipeline"
+      ],
+      "prerequisites": [
+        "4.1",
+        "4.2"
+      ],
+      "cross_refs": [
+        "RAG pipeline",
+        "vector database",
+        "embeddings",
+        "similarity search",
+        "chunking"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "4.4",
+      "title": "Agents — LLM plus memory, tools, and a planning loop (conceptual introduction)",
+      "week_num": 4,
+      "session_name": "The 2026 AI Stack",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 2,
+      "module_slug": "2-retrieval-agents-and-tools",
+      "module_title": "Retrieval, Agents and Tools",
+      "topic_slug": "4-4-agents-llm-plus-memory-tools-and-a-planning-loop-conceptual",
+      "path": "m2-introduction-to-ai-systems/week-4/2-retrieval-agents-and-tools/4-4-agents-llm-plus-memory-tools-and-a-planning-loop-conceptual",
+      "concepts_introduced": [
+        "agent",
+        "LLM core (the reasoning engine)",
+        "memory (short-term and long-term)",
+        "tool",
+        "planning loop",
+        "observe-think-act cycle",
+        "agentic workflow"
+      ],
+      "prerequisites": [
+        4.1,
+        4.2,
+        4.3
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "4.5",
+      "title": "Tool use — AI calling search, calculator, and code runner",
+      "week_num": 4,
+      "session_name": "The 2026 AI Stack",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 2,
+      "module_slug": "2-retrieval-agents-and-tools",
+      "module_title": "Retrieval, Agents and Tools",
+      "topic_slug": "4-5-tool-use-ai-calling-search-calculator-and-code-runner",
+      "path": "m2-introduction-to-ai-systems/week-4/2-retrieval-agents-and-tools/4-5-tool-use-ai-calling-search-calculator-and-code-runner",
+      "concepts_introduced": [
+        "tool-use cycle",
+        "tool request",
+        "search tool",
+        "calculator tool",
+        "code runner",
+        "routing software layer",
+        "tool availability scope"
+      ],
+      "prerequisites": [
+        "4.4"
+      ],
+      "cross_refs": [
+        "4.3"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "4.6",
+      "title": "Multimodal AI — working with text, image, audio, and video in one system",
+      "week_num": 4,
+      "session_name": "The 2026 AI Stack",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 3,
+      "module_slug": "3-multimodal-ai",
+      "module_title": "Multimodal AI",
+      "topic_slug": "4-6-multimodal-ai-working-with-text-image-audio-and-video-in-one",
+      "path": "m2-introduction-to-ai-systems/week-4/3-multimodal-ai/4-6-multimodal-ai-working-with-text-image-audio-and-video-in-one",
+      "concepts_introduced": [
+        "modality",
+        "unimodal",
+        "shared representation space",
+        "encoder",
+        "video understanding",
+        "multimodal AI system"
+      ],
+      "prerequisites": [
+        4.1,
+        4.2,
+        4.3,
+        4.4,
+        4.5
+      ],
+      "cross_refs": [
+        "shared representation space",
+        "encoder",
+        "modality fusion",
+        "GPT-4o",
+        "document intelligence",
+        "accessibility AI"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "4.7",
+      "title": "How to compare two AI tools — designing a measurable evaluation rubric",
+      "week_num": 4,
+      "session_name": "The 2026 AI Stack",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 4,
+      "module_slug": "4-comparing-and-evaluating-ai-tools",
+      "module_title": "Comparing and Evaluating AI Tools",
+      "topic_slug": "4-7-how-to-compare-two-ai-tools-designing-a-measurable-evaluatio",
+      "path": "m2-introduction-to-ai-systems/week-4/4-comparing-and-evaluating-ai-tools/4-7-how-to-compare-two-ai-tools-designing-a-measurable-evaluatio",
+      "concepts_introduced": [
+        "evaluation rubric",
+        "criteria",
+        "performance levels",
+        "descriptors",
+        "weighting",
+        "test protocol"
+      ],
+      "prerequisites": [
+        3.9,
+        3.1,
+        4.1,
+        4.4,
+        4.5,
+        4.6
+      ],
+      "cross_refs": [
+        "rubric",
+        "criteria",
+        "descriptors",
+        "weighting",
+        "test protocol",
+        "hallucination"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "4.8",
+      "title": "Presenting a findings-based recommendation — evidence, not opinion",
+      "week_num": 4,
+      "session_name": "The 2026 AI Stack",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 4,
+      "module_slug": "4-comparing-and-evaluating-ai-tools",
+      "module_title": "Comparing and Evaluating AI Tools",
+      "topic_slug": "4-8-presenting-a-findings-based-recommendation-evidence-not-opin",
+      "path": "m2-introduction-to-ai-systems/week-4/4-comparing-and-evaluating-ai-tools/4-8-presenting-a-findings-based-recommendation-evidence-not-opin",
+      "concepts_introduced": [
+        "evidence-based recommendation",
+        "findings summary",
+        "evidence anchor",
+        "recommendation statement",
+        "trade-off (in evaluation context)",
+        "evaluation limitations"
+      ],
+      "prerequisites": [
+        4.7
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "5.1",
+      "title": "Real AI failure cases — healthcare misdiagnosis, hiring bias, deepfake harm",
+      "week_num": 5,
+      "session_name": "AI Ethics, Safety and Governance",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 1,
+      "module_slug": "1-ai-failures-and-why-they-happen",
+      "module_title": "AI Failures and Why They Happen",
+      "topic_slug": "5-1-real-ai-failure-cases-healthcare-misdiagnosis-hiring-bias-de",
+      "path": "m2-introduction-to-ai-systems/week-5/1-ai-failures-and-why-they-happen/5-1-real-ai-failure-cases-healthcare-misdiagnosis-hiring-bias-de",
+      "concepts_introduced": [
+        "AI failure",
+        "training data bias",
+        "diagnostic AI",
+        "algorithmic bias",
+        "deepfake",
+        "deep learning"
+      ],
+      "prerequisites": [
+        "1.3",
+        "2.6",
+        "3.8",
+        "3.9"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "5.2",
+      "title": "Hallucination — why AI states falsehoods confidently",
+      "week_num": 5,
+      "session_name": "AI Ethics, Safety and Governance",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 1,
+      "module_slug": "1-ai-failures-and-why-they-happen",
+      "module_title": "AI Failures and Why They Happen",
+      "topic_slug": "5-2-hallucination-why-ai-states-falsehoods-confidently",
+      "path": "m2-introduction-to-ai-systems/week-5/1-ai-failures-and-why-they-happen/5-2-hallucination-why-ai-states-falsehoods-confidently",
+      "concepts_introduced": [
+        "next-token prediction",
+        "intrinsic hallucination",
+        "extrinsic hallucination",
+        "calibration",
+        "confidence problem"
+      ],
+      "prerequisites": [
+        3.9,
+        5.1
+      ],
+      "cross_refs": [
+        "LLM"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "5.3",
+      "title": "Data bias — how biased training data produces biased model output",
+      "week_num": 5,
+      "session_name": "AI Ethics, Safety and Governance",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 1,
+      "module_slug": "1-ai-failures-and-why-they-happen",
+      "module_title": "AI Failures and Why They Happen",
+      "topic_slug": "5-3-data-bias-how-biased-training-data-produces-biased-model-out",
+      "path": "m2-introduction-to-ai-systems/week-5/1-ai-failures-and-why-they-happen/5-3-data-bias-how-biased-training-data-produces-biased-model-out",
+      "concepts_introduced": [
+        "data bias",
+        "historical bias",
+        "representation bias",
+        "measurement bias",
+        "GIGO",
+        "objectivity illusion",
+        "disaggregated metrics"
+      ],
+      "prerequisites": [
+        "5.1",
+        "5.2"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "5.4",
+      "title": "The four pillars — fairness, transparency, accountability, harm prevention",
+      "week_num": 5,
+      "session_name": "AI Ethics, Safety and Governance",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 2,
+      "module_slug": "2-ethical-principles",
+      "module_title": "Ethical Principles",
+      "topic_slug": "5-4-the-four-pillars-fairness-transparency-accountability-harm-p",
+      "path": "m2-introduction-to-ai-systems/week-5/2-ethical-principles/5-4-the-four-pillars-fairness-transparency-accountability-harm-p",
+      "concepts_introduced": [
+        "fairness in AI",
+        "proxy discrimination",
+        "transparency in AI",
+        "explainability",
+        "discoverability",
+        "black box problem",
+        "XAI (Explainable AI)",
+        "accountability in AI",
+        "accountability gap",
+        "harm prevention",
+        "risk assessment",
+        "categories of AI harm"
+      ],
+      "prerequisites": [
+        5.1,
+        5.2,
+        5.3
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "5.5",
+      "title": "Red-teaming — systematically testing your own system for failure before deployment",
+      "week_num": 5,
+      "session_name": "AI Ethics, Safety and Governance",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 3,
+      "module_slug": "3-safety-practices",
+      "module_title": "Safety Practices",
+      "topic_slug": "5-5-red-teaming-systematically-testing-your-own-system-for-failu",
+      "path": "m2-introduction-to-ai-systems/week-5/3-safety-practices/5-5-red-teaming-systematically-testing-your-own-system-for-failu",
+      "concepts_introduced": [
+        "red-teaming",
+        "adversarial testing",
+        "red team vs blue team",
+        "jailbreak",
+        "data leakage",
+        "data poisoning",
+        "testing timeline",
+        "test-find-fix-regression loop"
+      ],
+      "prerequisites": [
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4"
+      ],
+      "cross_refs": [
+        "LLM"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "5.6",
+      "title": "Prompt injection — how attackers manipulate AI through crafted inputs",
+      "week_num": 5,
+      "session_name": "AI Ethics, Safety and Governance",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 3,
+      "module_slug": "3-safety-practices",
+      "module_title": "Safety Practices",
+      "topic_slug": "5-6-prompt-injection-how-attackers-manipulate-ai-through-crafted",
+      "path": "m2-introduction-to-ai-systems/week-5/3-safety-practices/5-6-prompt-injection-how-attackers-manipulate-ai-through-crafted",
+      "concepts_introduced": [
+        "prompt injection",
+        "system prompt vs user input",
+        "shared context window",
+        "direct vs indirect prompt injection",
+        "ignore-previous-instructions attack",
+        "injection impacts (unauthorized output, data leakage, unintended actions)"
+      ],
+      "prerequisites": [
+        "3.2",
+        "3.4",
+        "5.4",
+        "5.5"
+      ],
+      "cross_refs": [
+        "LLM"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "5.7",
+      "title": "EU AI Act — risk tiers (unacceptable / high / limited / minimal risk)",
+      "week_num": 5,
+      "session_name": "AI Ethics, Safety and Governance",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 4,
+      "module_slug": "4-governance-frameworks",
+      "module_title": "Governance Frameworks",
+      "topic_slug": "5-7-eu-ai-act-risk-tiers-unacceptable-high-limited-minimal-risk",
+      "path": "m2-introduction-to-ai-systems/week-5/4-governance-frameworks/5-7-eu-ai-act-risk-tiers-unacceptable-high-limited-minimal-risk",
+      "concepts_introduced": [
+        "EU AI Act",
+        "risk-based regulation",
+        "unacceptable-risk tier (banned uses)",
+        "high-risk systems",
+        "conformity assessment",
+        "limited-risk transparency obligation",
+        "minimal-risk tier"
+      ],
+      "prerequisites": [
+        "5.1",
+        "5.4",
+        "5.5"
+      ],
+      "cross_refs": [
+        "EU AI Act"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "5.8",
+      "title": "EU AI Act — obligations for high-risk systems (documentation, testing, human oversight)",
+      "week_num": 5,
+      "session_name": "AI Ethics, Safety and Governance",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 4,
+      "module_slug": "4-governance-frameworks",
+      "module_title": "Governance Frameworks",
+      "topic_slug": "5-8-eu-ai-act-obligations-for-high-risk-systems-documentation-te",
+      "path": "m2-introduction-to-ai-systems/week-5/4-governance-frameworks/5-8-eu-ai-act-obligations-for-high-risk-systems-documentation-te",
+      "concepts_introduced": [
+        "high-risk obligations (documentation, testing, human oversight, etc.)",
+        "provider vs deployer",
+        "conformity assessment",
+        "technical documentation",
+        "robustness",
+        "data governance",
+        "record-keeping / logging"
+      ],
+      "prerequisites": [
+        "5.7",
+        "5.4",
+        "5.5",
+        "5.3",
+        "5.6",
+        "5.1"
+      ],
+      "cross_refs": [
+        "5.7",
+        "5.4",
+        "5.5",
+        "5.3",
+        "5.6",
+        "5.9",
+        "5.10",
+        "5.11",
+        "5.12"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "5.9",
+      "title": "EU AI Act — prohibited uses including social scoring and real-time biometric surveillance",
+      "week_num": 5,
+      "session_name": "AI Ethics, Safety and Governance",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 4,
+      "module_slug": "4-governance-frameworks",
+      "module_title": "Governance Frameworks",
+      "topic_slug": "5-9-eu-ai-act-prohibited-uses-including-social-scoring-and-real",
+      "path": "m2-introduction-to-ai-systems/week-5/4-governance-frameworks/5-9-eu-ai-act-prohibited-uses-including-social-scoring-and-real",
+      "concepts_introduced": [
+        "prohibited uses (Article 5)",
+        "social scoring by governments",
+        "real-time biometric surveillance",
+        "narrow biometric-ID exceptions",
+        "other Article 5 bans"
+      ],
+      "prerequisites": [
+        "5.7",
+        "5.4",
+        "5.1"
+      ],
+      "cross_refs": [
+        "EU AI Act risk tiers (5.7)",
+        "high-risk obligations (5.8)",
+        "four pillars (5.4)",
+        "AI failure cases (5.1)"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "5.10",
+      "title": "NIST AI Risk Management Framework — four functions: Govern, Map, Measure, Manage",
+      "week_num": 5,
+      "session_name": "AI Ethics, Safety and Governance",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 4,
+      "module_slug": "4-governance-frameworks",
+      "module_title": "Governance Frameworks",
+      "topic_slug": "5-10-nist-ai-risk-management-framework-four-functions-govern-map",
+      "path": "m2-introduction-to-ai-systems/week-5/4-governance-frameworks/5-10-nist-ai-risk-management-framework-four-functions-govern-map",
+      "concepts_introduced": [
+        "NIST AI Risk Management Framework",
+        "AI RMF",
+        "voluntary framework",
+        "Govern function",
+        "Map function",
+        "Measure function",
+        "Manage function",
+        "risk as chance times severity"
+      ],
+      "prerequisites": [
+        "5.7",
+        "5.4",
+        "5.1"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "5.11",
+      "title": "White House Executive Order on AI (2023) — key provisions",
+      "week_num": 5,
+      "session_name": "AI Ethics, Safety and Governance",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 4,
+      "module_slug": "4-governance-frameworks",
+      "module_title": "Governance Frameworks",
+      "topic_slug": "5-11-white-house-executive-order-on-ai-2023-key-provisions",
+      "path": "m2-introduction-to-ai-systems/week-5/4-governance-frameworks/5-11-white-house-executive-order-on-ai-2023-key-provisions",
+      "concepts_introduced": [
+        "executive order (EO 14110)",
+        "dual-use foundation models",
+        "mandatory safety testing",
+        "civil-rights protections in AI",
+        "federal-agency AI governance guidance",
+        "revocability of executive action"
+      ],
+      "prerequisites": [
+        "5.4",
+        "5.5",
+        "5.7",
+        "5.10"
+      ],
+      "cross_refs": [
+        "EU AI Act",
+        "NIST AI RMF",
+        "red-teaming",
+        "four pillars"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "5.12",
+      "title": "India AI governance — MEITY advisory guidelines",
+      "week_num": 5,
+      "session_name": "AI Ethics, Safety and Governance",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 4,
+      "module_slug": "4-governance-frameworks",
+      "module_title": "Governance Frameworks",
+      "topic_slug": "5-12-india-ai-governance-meity-advisory-guidelines",
+      "path": "m2-introduction-to-ai-systems/week-5/4-governance-frameworks/5-12-india-ai-governance-meity-advisory-guidelines",
+      "concepts_introduced": [
+        "MEITY (Ministry of Electronics and Information Technology)",
+        "government advisory (soft law vs statute)",
+        "intermediary/online platform",
+        "labeling of unreliable/AI-generated output",
+        "platform due diligence",
+        "directionally aligned with global frameworks"
+      ],
+      "prerequisites": [
+        "5.4",
+        "5.7",
+        "5.10",
+        "5.11"
+      ],
+      "cross_refs": [
+        "EU AI Act",
+        "NIST AI RMF",
+        "EO 14110",
+        "four pillars"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "5.13",
+      "title": "Knowing which governance framework applies to your system",
+      "week_num": 5,
+      "session_name": "AI Ethics, Safety and Governance",
+      "course_code": "M2",
+      "course_slug": "m2-introduction-to-ai-systems",
+      "course_title": "Introduction to AI Systems",
+      "module_position": 4,
+      "module_slug": "4-governance-frameworks",
+      "module_title": "Governance Frameworks",
+      "topic_slug": "5-13-knowing-which-governance-framework-applies-to-your-system",
+      "path": "m2-introduction-to-ai-systems/week-5/4-governance-frameworks/5-13-knowing-which-governance-framework-applies-to-your-system",
+      "concepts_introduced": [
+        "governance as a design-time engineering decision",
+        "jurisdiction-driven applicability",
+        "EU AI Act extraterritorial reach (output used in EU)",
+        "risk-tier classification as the second filter",
+        "frameworks are non-exclusive (multiple apply at once)"
+      ],
+      "prerequisites": [
+        "5.4",
+        "5.7",
+        "5.10",
+        "5.11",
+        "5.12"
+      ],
+      "cross_refs": [
+        "5.4",
+        "5.5",
+        "5.7",
+        "5.8",
+        "5.10",
+        "5.11",
+        "5.12"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "6.1",
+      "title": "Why every AI system is built on numbers",
+      "week_num": 6,
+      "session_name": "Numbers, Vectors and Meaning",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 1,
+      "module_slug": "1-why-numbers-matter-in-ai",
+      "module_title": "Why Numbers Matter in AI",
+      "topic_slug": "6-1-why-every-ai-system-is-built-on-numbers",
+      "path": "m3-applied-maths-for-ai/week-6/1-why-numbers-matter-in-ai/6-1-why-every-ai-system-is-built-on-numbers",
+      "concepts_introduced": [
+        "binary representation",
+        "data-to-number conversion",
+        "pixels as numbers",
+        "parameters",
+        "number as universal data language",
+        "pattern-finding through arithmetic"
+      ],
+      "prerequisites": [
+        "1.1",
+        "1.2",
+        "2.1",
+        "3.1",
+        "5.1"
+      ],
+      "cross_refs": [
+        "TensorFlow Embedding Projector",
+        "LLM",
+        "AI Systems Essay A2"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "6.2",
+      "title": "Scalars — a single number representing one property",
+      "week_num": 6,
+      "session_name": "Numbers, Vectors and Meaning",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 2,
+      "module_slug": "2-scalars-vectors-and-matrices",
+      "module_title": "Scalars, Vectors and Matrices",
+      "topic_slug": "6-2-scalars-a-single-number-representing-one-property",
+      "path": "m3-applied-maths-for-ai/week-6/2-scalars-vectors-and-matrices/6-2-scalars-a-single-number-representing-one-property",
+      "concepts_introduced": [
+        "scalar",
+        "magnitude",
+        "loss value",
+        "learning rate",
+        "hyperparameter",
+        "pixel brightness as scalar"
+      ],
+      "prerequisites": [
+        "6.1"
+      ],
+      "cross_refs": [
+        "vectors (6.3)",
+        "matrices (6.4)"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "6.3",
+      "title": "Vectors — a list of numbers representing multiple properties at once",
+      "week_num": 6,
+      "session_name": "Numbers, Vectors and Meaning",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 2,
+      "module_slug": "2-scalars-vectors-and-matrices",
+      "module_title": "Scalars, Vectors and Matrices",
+      "topic_slug": "6-3-vectors-a-list-of-numbers-representing-multiple-properties-a",
+      "path": "m3-applied-maths-for-ai/week-6/2-scalars-vectors-and-matrices/6-3-vectors-a-list-of-numbers-representing-multiple-properties-a",
+      "concepts_introduced": [
+        "vector",
+        "dimension",
+        "feature",
+        "feature vector",
+        "consistent position-to-property mapping",
+        "ordered list of scalars"
+      ],
+      "prerequisites": [
+        "6.1",
+        "6.2"
+      ],
+      "cross_refs": [
+        "6.4 matrices",
+        "6.5 geometric view of vectors",
+        "6.6 dot product"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "6.4",
+      "title": "Matrices — grids of numbers and how AI uses them",
+      "week_num": 6,
+      "session_name": "Numbers, Vectors and Meaning",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 2,
+      "module_slug": "2-scalars-vectors-and-matrices",
+      "module_title": "Scalars, Vectors and Matrices",
+      "topic_slug": "6-4-matrices-grids-of-numbers-and-how-ai-uses-them",
+      "path": "m3-applied-maths-for-ai/week-6/2-scalars-vectors-and-matrices/6-4-matrices-grids-of-numbers-and-how-ai-uses-them",
+      "concepts_introduced": [
+        "matrix",
+        "row",
+        "column",
+        "cell",
+        "weight_matrix",
+        "image_pixel_grid",
+        "rows_x_columns_notation"
+      ],
+      "prerequisites": [
+        "6.1",
+        "6.2",
+        "6.3"
+      ],
+      "cross_refs": [
+        "neural_networks",
+        "linear_algebra"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "6.5",
+      "title": "A vector as a point in space — music taste described as three numbers",
+      "week_num": 6,
+      "session_name": "Numbers, Vectors and Meaning",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 2,
+      "module_slug": "2-scalars-vectors-and-matrices",
+      "module_title": "Scalars, Vectors and Matrices",
+      "topic_slug": "6-5-a-vector-as-a-point-in-space-music-taste-described-as-three",
+      "path": "m3-applied-maths-for-ai/week-6/2-scalars-vectors-and-matrices/6-5-a-vector-as-a-point-in-space-music-taste-described-as-three",
+      "concepts_introduced": [
+        "coordinate",
+        "axis",
+        "origin",
+        "coordinate_plane",
+        "point_in_space",
+        "3D_coordinate_space",
+        "taste_space",
+        "distance_as_similarity",
+        "coordinate_space",
+        "n_dimensional_space",
+        "neighbourhood"
+      ],
+      "prerequisites": [
+        "6.1",
+        "6.2",
+        "6.3",
+        "6.4"
+      ],
+      "cross_refs": [
+        "recommendation_systems",
+        "vector_search",
+        "embedding_spaces"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "6.6",
+      "title": "Dot product as similarity — vectors pointing the same direction score high",
+      "week_num": 6,
+      "session_name": "Numbers, Vectors and Meaning",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 3,
+      "module_slug": "3-similarity-and-meaning",
+      "module_title": "Similarity and Meaning",
+      "topic_slug": "6-6-dot-product-as-similarity-vectors-pointing-the-same-directio",
+      "path": "m3-applied-maths-for-ai/week-6/3-similarity-and-meaning/6-6-dot-product-as-similarity-vectors-pointing-the-same-directio",
+      "concepts_introduced": [
+        "dot_product",
+        "position_multiply_sum",
+        "same_direction_score",
+        "opposite_direction_negative",
+        "perpendicular_zero",
+        "similarity_score",
+        "magnitude_sensitivity"
+      ],
+      "prerequisites": [
+        "6.2",
+        "6.3",
+        "6.4",
+        "6.5"
+      ],
+      "cross_refs": [
+        "recommendation_systems",
+        "vector_search"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "6.7",
+      "title": "Embeddings — turning words into vectors that capture meaning",
+      "week_num": 6,
+      "session_name": "Numbers, Vectors and Meaning",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 3,
+      "module_slug": "3-similarity-and-meaning",
+      "module_title": "Similarity and Meaning",
+      "topic_slug": "6-7-embeddings-turning-words-into-vectors-that-capture-meaning",
+      "path": "m3-applied-maths-for-ai/week-6/3-similarity-and-meaning/6-7-embeddings-turning-words-into-vectors-that-capture-meaning",
+      "concepts_introduced": [
+        "embedding",
+        "one-hot_encoding",
+        "distributional_hypothesis",
+        "Word2Vec",
+        "learned_representation",
+        "embedding_space",
+        "dense_vector",
+        "pre-trained_embedding"
+      ],
+      "prerequisites": [
+        "6.3",
+        "6.5",
+        "6.6"
+      ],
+      "cross_refs": [
+        "Word2Vec",
+        "GloVe",
+        "FastText",
+        "TensorFlow Embedding Projector"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "6.8",
+      "title": "Why 'king − man + woman ≈ queen' works",
+      "week_num": 6,
+      "session_name": "Numbers, Vectors and Meaning",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 3,
+      "module_slug": "3-similarity-and-meaning",
+      "module_title": "Similarity and Meaning",
+      "topic_slug": "6-8-why-king-man-woman-queen-works",
+      "path": "m3-applied-maths-for-ai/week-6/3-similarity-and-meaning/6-8-why-king-man-woman-queen-works",
+      "concepts_introduced": [
+        "analogy_direction",
+        "gender_direction",
+        "vector_arithmetic",
+        "approximate_equality",
+        "nearest_neighbour_answer",
+        "embedding_offset"
+      ],
+      "prerequisites": [
+        "6.3",
+        "6.5",
+        "6.6",
+        "6.7"
+      ],
+      "cross_refs": [
+        "Word2Vec",
+        "GloVe",
+        "TensorFlow Embedding Projector"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "6.9",
+      "title": "Cosine similarity — measuring the angle between two meaning-vectors",
+      "week_num": 6,
+      "session_name": "Numbers, Vectors and Meaning",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 3,
+      "module_slug": "3-similarity-and-meaning",
+      "module_title": "Similarity and Meaning",
+      "topic_slug": "6-9-cosine-similarity-measuring-the-angle-between-two-meaning-ve",
+      "path": "m3-applied-maths-for-ai/week-6/3-similarity-and-meaning/6-9-cosine-similarity-measuring-the-angle-between-two-meaning-ve",
+      "concepts_introduced": [
+        "cosine_similarity",
+        "angle_between_vectors",
+        "theta",
+        "vector_magnitude",
+        "normalisation",
+        "cosine_formula",
+        "perpendicular_vectors",
+        "cosine_distance"
+      ],
+      "prerequisites": [
+        "6.6",
+        "6.5",
+        "6.3"
+      ],
+      "cross_refs": [
+        "Word2Vec",
+        "scikit-learn",
+        "Keras"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "6.10",
+      "title": "Using the TensorFlow Embedding Projector to explore word clusters",
+      "week_num": 6,
+      "session_name": "Numbers, Vectors and Meaning",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 4,
+      "module_slug": "4-hands-on-exploration",
+      "module_title": "Hands-On Exploration",
+      "topic_slug": "6-10-using-the-tensorflow-embedding-projector-to-explore-word-clu",
+      "path": "m3-applied-maths-for-ai/week-6/4-hands-on-exploration/6-10-using-the-tensorflow-embedding-projector-to-explore-word-clu",
+      "concepts_introduced": [
+        "TensorFlow Embedding Projector",
+        "cluster of word-vectors",
+        "dimensionality reduction as squashing to 2D/3D",
+        "reading nearest neighbours in the Projector",
+        "search-and-highlight interaction"
+      ],
+      "prerequisites": [
+        "6.3",
+        "6.5",
+        "6.6",
+        "6.7",
+        "6.8",
+        "6.9"
+      ],
+      "cross_refs": [
+        "Embeddings",
+        "Vectors",
+        "Cosine similarity",
+        "Nearest neighbour",
+        "PCA/t-SNE (deferred)"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "7.1",
+      "title": "Probability basics — likelihood, events, outcomes",
+      "week_num": 7,
+      "session_name": "Probability, Statistics and AI Confidence",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 1,
+      "module_slug": "1-probability-foundations",
+      "module_title": "Probability Foundations",
+      "topic_slug": "7-1-probability-basics-likelihood-events-outcomes",
+      "path": "m3-applied-maths-for-ai/week-7/1-probability-foundations/7-1-probability-basics-likelihood-events-outcomes",
+      "concepts_introduced": [
+        "probability",
+        "outcome",
+        "sample space",
+        "event",
+        "complement",
+        "equally-likely outcomes"
+      ],
+      "prerequisites": [
+        1.3,
+        1.4,
+        3.4
+      ],
+      "cross_refs": [
+        "LLMs"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "7.2",
+      "title": "Conditional probability — P(A given B)",
+      "week_num": 7,
+      "session_name": "Probability, Statistics and AI Confidence",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 1,
+      "module_slug": "1-probability-foundations",
+      "module_title": "Probability Foundations",
+      "topic_slug": "7-2-conditional-probability-p-a-given-b",
+      "path": "m3-applied-maths-for-ai/week-7/1-probability-foundations/7-2-conditional-probability-p-a-given-b",
+      "concepts_introduced": [
+        "conditional probability",
+        "P(A|B) notation",
+        "reduced sample space",
+        "joint probability",
+        "conditional probability formula"
+      ],
+      "prerequisites": [
+        "7.1"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "7.3",
+      "title": "Bayes' theorem intuition — updating belief with new evidence",
+      "week_num": 7,
+      "session_name": "Probability, Statistics and AI Confidence",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 1,
+      "module_slug": "1-probability-foundations",
+      "module_title": "Probability Foundations",
+      "topic_slug": "7-3-bayes-theorem-intuition-updating-belief-with-new-evidence",
+      "path": "m3-applied-maths-for-ai/week-7/1-probability-foundations/7-3-bayes-theorem-intuition-updating-belief-with-new-evidence",
+      "concepts_introduced": [
+        "prior",
+        "posterior",
+        "likelihood",
+        "Bayes' theorem",
+        "Bayesian updating"
+      ],
+      "prerequisites": [
+        "7.1",
+        "7.2"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "7.4",
+      "title": "Why LLMs output a probability distribution, not a single fixed answer",
+      "week_num": 7,
+      "session_name": "Probability, Statistics and AI Confidence",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 2,
+      "module_slug": "2-how-llms-use-probability",
+      "module_title": "How LLMs Use Probability",
+      "topic_slug": "7-4-why-llms-output-a-probability-distribution-not-a-single-fixe",
+      "path": "m3-applied-maths-for-ai/week-7/2-how-llms-use-probability/7-4-why-llms-output-a-probability-distribution-not-a-single-fixe",
+      "concepts_introduced": [
+        "token",
+        "vocabulary",
+        "probability distribution over vocabulary",
+        "softmax",
+        "sampling",
+        "stochastic system",
+        "deterministic system",
+        "generation loop"
+      ],
+      "prerequisites": [
+        "7.1",
+        "7.2",
+        "7.3"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "7.5",
+      "title": "Temperature — low picks the most likely token, high introduces variation",
+      "week_num": 7,
+      "session_name": "Probability, Statistics and AI Confidence",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 2,
+      "module_slug": "2-how-llms-use-probability",
+      "module_title": "How LLMs Use Probability",
+      "topic_slug": "7-5-temperature-low-picks-the-most-likely-token-high-introduces",
+      "path": "m3-applied-maths-for-ai/week-7/2-how-llms-use-probability/7-5-temperature-low-picks-the-most-likely-token-high-introduces",
+      "concepts_introduced": [
+        "temperature",
+        "sharp distribution",
+        "flat distribution",
+        "temperature 0",
+        "reliability vs variety trade-off"
+      ],
+      "prerequisites": [
+        7.4,
+        7.1
+      ],
+      "cross_refs": [
+        "LLM API parameters",
+        "ChatGPT",
+        "temperature setting in developer tools"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "7.6",
+      "title": "Mean, median, mode — measuring consistency across AI runs",
+      "week_num": 7,
+      "session_name": "Probability, Statistics and AI Confidence",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 3,
+      "module_slug": "3-measuring-ai-performance",
+      "module_title": "Measuring AI Performance",
+      "topic_slug": "7-6-mean-median-mode-measuring-consistency-across-ai-runs",
+      "path": "m3-applied-maths-for-ai/week-7/3-measuring-ai-performance/7-6-mean-median-mode-measuring-consistency-across-ai-runs",
+      "concepts_introduced": [
+        "mean",
+        "median",
+        "mode",
+        "measures of central tendency",
+        "descriptive statistics",
+        "outlier",
+        "mode as categorical measure"
+      ],
+      "prerequisites": [
+        "7.4",
+        "7.5"
+      ],
+      "cross_refs": [
+        "AI evaluation",
+        "temperature 0 vs temperature 1",
+        "chatbot consistency testing"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "7.7",
+      "title": "Accuracy — what proportion of outputs were correct",
+      "week_num": 7,
+      "session_name": "Probability, Statistics and AI Confidence",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 3,
+      "module_slug": "3-measuring-ai-performance",
+      "module_title": "Measuring AI Performance",
+      "topic_slug": "7-7-accuracy-what-proportion-of-outputs-were-correct",
+      "path": "m3-applied-maths-for-ai/week-7/3-measuring-ai-performance/7-7-accuracy-what-proportion-of-outputs-were-correct",
+      "concepts_introduced": [
+        "accuracy",
+        "correct prediction",
+        "incorrect prediction",
+        "accuracy formula",
+        "classification task",
+        "labelled dataset",
+        "test set",
+        "accuracy limitations",
+        "imbalanced dataset",
+        "dummy baseline"
+      ],
+      "prerequisites": [
+        "7.1",
+        "7.6"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "7.8",
+      "title": "Precision — of the things the model flagged, how many were actually correct",
+      "week_num": 7,
+      "session_name": "Probability, Statistics and AI Confidence",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 3,
+      "module_slug": "3-measuring-ai-performance",
+      "module_title": "Measuring AI Performance",
+      "topic_slug": "7-8-precision-of-the-things-the-model-flagged-how-many-were-actu",
+      "path": "m3-applied-maths-for-ai/week-7/3-measuring-ai-performance/7-8-precision-of-the-things-the-model-flagged-how-many-were-actu",
+      "concepts_introduced": [
+        "precision",
+        "true positive",
+        "false positive",
+        "positive prediction",
+        "negative prediction",
+        "flagged",
+        "false alarm",
+        "precision formula"
+      ],
+      "prerequisites": [
+        "7.7"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "7.9",
+      "title": "Recall — of all the things that were correct, how many did the model find",
+      "week_num": 7,
+      "session_name": "Probability, Statistics and AI Confidence",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 3,
+      "module_slug": "3-measuring-ai-performance",
+      "module_title": "Measuring AI Performance",
+      "topic_slug": "7-9-recall-of-all-the-things-that-were-correct-how-many-did-the",
+      "path": "m3-applied-maths-for-ai/week-7/3-measuring-ai-performance/7-9-recall-of-all-the-things-that-were-correct-how-many-did-the",
+      "concepts_introduced": [
+        "recall",
+        "false negative",
+        "precision-recall trade-off",
+        "coverage of true positives"
+      ],
+      "prerequisites": [
+        7.7,
+        7.8
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "7.10",
+      "title": "Confusion matrix — why 95% accuracy can still mean frequent failure",
+      "week_num": 7,
+      "session_name": "Probability, Statistics and AI Confidence",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 3,
+      "module_slug": "3-measuring-ai-performance",
+      "module_title": "Measuring AI Performance",
+      "topic_slug": "7-10-confusion-matrix-why-95-accuracy-can-still-mean-frequent-fai",
+      "path": "m3-applied-maths-for-ai/week-7/3-measuring-ai-performance/7-10-confusion-matrix-why-95-accuracy-can-still-mean-frequent-fai",
+      "concepts_introduced": [
+        "confusion matrix",
+        "true negative",
+        "accuracy paradox",
+        "off-diagonal cells",
+        "ground truth",
+        "positive class"
+      ],
+      "prerequisites": [
+        "7.7",
+        "7.8",
+        "7.9"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "7.11",
+      "title": "Interpreting AI output variation — what it tells you about reliability",
+      "week_num": 7,
+      "session_name": "Probability, Statistics and AI Confidence",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 3,
+      "module_slug": "3-measuring-ai-performance",
+      "module_title": "Measuring AI Performance",
+      "topic_slug": "7-11-interpreting-ai-output-variation-what-it-tells-you-about-rel",
+      "path": "m3-applied-maths-for-ai/week-7/3-measuring-ai-performance/7-11-interpreting-ai-output-variation-what-it-tells-you-about-rel",
+      "concepts_introduced": [
+        "output variation",
+        "temperature-adjusted variation reading",
+        "four-quadrant reliability framework",
+        "deterministic task",
+        "open-ended task",
+        "variation-based reliability measurement",
+        "consistency vs correctness distinction"
+      ],
+      "prerequisites": [
+        "7.4",
+        "7.5",
+        "7.6",
+        "7.7",
+        "7.8",
+        "7.9",
+        "7.10"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "8.1",
+      "title": "Embedding explorer — comparing domain-specific word clusters in 2D",
+      "week_num": 8,
+      "session_name": "Applied Maths Lab",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 1,
+      "module_slug": "1-embeddings-in-practice",
+      "module_title": "Embeddings in Practice",
+      "topic_slug": "8-1-embedding-explorer-comparing-domain-specific-word-clusters-i",
+      "path": "m3-applied-maths-for-ai/week-8/1-embeddings-in-practice/8-1-embedding-explorer-comparing-domain-specific-word-clusters-i",
+      "concepts_introduced": [
+        "domain-specific words",
+        "2D projection",
+        "cluster",
+        "outlier",
+        "comparing word clusters across domains",
+        "nearest neighbors (in the Projector)"
+      ],
+      "prerequisites": [
+        "6.7",
+        "6.5",
+        "6.10"
+      ],
+      "cross_refs": [
+        "Embeddings",
+        "Visualization"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "8.2",
+      "title": "Similarity scoring — computing cosine similarity between sentence pairs",
+      "week_num": 8,
+      "session_name": "Applied Maths Lab",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 1,
+      "module_slug": "1-embeddings-in-practice",
+      "module_title": "Embeddings in Practice",
+      "topic_slug": "8-2-similarity-scoring-computing-cosine-similarity-between-sente",
+      "path": "m3-applied-maths-for-ai/week-8/1-embeddings-in-practice/8-2-similarity-scoring-computing-cosine-similarity-between-sente",
+      "concepts_introduced": [
+        "sentence embedding",
+        "cosine similarity score (0–1 scale)",
+        "similarity by angle/direction not length",
+        "pre-computed vectors",
+        "same meaning vs same words",
+        "similarity ranking of sentence pairs"
+      ],
+      "prerequisites": [
+        "6.5",
+        "6.6",
+        "6.7",
+        "6.9",
+        "8.1"
+      ],
+      "cross_refs": [
+        "Embeddings",
+        "Similarity"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "8.3",
+      "title": "Precision vs recall trade-off — when does recall matter more than precision?",
+      "week_num": 8,
+      "session_name": "Applied Maths Lab",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 2,
+      "module_slug": "2-evaluation-metrics-in-depth",
+      "module_title": "Evaluation Metrics in Depth",
+      "topic_slug": "8-3-precision-vs-recall-trade-off-when-does-recall-matter-more-t",
+      "path": "m3-applied-maths-for-ai/week-8/2-evaluation-metrics-in-depth/8-3-precision-vs-recall-trade-off-when-does-recall-matter-more-t",
+      "concepts_introduced": [
+        "precision",
+        "recall",
+        "false positive",
+        "false negative",
+        "precision-recall trade-off",
+        "threshold",
+        "cost-of-error framing"
+      ],
+      "prerequisites": [],
+      "cross_refs": [
+        "Evaluation",
+        "Classification metrics"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "8.4",
+      "title": "F1 score — balancing precision and recall into one metric",
+      "week_num": 8,
+      "session_name": "Applied Maths Lab",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 2,
+      "module_slug": "2-evaluation-metrics-in-depth",
+      "module_title": "Evaluation Metrics in Depth",
+      "topic_slug": "8-4-f1-score-balancing-precision-and-recall-into-one-metric",
+      "path": "m3-applied-maths-for-ai/week-8/2-evaluation-metrics-in-depth/8-4-f1-score-balancing-precision-and-recall-into-one-metric",
+      "concepts_introduced": [
+        "F1 score",
+        "harmonic mean",
+        "arithmetic mean (plain average) as contrast",
+        "single-number metric vs reporting precision/recall separately",
+        "balance-vs-imbalance penalty"
+      ],
+      "prerequisites": [
+        "8.3"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "8.5",
+      "title": "Computing accuracy, precision, recall, and F1 by hand from a confusion matrix",
+      "week_num": 8,
+      "session_name": "Applied Maths Lab",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 2,
+      "module_slug": "2-evaluation-metrics-in-depth",
+      "module_title": "Evaluation Metrics in Depth",
+      "topic_slug": "8-5-computing-accuracy-precision-recall-and-f1-by-hand-from-a-co",
+      "path": "m3-applied-maths-for-ai/week-8/2-evaluation-metrics-in-depth/8-5-computing-accuracy-precision-recall-and-f1-by-hand-from-a-co",
+      "concepts_introduced": [
+        "confusion matrix (2x2 TP/FP/FN/TN grid)",
+        "true negative",
+        "accuracy",
+        "accuracy formula (TP+TN)/(TP+TN+FP+FN)",
+        "by-hand metric computation from a confusion matrix",
+        "all-cells-sum sanity check"
+      ],
+      "prerequisites": [
+        "8.3",
+        "8.4"
+      ],
+      "cross_refs": [
+        "Evaluation",
+        "Classification metrics"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "8.6",
+      "title": "Calibration — does the model's stated confidence match its actual accuracy?",
+      "week_num": 8,
+      "session_name": "Applied Maths Lab",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 3,
+      "module_slug": "3-model-calibration",
+      "module_title": "Model Calibration",
+      "topic_slug": "8-6-calibration-does-the-models-stated-confidence-match-its-actu",
+      "path": "m3-applied-maths-for-ai/week-8/3-model-calibration/8-6-calibration-does-the-models-stated-confidence-match-its-actu",
+      "concepts_introduced": [
+        "confidence (model's stated certainty per prediction)",
+        "calibration / well-calibrated",
+        "grouping predictions by confidence (bucketing)",
+        "reliability diagram (confidence-vs-accuracy plot)",
+        "overconfidence (below diagonal)",
+        "underconfidence (above diagonal)",
+        "accuracy-vs-calibration distinction"
+      ],
+      "prerequisites": [
+        "8.5",
+        "8.3"
+      ],
+      "cross_refs": [
+        "Evaluation",
+        "Model trust / confidence scores"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "8.7",
+      "title": "Designing a domain evaluation plan — metric, test set size, pass/fail threshold",
+      "week_num": 8,
+      "session_name": "Applied Maths Lab",
+      "course_code": "M3",
+      "course_slug": "m3-applied-maths-for-ai",
+      "course_title": "Applied Maths for AI",
+      "module_position": 4,
+      "module_slug": "4-planning-your-capstone-evaluation",
+      "module_title": "Planning Your Capstone Evaluation",
+      "topic_slug": "8-7-designing-a-domain-evaluation-plan-metric-test-set-size-pass",
+      "path": "m3-applied-maths-for-ai/week-8/4-planning-your-capstone-evaluation/8-7-designing-a-domain-evaluation-plan-metric-test-set-size-pass",
+      "concepts_introduced": [
+        "evaluation plan",
+        "matching metric to cost of errors in your domain",
+        "test set size for a trustworthy (non-noisy) score",
+        "held-out / representative test set",
+        "pass/fail threshold set in advance",
+        "tying the threshold to task stakes"
+      ],
+      "prerequisites": [
+        "8.3",
+        "8.4",
+        "8.5",
+        "8.6"
+      ],
+      "cross_refs": [
+        "8.1",
+        "8.2"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "9.1",
+      "title": "System 1 thinking — fast, instinctive, automatic",
+      "week_num": 9,
+      "session_name": "Human Judgment and AI Oversight",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 1,
+      "module_slug": "1-how-humans-think",
+      "module_title": "How Humans Think",
+      "topic_slug": "9-1-system-1-thinking-fast-instinctive-automatic",
+      "path": "m4-human-cognition-and-ai-oversight/week-9/1-how-humans-think/9-1-system-1-thinking-fast-instinctive-automatic",
+      "concepts_introduced": [
+        "System 1 thinking",
+        "cognitive heuristics",
+        "automatic processing",
+        "fast thinking",
+        "pattern matching"
+      ],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "9.2",
+      "title": "System 2 thinking — slow, deliberate, effortful",
+      "week_num": 9,
+      "session_name": "Human Judgment and AI Oversight",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 1,
+      "module_slug": "1-how-humans-think",
+      "module_title": "How Humans Think",
+      "topic_slug": "9-2-system-2-thinking-slow-deliberate-effortful",
+      "path": "m4-human-cognition-and-ai-oversight/week-9/1-how-humans-think/9-2-system-2-thinking-slow-deliberate-effortful",
+      "concepts_introduced": [
+        "System 2 thinking",
+        "working memory",
+        "cognitive load",
+        "cognitive fatigue",
+        "serial processing",
+        "deliberate processing",
+        "cognitive capacity"
+      ],
+      "prerequisites": [
+        9.1
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "9.3",
+      "title": "Confirmation bias — seeking information that confirms existing beliefs",
+      "week_num": 9,
+      "session_name": "Human Judgment and AI Oversight",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 2,
+      "module_slug": "2-cognitive-biases-and-ai",
+      "module_title": "Cognitive Biases and AI",
+      "topic_slug": "9-3-confirmation-bias-seeking-information-that-confirms-existing",
+      "path": "m4-human-cognition-and-ai-oversight/week-9/2-cognitive-biases-and-ai/9-3-confirmation-bias-seeking-information-that-confirms-existing",
+      "concepts_introduced": [
+        "confirmation bias",
+        "selective search",
+        "biased interpretation",
+        "selective memory",
+        "motivated reasoning",
+        "cognitive economy",
+        "Wason 2-4-6 task"
+      ],
+      "prerequisites": [
+        "9.1",
+        "9.2"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "9.4",
+      "title": "Anchoring bias — over-relying on the first piece of information received",
+      "week_num": 9,
+      "session_name": "Human Judgment and AI Oversight",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 2,
+      "module_slug": "2-cognitive-biases-and-ai",
+      "module_title": "Cognitive Biases and AI",
+      "topic_slug": "9-4-anchoring-bias-over-relying-on-the-first-piece-of-informatio",
+      "path": "m4-human-cognition-and-ai-oversight/week-9/2-cognitive-biases-and-ai/9-4-anchoring-bias-over-relying-on-the-first-piece-of-informatio",
+      "concepts_introduced": [
+        "anchoring bias",
+        "anchor",
+        "adjustment heuristic",
+        "insufficient adjustment",
+        "primacy effect",
+        "first-pass anchor"
+      ],
+      "prerequisites": [
+        "9.1",
+        "9.2",
+        "9.3"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "9.5",
+      "title": "Automation bias — trusting automated systems over human judgment",
+      "week_num": 9,
+      "session_name": "Human Judgment and AI Oversight",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 2,
+      "module_slug": "2-cognitive-biases-and-ai",
+      "module_title": "Cognitive Biases and AI",
+      "topic_slug": "9-5-automation-bias-trusting-automated-systems-over-human-judgme",
+      "path": "m4-human-cognition-and-ai-oversight/week-9/2-cognitive-biases-and-ai/9-5-automation-bias-trusting-automated-systems-over-human-judgme",
+      "concepts_introduced": [
+        "automation bias",
+        "omission error",
+        "commission error",
+        "cognitive offloading",
+        "complacency",
+        "situational awareness",
+        "calibrated trust",
+        "alert fatigue"
+      ],
+      "prerequisites": [
+        "9.1",
+        "9.2",
+        "9.3",
+        "9.4"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "9.6",
+      "title": "How human biases get encoded into AI training data",
+      "week_num": 9,
+      "session_name": "Human Judgment and AI Oversight",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 2,
+      "module_slug": "2-cognitive-biases-and-ai",
+      "module_title": "Cognitive Biases and AI",
+      "topic_slug": "9-6-how-human-biases-get-encoded-into-ai-training-data",
+      "path": "m4-human-cognition-and-ai-oversight/week-9/2-cognitive-biases-and-ai/9-6-how-human-biases-get-encoded-into-ai-training-data",
+      "concepts_introduced": [
+        "encoding (bias into data)",
+        "training data",
+        "labelling",
+        "labelling bias",
+        "historical bias",
+        "selection bias",
+        "representation bias",
+        "feedback loop",
+        "feedback loop amplification",
+        "aggregation bias"
+      ],
+      "prerequisites": [
+        "9.3",
+        "9.4",
+        "9.5"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "9.7",
+      "title": "The Judgment Framework — Q1: What is the cost of this being wrong?",
+      "week_num": 9,
+      "session_name": "Human Judgment and AI Oversight",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 3,
+      "module_slug": "3-the-judgment-framework",
+      "module_title": "The Judgment Framework",
+      "topic_slug": "9-7-the-judgment-framework-q1-what-is-the-cost-of-this-being-wro",
+      "path": "m4-human-cognition-and-ai-oversight/week-9/3-the-judgment-framework/9-7-the-judgment-framework-q1-what-is-the-cost-of-this-being-wro",
+      "concepts_introduced": [
+        "Judgment Framework",
+        "severity of error",
+        "probability of error",
+        "detectability",
+        "decision consequence",
+        "cost-of-error triage"
+      ],
+      "prerequisites": [
+        9.1,
+        9.2,
+        9.5,
+        9.6
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "9.8",
+      "title": "The Judgment Framework — Q2: Can I verify this without the AI?",
+      "week_num": 9,
+      "session_name": "Human Judgment and AI Oversight",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 3,
+      "module_slug": "3-the-judgment-framework",
+      "module_title": "The Judgment Framework",
+      "topic_slug": "9-8-the-judgment-framework-q2-can-i-verify-this-without-the-ai",
+      "path": "m4-human-cognition-and-ai-oversight/week-9/3-the-judgment-framework/9-8-the-judgment-framework-q2-can-i-verify-this-without-the-ai",
+      "concepts_introduced": [
+        "independent verification",
+        "production question vs verification question",
+        "cross-referencing a source",
+        "domain expertise as verification",
+        "checking against a known standard",
+        "asking a second person"
+      ],
+      "prerequisites": [
+        "9.7",
+        "9.5",
+        "9.4",
+        "9.3"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "9.9",
+      "title": "The Judgment Framework — Q3: Who is accountable if this fails?",
+      "week_num": 9,
+      "session_name": "Human Judgment and AI Oversight",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 3,
+      "module_slug": "3-the-judgment-framework",
+      "module_title": "The Judgment Framework",
+      "topic_slug": "9-9-the-judgment-framework-q3-who-is-accountable-if-this-fails",
+      "path": "m4-human-cognition-and-ai-oversight/week-9/3-the-judgment-framework/9-9-the-judgment-framework-q3-who-is-accountable-if-this-fails",
+      "concepts_introduced": [
+        "accountability",
+        "accountability chain",
+        "pre-decision accountability",
+        "escalation",
+        "design-time accountability",
+        "deployment-time accountability",
+        "nameability"
+      ],
+      "prerequisites": [
+        "9.7",
+        "9.8"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "9.10",
+      "title": "Acceptable error — defining the failure threshold tolerable for a use case",
+      "week_num": 9,
+      "session_name": "Human Judgment and AI Oversight",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 4,
+      "module_slug": "4-defining-safe-boundaries",
+      "module_title": "Defining Safe Boundaries",
+      "topic_slug": "9-10-acceptable-error-defining-the-failure-threshold-tolerable-fo",
+      "path": "m4-human-cognition-and-ai-oversight/week-9/4-defining-safe-boundaries/9-10-acceptable-error-defining-the-failure-threshold-tolerable-fo",
+      "concepts_introduced": [
+        "acceptable error",
+        "failure threshold",
+        "false positive (Type I error)",
+        "false negative (Type II error)",
+        "asymmetric error cost",
+        "error tolerance",
+        "confidence threshold",
+        "threshold segmentation",
+        "human baseline comparison"
+      ],
+      "prerequisites": [
+        "9.7",
+        "9.5"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "9.11",
+      "title": "High-stakes domains where AI must not have the final word — medical, legal, safety",
+      "week_num": 9,
+      "session_name": "Human Judgment and AI Oversight",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 4,
+      "module_slug": "4-defining-safe-boundaries",
+      "module_title": "Defining Safe Boundaries",
+      "topic_slug": "9-11-high-stakes-domains-where-ai-must-not-have-the-final-word-me",
+      "path": "m4-human-cognition-and-ai-oversight/week-9/4-defining-safe-boundaries/9-11-high-stakes-domains-where-ai-must-not-have-the-final-word-me",
+      "concepts_introduced": [
+        "high-stakes domain",
+        "final word (human final authority)",
+        "decision support vs decision-maker",
+        "meaningful oversight vs nominal oversight",
+        "accountability gap",
+        "high-risk AI (EU AI Act classification)",
+        "explainability / XAI"
+      ],
+      "prerequisites": [
+        "9.7",
+        "9.9",
+        "9.10"
+      ],
+      "cross_refs": [
+        "EU AI Act",
+        "HITL (human-in-the-loop)",
+        "COMPAS",
+        "Boeing 737 MAX MCAS"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "module_passed"
+    },
+    {
+      "id": "10.1",
+      "title": "Case study: AI in college admissions — where was the human override point missed?",
+      "week_num": 10,
+      "session_name": "Cognition in Practice — Case Studies",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 1,
+      "module_slug": "1-case-studies",
+      "module_title": "Case Studies",
+      "topic_slug": "10-1-case-study-ai-in-college-admissions-where-was-the-human-over",
+      "path": "m4-human-cognition-and-ai-oversight/week-10/1-case-studies/10-1-case-study-ai-in-college-admissions-where-was-the-human-over",
+      "concepts_introduced": [
+        "holistic review",
+        "pipeline",
+        "human override point",
+        "calibration",
+        "holistic review collapse",
+        "training data",
+        "override as theater"
+      ],
+      "prerequisites": [
+        "9.5",
+        "9.7",
+        "9.8",
+        "9.9",
+        "9.10",
+        "9.11"
+      ],
+      "cross_refs": [
+        "9.6"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "10.2",
+      "title": "Case study: Automated medical triage — what failure mode was tolerated?",
+      "week_num": 10,
+      "session_name": "Cognition in Practice — Case Studies",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 1,
+      "module_slug": "1-case-studies",
+      "module_title": "Case Studies",
+      "topic_slug": "10-2-case-study-automated-medical-triage-what-failure-mode-was-to",
+      "path": "m4-human-cognition-and-ai-oversight/week-10/1-case-studies/10-2-case-study-automated-medical-triage-what-failure-mode-was-to",
+      "concepts_introduced": [
+        "failure mode",
+        "systematic under-scoring",
+        "sub-group performance audit",
+        "deterioration-contradiction alert",
+        "evaluation gap",
+        "override accountability",
+        "post-market surveillance analogy"
+      ],
+      "prerequisites": [
+        "9.5",
+        "9.7",
+        "9.8",
+        "9.9",
+        "9.11",
+        "10.1"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "10.3",
+      "title": "Case study: AI loan approval at scale — who was accountable?",
+      "week_num": 10,
+      "session_name": "Cognition in Practice — Case Studies",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 1,
+      "module_slug": "1-case-studies",
+      "module_title": "Case Studies",
+      "topic_slug": "10-3-case-study-ai-loan-approval-at-scale-who-was-accountable",
+      "path": "m4-human-cognition-and-ai-oversight/week-10/1-case-studies/10-3-case-study-ai-loan-approval-at-scale-who-was-accountable",
+      "concepts_introduced": [
+        "diffuse accountability",
+        "accountability gap",
+        "adverse action notice",
+        "model documentation",
+        "accountability chain"
+      ],
+      "prerequisites": [
+        9.5,
+        9.7,
+        9.9,
+        9.11,
+        10.1,
+        10.2
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "10.4",
+      "title": "Automation complacency — how high accuracy makes humans less vigilant",
+      "week_num": 10,
+      "session_name": "Cognition in Practice — Case Studies",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 2,
+      "module_slug": "2-automation-complacency",
+      "module_title": "Automation Complacency",
+      "topic_slug": "10-4-automation-complacency-how-high-accuracy-makes-humans-less-v",
+      "path": "m4-human-cognition-and-ai-oversight/week-10/2-automation-complacency/10-4-automation-complacency-how-high-accuracy-makes-humans-less-v",
+      "concepts_introduced": [
+        "automation complacency",
+        "vigilance",
+        "vigilance decay",
+        "accuracy paradox",
+        "trust calibration",
+        "out-of-the-loop performance decrement"
+      ],
+      "prerequisites": [
+        "10.1",
+        "10.2",
+        "10.3"
+      ],
+      "cross_refs": [
+        "aviation",
+        "healthcare",
+        "content moderation"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "10.5",
+      "title": "Designing human-in-the-loop checkpoints — when to require sign-off vs allow autonomous action",
+      "week_num": 10,
+      "session_name": "Cognition in Practice — Case Studies",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 3,
+      "module_slug": "3-designing-human-oversight",
+      "module_title": "Designing Human Oversight",
+      "topic_slug": "10-5-designing-human-in-the-loop-checkpoints-when-to-require-sign",
+      "path": "m4-human-cognition-and-ai-oversight/week-10/3-designing-human-oversight/10-5-designing-human-in-the-loop-checkpoints-when-to-require-sign",
+      "concepts_introduced": [
+        "human-in-the-loop (HITL)",
+        "human-on-the-loop (HOTL)",
+        "human-out-of-the-loop (HOOTL)",
+        "checkpoint",
+        "confidence routing",
+        "escalation trigger",
+        "checkpoint matrix"
+      ],
+      "prerequisites": [
+        "9.7",
+        "9.8",
+        "9.9",
+        "9.10",
+        "9.11",
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4"
+      ],
+      "cross_refs": [
+        "college admissions pipeline",
+        "medical triage AI",
+        "loan approval AI",
+        "content moderation AI"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "10.6",
+      "title": "Identifying which components in your system need a mandatory human checkpoint",
+      "week_num": 10,
+      "session_name": "Cognition in Practice — Case Studies",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 3,
+      "module_slug": "3-designing-human-oversight",
+      "module_title": "Designing Human Oversight",
+      "topic_slug": "10-6-identifying-which-components-in-your-system-need-a-mandatory",
+      "path": "m4-human-cognition-and-ai-oversight/week-10/3-designing-human-oversight/10-6-identifying-which-components-in-your-system-need-a-mandatory",
+      "concepts_introduced": [
+        "component",
+        "risk-tiered component mapping",
+        "mandatory checkpoint",
+        "optional checkpoint",
+        "error budget",
+        "baseline oversight assignment",
+        "triggered oversight assignment"
+      ],
+      "prerequisites": [
+        "9.5",
+        "9.7",
+        "9.8",
+        "9.9",
+        "9.10",
+        "9.11",
+        "10.1",
+        "10.3",
+        "10.4",
+        "10.5"
+      ],
+      "cross_refs": [
+        "medical triage AI",
+        "AI loan approval pipeline",
+        "EU AI Act Article 14"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "10.7",
+      "title": "Writing a post-mortem — what failed, why, who was accountable, what governance would have prevented it",
+      "week_num": 10,
+      "session_name": "Cognition in Practice — Case Studies",
+      "course_code": "M4",
+      "course_slug": "m4-human-cognition-and-ai-oversight",
+      "course_title": "Human Cognition and AI Oversight",
+      "module_position": 4,
+      "module_slug": "4-post-mortem-writing",
+      "module_title": "Post-Mortem Writing",
+      "topic_slug": "10-7-writing-a-post-mortem-what-failed-why-who-was-accountable-wh",
+      "path": "m4-human-cognition-and-ai-oversight/week-10/4-post-mortem-writing/10-7-writing-a-post-mortem-what-failed-why-who-was-accountable-wh",
+      "concepts_introduced": [
+        "post-mortem",
+        "no-blame post-mortem",
+        "proximate cause",
+        "root cause",
+        "post-incident review"
+      ],
+      "prerequisites": [
+        9.7,
+        9.9,
+        9.11,
+        10.1,
+        10.2,
+        10.3,
+        10.4,
+        10.5,
+        10.6
+      ],
+      "cross_refs": [
+        10.1,
+        10.2,
+        10.3
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "11.1",
+      "title": "Python's role — the orchestration layer connecting your specification to an AI system",
+      "week_num": 11,
+      "session_name": "Python Foundations I",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-getting-started-with-python",
+      "module_title": "Getting Started with Python",
+      "topic_slug": "11-1-pythons-role-the-orchestration-layer-connecting-your-specifi",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-11/1-getting-started-with-python/11-1-pythons-role-the-orchestration-layer-connecting-your-specifi",
+      "concepts_introduced": [
+        "orchestration layer",
+        "four-layer model",
+        "specification",
+        "spec-first discipline",
+        "API",
+        "Python interpreted language",
+        "golden rule"
+      ],
+      "prerequisites": [],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "11.2",
+      "title": "Setting up Google Colab — no installation, runs in the browser",
+      "week_num": 11,
+      "session_name": "Python Foundations I",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-getting-started-with-python",
+      "module_title": "Getting Started with Python",
+      "topic_slug": "11-2-setting-up-google-colab-no-installation-runs-in-the-browser",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-11/1-getting-started-with-python/11-2-setting-up-google-colab-no-installation-runs-in-the-browser",
+      "concepts_introduced": [
+        "notebook",
+        "code cell",
+        "text cell",
+        "output area",
+        "runtime",
+        "session",
+        "Google Drive autosave",
+        ".ipynb file format"
+      ],
+      "prerequisites": [
+        "11.1"
+      ],
+      "cross_refs": [
+        "Python",
+        "Google Colab"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "11.3",
+      "title": "Variables — naming and storing values",
+      "week_num": 11,
+      "session_name": "Python Foundations I",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 2,
+      "module_slug": "2-core-python-concepts",
+      "module_title": "Core Python Concepts",
+      "topic_slug": "11-3-variables-naming-and-storing-values",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-11/2-core-python-concepts/11-3-variables-naming-and-storing-values",
+      "concepts_introduced": [
+        "variable",
+        "assignment operator",
+        "data type",
+        "str",
+        "int",
+        "float",
+        "bool",
+        "type()",
+        "snake_case",
+        "reassignment",
+        "dynamically typed"
+      ],
+      "prerequisites": [
+        "11.1",
+        "11.2"
+      ],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "11.4",
+      "title": "Data types — string, integer, float, boolean",
+      "week_num": 11,
+      "session_name": "Python Foundations I",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 2,
+      "module_slug": "2-core-python-concepts",
+      "module_title": "Core Python Concepts",
+      "topic_slug": "11-4-data-types-string-integer-float-boolean",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-11/2-core-python-concepts/11-4-data-types-string-integer-float-boolean",
+      "concepts_introduced": [
+        "print() function",
+        "string concatenation",
+        "string indexing",
+        "len()",
+        "floor division",
+        "modulo",
+        "float precision",
+        "round()",
+        "boolean and",
+        "boolean or",
+        "boolean not",
+        "bool flag",
+        "explicit type conversion",
+        "str()",
+        "int()",
+        "float()",
+        "bool()",
+        "truthy",
+        "falsy"
+      ],
+      "prerequisites": [
+        "11.1",
+        "11.2",
+        "11.3"
+      ],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "11.5",
+      "title": "If / else — writing decision logic in code",
+      "week_num": 11,
+      "session_name": "Python Foundations I",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 2,
+      "module_slug": "2-core-python-concepts",
+      "module_title": "Core Python Concepts",
+      "topic_slug": "11-5-if-else-writing-decision-logic-in-code",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-11/2-core-python-concepts/11-5-if-else-writing-decision-logic-in-code",
+      "concepts_introduced": [
+        "comparison operators",
+        "== equality test",
+        "!= not equal",
+        "< less than",
+        "> greater than",
+        "<= less than or equal",
+        "<= less than or equal",
+        ">= greater than or equal",
+        "if statement",
+        "else clause",
+        "elif",
+        "Python indentation rule",
+        "compound condition",
+        "input() function"
+      ],
+      "prerequisites": [
+        "11.1",
+        "11.2",
+        "11.3",
+        "11.4"
+      ],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "11.6",
+      "title": "For loops — repeating an action across a list",
+      "week_num": 11,
+      "session_name": "Python Foundations I",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 2,
+      "module_slug": "2-core-python-concepts",
+      "module_title": "Core Python Concepts",
+      "topic_slug": "11-6-for-loops-repeating-an-action-across-a-list",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-11/2-core-python-concepts/11-6-for-loops-repeating-an-action-across-a-list",
+      "concepts_introduced": [
+        "list",
+        "list literal",
+        "list element",
+        "list index",
+        "for loop",
+        "loop variable",
+        "range()",
+        "accumulator pattern",
+        "running sum",
+        "list.append()"
+      ],
+      "prerequisites": [
+        "11.1",
+        "11.2",
+        "11.3",
+        "11.4",
+        "11.5"
+      ],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "11.7",
+      "title": "Spec-first discipline — writing the plain-English specification before writing or prompting code",
+      "week_num": 11,
+      "session_name": "Python Foundations I",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 3,
+      "module_slug": "3-professional-coding-discipline",
+      "module_title": "Professional Coding Discipline",
+      "topic_slug": "11-7-spec-first-discipline-writing-the-plain-english-specificatio",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-11/3-professional-coding-discipline/11-7-spec-first-discipline-writing-the-plain-english-specificatio",
+      "concepts_introduced": [
+        "specification",
+        "plain-English spec",
+        "inputs",
+        "outputs",
+        "constraints",
+        "spec examples",
+        "spec-first workflow",
+        "specify-prompt-explain-test",
+        "verification standard",
+        "prompt as distilled spec"
+      ],
+      "prerequisites": [
+        "11.1",
+        "11.2",
+        "11.3",
+        "11.4",
+        "11.5",
+        "11.6"
+      ],
+      "cross_refs": [
+        "Python",
+        "AI prompting"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "11.8",
+      "title": "The golden rule — never run code you cannot explain line by line",
+      "week_num": 11,
+      "session_name": "Python Foundations I",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 3,
+      "module_slug": "3-professional-coding-discipline",
+      "module_title": "Professional Coding Discipline",
+      "topic_slug": "11-8-the-golden-rule-never-run-code-you-cannot-explain-line-by-li",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-11/3-professional-coding-discipline/11-8-the-golden-rule-never-run-code-you-cannot-explain-line-by-li",
+      "concepts_introduced": [
+        "golden rule (full definition)",
+        "explain line by line",
+        "silent failure",
+        "loud failure",
+        "four-question test",
+        "code ownership",
+        "plausible-looking wrong code"
+      ],
+      "prerequisites": [
+        "11.7"
+      ],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "11.9",
+      "title": "Edge cases — testing what happens at the boundary of expected input",
+      "week_num": 11,
+      "session_name": "Python Foundations I",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 3,
+      "module_slug": "3-professional-coding-discipline",
+      "module_title": "Professional Coding Discipline",
+      "topic_slug": "11-9-edge-cases-testing-what-happens-at-the-boundary-of-expected",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-11/3-professional-coding-discipline/11-9-edge-cases-testing-what-happens-at-the-boundary-of-expected",
+      "concepts_introduced": [
+        "edge case",
+        "boundary value",
+        "equivalence class",
+        "normal input",
+        "empty input",
+        "zero input",
+        "off-by-one error",
+        "test prediction",
+        "minimum valid input",
+        "maximum valid input"
+      ],
+      "prerequisites": [
+        "11.6",
+        "11.7",
+        "11.8"
+      ],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.1",
+      "title": "Functions — named, reusable blocks of logic",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-functions-and-data-structures",
+      "module_title": "Functions and Data Structures",
+      "topic_slug": "12-1-functions-named-reusable-blocks-of-logic",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/1-functions-and-data-structures/12-1-functions-named-reusable-blocks-of-logic",
+      "concepts_introduced": [
+        "Python function",
+        "def keyword",
+        "function call",
+        "code reuse",
+        "function naming",
+        "indentation",
+        "definition vs call"
+      ],
+      "prerequisites": [
+        "11.3",
+        "11.4",
+        "11.5",
+        "11.6"
+      ],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.2",
+      "title": "Parameters and return values — defining what goes in and what comes out",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-functions-and-data-structures",
+      "module_title": "Functions and Data Structures",
+      "topic_slug": "12-2-parameters-and-return-values-defining-what-goes-in-and-what",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/1-functions-and-data-structures/12-2-parameters-and-return-values-defining-what-goes-in-and-what",
+      "concepts_introduced": [
+        "parameter",
+        "argument",
+        "positional parameter",
+        "return value",
+        "return keyword",
+        "implicit None"
+      ],
+      "prerequisites": [
+        12.1,
+        11.3,
+        11.4
+      ],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.3",
+      "title": "One function = one job — the testable unit principle",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-functions-and-data-structures",
+      "module_title": "Functions and Data Structures",
+      "topic_slug": "12-3-one-function-one-job-the-testable-unit-principle",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/1-functions-and-data-structures/12-3-one-function-one-job-the-testable-unit-principle",
+      "concepts_introduced": [
+        "single responsibility principle",
+        "one job per function",
+        "code smell",
+        "testable unit",
+        "refactoring",
+        "and naming heuristic"
+      ],
+      "prerequisites": [
+        12.1,
+        12.2
+      ],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.4",
+      "title": "Lists — storing and iterating over multiple values",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-functions-and-data-structures",
+      "module_title": "Functions and Data Structures",
+      "topic_slug": "12-4-lists-storing-and-iterating-over-multiple-values",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/1-functions-and-data-structures/12-4-lists-storing-and-iterating-over-multiple-values",
+      "concepts_introduced": [
+        "list",
+        "item",
+        "element",
+        "index",
+        "square brackets",
+        "len()",
+        "append()",
+        "method",
+        "iterating",
+        "for item in list pattern",
+        "range(len()) pattern"
+      ],
+      "prerequisites": [
+        "12.1",
+        "12.2",
+        "12.3"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.5",
+      "title": "Dictionaries — key-value pairs for structured data",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-functions-and-data-structures",
+      "module_title": "Functions and Data Structures",
+      "topic_slug": "12-5-dictionaries-key-value-pairs-for-structured-data",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/1-functions-and-data-structures/12-5-dictionaries-key-value-pairs-for-structured-data",
+      "concepts_introduced": [
+        "dictionary",
+        "key",
+        "value",
+        "key-value pair",
+        "curly braces",
+        "KeyError",
+        "in keyword (membership test)",
+        "dict.get()",
+        "dict.values()",
+        "dict.items()",
+        "immutable",
+        "TypeError"
+      ],
+      "prerequisites": [
+        "12.1",
+        "12.2",
+        "12.3",
+        "12.4"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.6",
+      "title": "Reading from a file — open, read lines, close",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 2,
+      "module_slug": "2-working-with-files",
+      "module_title": "Working with Files",
+      "topic_slug": "12-6-reading-from-a-file-open-read-lines-close",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/2-working-with-files/12-6-reading-from-a-file-open-read-lines-close",
+      "concepts_introduced": [
+        "file object",
+        "open() function",
+        "read mode",
+        ".read()",
+        ".readlines()",
+        ".readline()",
+        "with block",
+        "FileNotFoundError"
+      ],
+      "prerequisites": [
+        "12.1",
+        "12.4",
+        "12.5"
+      ],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.7",
+      "title": "Writing to a file — open, write, close",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 2,
+      "module_slug": "2-working-with-files",
+      "module_title": "Working with Files",
+      "topic_slug": "12-7-writing-to-a-file-open-write-close",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/2-working-with-files/12-7-writing-to-a-file-open-write-close",
+      "concepts_introduced": [
+        "write mode ('w')",
+        "append mode ('a')",
+        ".write() method",
+        ".writelines() method",
+        "newline requirement in .write()",
+        "overwrite behavior",
+        "append behavior"
+      ],
+      "prerequisites": [
+        "12.6",
+        "12.4",
+        "12.1"
+      ],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.8",
+      "title": "try / except — handling errors gracefully without crashing",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 2,
+      "module_slug": "2-working-with-files",
+      "module_title": "Working with Files",
+      "topic_slug": "12-8-try-except-handling-errors-gracefully-without-crashing",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/2-working-with-files/12-8-try-except-handling-errors-gracefully-without-crashing",
+      "concepts_introduced": [
+        "exception",
+        "runtime error",
+        "raises (an exception)",
+        "try block",
+        "except block",
+        "FileNotFoundError",
+        "ValueError",
+        "TypeError",
+        "ZeroDivisionError",
+        "PermissionError",
+        "bare except",
+        "exception object (as e)",
+        "else clause (try/except)",
+        "specific exception catching"
+      ],
+      "prerequisites": [
+        "12.6",
+        "12.7"
+      ],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.9",
+      "title": "What an API is — a door into another system; request and response",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 3,
+      "module_slug": "3-calling-an-llm-from-python",
+      "module_title": "Calling an LLM from Python",
+      "topic_slug": "12-9-what-an-api-is-a-door-into-another-system-request-and-respon",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/3-calling-an-llm-from-python/12-9-what-an-api-is-a-door-into-another-system-request-and-respon",
+      "concepts_introduced": [
+        "API",
+        "client",
+        "server",
+        "request-response cycle",
+        "endpoint",
+        "HTTP method",
+        "GET",
+        "POST",
+        "headers",
+        "body (payload)",
+        "JSON",
+        "status code",
+        "API key",
+        "rate limit",
+        "abstraction layer"
+      ],
+      "prerequisites": [
+        "12.8"
+      ],
+      "cross_refs": [
+        "Python",
+        "Anthropic API"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.10",
+      "title": "The Anthropic API — model, messages array, system prompt, user prompt, authentication",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 3,
+      "module_slug": "3-calling-an-llm-from-python",
+      "module_title": "Calling an LLM from Python",
+      "topic_slug": "12-10-the-anthropic-api-model-messages-array-system-prompt-user-pr",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/3-calling-an-llm-from-python/12-10-the-anthropic-api-model-messages-array-system-prompt-user-pr",
+      "concepts_introduced": [
+        "Messages API",
+        "model parameter",
+        "messages array",
+        "role field",
+        "content field",
+        "system prompt",
+        "user prompt",
+        "authentication (API key)"
+      ],
+      "prerequisites": [
+        "12.9",
+        "12.1",
+        "12.4",
+        "12.5"
+      ],
+      "cross_refs": [
+        "Python",
+        "Anthropic API"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.11",
+      "title": "Making the first API call — install the library, write the call, run in Colab",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 3,
+      "module_slug": "3-calling-an-llm-from-python",
+      "module_title": "Calling an LLM from Python",
+      "topic_slug": "12-11-making-the-first-api-call-install-the-library-write-the-call",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/3-calling-an-llm-from-python/12-11-making-the-first-api-call-install-the-library-write-the-call",
+      "concepts_introduced": [
+        "!pip install anthropic",
+        "pip",
+        "package",
+        "library",
+        "SDK",
+        "import anthropic",
+        "anthropic.Anthropic()",
+        "client object",
+        "max_tokens",
+        "client.messages.create()",
+        "response object",
+        "message.content[0].text",
+        "content block"
+      ],
+      "prerequisites": [
+        "12.9",
+        "12.10"
+      ],
+      "cross_refs": [
+        "Python",
+        "Anthropic SDK"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.12",
+      "title": "Parsing the JSON response — extracting the text you need",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 3,
+      "module_slug": "3-calling-an-llm-from-python",
+      "module_title": "Calling an LLM from Python",
+      "topic_slug": "12-12-parsing-the-json-response-extracting-the-text-you-need",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/3-calling-an-llm-from-python/12-12-parsing-the-json-response-extracting-the-text-you-need",
+      "concepts_introduced": [
+        "response object fields",
+        "message.id",
+        "message.stop_reason",
+        "message.usage",
+        "input_tokens",
+        "output_tokens",
+        "content block type field",
+        "for-loop content block iteration",
+        "truncation detection",
+        "token count logging"
+      ],
+      "prerequisites": [
+        "12.11"
+      ],
+      "cross_refs": [
+        "Python",
+        "Anthropic SDK"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.13",
+      "title": "Handling API errors — what to do when the call fails",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 3,
+      "module_slug": "3-calling-an-llm-from-python",
+      "module_title": "Calling an LLM from Python",
+      "topic_slug": "12-13-handling-api-errors-what-to-do-when-the-call-fails",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/3-calling-an-llm-from-python/12-13-handling-api-errors-what-to-do-when-the-call-fails",
+      "concepts_introduced": [
+        "AnthropicError",
+        "APIError",
+        "AuthenticationError",
+        "RateLimitError",
+        "BadRequestError",
+        "APIConnectionError",
+        "APIStatusError",
+        "InternalServerError",
+        "exception hierarchy",
+        "time.sleep",
+        "retry pattern",
+        "status_code attribute"
+      ],
+      "prerequisites": [
+        "12.8",
+        "12.11"
+      ],
+      "cross_refs": [
+        "Python",
+        "Anthropic SDK"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "12.14",
+      "title": "Every API call is a design decision — latency, cost, and reliability",
+      "week_num": 12,
+      "session_name": "Python Foundations II and Calling an LLM",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 3,
+      "module_slug": "3-calling-an-llm-from-python",
+      "module_title": "Calling an LLM from Python",
+      "topic_slug": "12-14-every-api-call-is-a-design-decision-latency-cost-and-reliabi",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-12/3-calling-an-llm-from-python/12-14-every-api-call-is-a-design-decision-latency-cost-and-reliabi",
+      "concepts_introduced": [
+        "latency",
+        "token pricing",
+        "input tokens",
+        "output tokens",
+        "cost calculation",
+        "model selection trade-off",
+        "Haiku model tier",
+        "Sonnet model tier",
+        "Opus model tier",
+        "three-question design checklist",
+        "cost-and-latency note",
+        "time.time() latency measurement"
+      ],
+      "prerequisites": [
+        "12.11",
+        "12.13"
+      ],
+      "cross_refs": [
+        "Python",
+        "Anthropic SDK"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.1",
+      "title": "System prompt vs user prompt — context-setting vs the live request",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-prompt-engineering-fundamentals",
+      "module_title": "Prompt Engineering Fundamentals",
+      "topic_slug": "13-1-system-prompt-vs-user-prompt-context-setting-vs-the-live-req",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/1-prompt-engineering-fundamentals/13-1-system-prompt-vs-user-prompt-context-setting-vs-the-live-req",
+      "concepts_introduced": [
+        "system prompt",
+        "user prompt",
+        "static context",
+        "authority",
+        "precedence",
+        "static vs dynamic split",
+        "persistent context"
+      ],
+      "prerequisites": [
+        "12.10",
+        "12.11"
+      ],
+      "cross_refs": [
+        "Python",
+        "Anthropic API"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.2",
+      "title": "Role assignment — telling the model who it is",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-prompt-engineering-fundamentals",
+      "module_title": "Prompt Engineering Fundamentals",
+      "topic_slug": "13-2-role-assignment-telling-the-model-who-it-is",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/1-prompt-engineering-fundamentals/13-2-role-assignment-telling-the-model-who-it-is",
+      "concepts_introduced": [
+        "role assignment",
+        "role statement",
+        "persona",
+        "specificity",
+        "calibration tool",
+        "tone register",
+        "vocabulary level"
+      ],
+      "prerequisites": [
+        "12.10",
+        "12.11",
+        "13.1"
+      ],
+      "cross_refs": [
+        "Anthropic Python SDK"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.3",
+      "title": "Few-shot examples — showing the model what good output looks like",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-prompt-engineering-fundamentals",
+      "module_title": "Prompt Engineering Fundamentals",
+      "topic_slug": "13-3-few-shot-examples-showing-the-model-what-good-output-looks-l",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/1-prompt-engineering-fundamentals/13-3-few-shot-examples-showing-the-model-what-good-output-looks-l",
+      "concepts_introduced": [
+        "few-shot prompting",
+        "zero-shot prompting",
+        "one-shot prompting",
+        "example pair",
+        "in-context learning",
+        "positive example",
+        "negative example"
+      ],
+      "prerequisites": [
+        13.1,
+        13.2,
+        12.1
+      ],
+      "cross_refs": [
+        "Python",
+        "Anthropic API"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.4",
+      "title": "Chain-of-thought prompting — asking the model to reason step by step",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-prompt-engineering-fundamentals",
+      "module_title": "Prompt Engineering Fundamentals",
+      "topic_slug": "13-4-chain-of-thought-prompting-asking-the-model-to-reason-step-b",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/1-prompt-engineering-fundamentals/13-4-chain-of-thought-prompting-asking-the-model-to-reason-step-b",
+      "concepts_introduced": [
+        "chain-of-thought prompting",
+        "chain of thought",
+        "zero-shot CoT",
+        "few-shot CoT",
+        "reasoning triple",
+        "final-answer marker",
+        "multi-step reasoning"
+      ],
+      "prerequisites": [
+        "13.1",
+        "13.2",
+        "13.3"
+      ],
+      "cross_refs": [
+        "Python",
+        "Anthropic API"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.5",
+      "title": "Constraints — telling AI what NOT to do",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-prompt-engineering-fundamentals",
+      "module_title": "Prompt Engineering Fundamentals",
+      "topic_slug": "13-5-constraints-telling-ai-what-not-to-do",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/1-prompt-engineering-fundamentals/13-5-constraints-telling-ai-what-not-to-do",
+      "concepts_introduced": [
+        "constraint",
+        "negative instruction",
+        "positive reframe",
+        "guardrail",
+        "content exclusion",
+        "scope limit"
+      ],
+      "prerequisites": [
+        13.1,
+        13.2,
+        13.3
+      ],
+      "cross_refs": [
+        "Prompt Engineering",
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.6",
+      "title": "Output format control — getting JSON, numbered lists, or fixed structure through the prompt",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-prompt-engineering-fundamentals",
+      "module_title": "Prompt Engineering Fundamentals",
+      "topic_slug": "13-6-output-format-control-getting-json-numbered-lists-or-fixed-s",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/1-prompt-engineering-fundamentals/13-6-output-format-control-getting-json-numbered-lists-or-fixed-s",
+      "concepts_introduced": [
+        "format mismatch problem",
+        "format specification",
+        "inline declaration",
+        "format example",
+        "template echo",
+        "format drift",
+        "output validator pattern"
+      ],
+      "prerequisites": [
+        "13.1",
+        "13.2",
+        "13.5"
+      ],
+      "cross_refs": [
+        "Python",
+        "json.loads",
+        "JSON"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.7",
+      "title": "The 5-role context framework — Authority, Exemplar, Constraint, Rubric, Metadata",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 2,
+      "module_slug": "2-the-5-role-context-framework",
+      "module_title": "The 5-Role Context Framework",
+      "topic_slug": "13-7-the-5-role-context-framework-authority-exemplar-constraint-r",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/2-the-5-role-context-framework/13-7-the-5-role-context-framework-authority-exemplar-constraint-r",
+      "concepts_introduced": [
+        "5-role context framework",
+        "context package",
+        "authority role",
+        "exemplar role",
+        "constraint role",
+        "rubric role",
+        "metadata role",
+        "priority stack"
+      ],
+      "prerequisites": [
+        "13.1",
+        "13.2",
+        "13.3",
+        "13.5",
+        "13.6"
+      ],
+      "cross_refs": [
+        "Python",
+        "Prompt Engineering"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.8",
+      "title": "Output validation — checking the AI's response meets the required format",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 3,
+      "module_slug": "3-output-validation-and-retry",
+      "module_title": "Output Validation and Retry",
+      "topic_slug": "13-8-output-validation-checking-the-ais-response-meets-the-requir",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/3-output-validation-and-retry/13-8-output-validation-checking-the-ais-response-meets-the-requir",
+      "concepts_introduced": [
+        "output validation",
+        "format check",
+        "validation function",
+        "schema check",
+        "validation error"
+      ],
+      "prerequisites": [
+        "13.6",
+        "13.7"
+      ],
+      "cross_refs": [
+        "Python",
+        "Anthropic SDK",
+        "JSON"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.9",
+      "title": "Retry logic — what to do when validation fails",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 3,
+      "module_slug": "3-output-validation-and-retry",
+      "module_title": "Output Validation and Retry",
+      "topic_slug": "13-9-retry-logic-what-to-do-when-validation-fails",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/3-output-validation-and-retry/13-9-retry-logic-what-to-do-when-validation-fails",
+      "concepts_introduced": [
+        "retry loop",
+        "corrective message",
+        "retry counter",
+        "max retries",
+        "fallback response"
+      ],
+      "prerequisites": [
+        "13.8"
+      ],
+      "cross_refs": [
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.10",
+      "title": "Why version control matters — never lose working code, track what changed and why",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 4,
+      "module_slug": "4-version-control-with-git-and-github",
+      "module_title": "Version Control with Git and GitHub",
+      "topic_slug": "13-10-why-version-control-matters-never-lose-working-code-track-wh",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/4-version-control-with-git-and-github/13-10-why-version-control-matters-never-lose-working-code-track-wh",
+      "concepts_introduced": [
+        "version control system",
+        "version history",
+        "manual versioning",
+        "working code safety",
+        "change log",
+        "distributed version control"
+      ],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.11",
+      "title": "Git fundamentals — repository, commit, branch, merge",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 4,
+      "module_slug": "4-version-control-with-git-and-github",
+      "module_title": "Version Control with Git and GitHub",
+      "topic_slug": "13-11-git-fundamentals-repository-commit-branch-merge",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/4-version-control-with-git-and-github/13-11-git-fundamentals-repository-commit-branch-merge",
+      "concepts_introduced": [
+        "repository",
+        "working directory",
+        "commit",
+        "snapshot",
+        "commit message",
+        "commit history",
+        "HEAD",
+        "branch",
+        "main branch",
+        "merge",
+        "merge commit"
+      ],
+      "prerequisites": [
+        "13.10"
+      ],
+      "cross_refs": [
+        "Git"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.12",
+      "title": "GitHub workflow — clone, add, commit, push",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 4,
+      "module_slug": "4-version-control-with-git-and-github",
+      "module_title": "Version Control with Git and GitHub",
+      "topic_slug": "13-12-github-workflow-clone-add-commit-push",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/4-version-control-with-git-and-github/13-12-github-workflow-clone-add-commit-push",
+      "concepts_introduced": [
+        "local repository",
+        "remote repository",
+        "GitHub",
+        "git clone",
+        "origin",
+        "staging area",
+        "index",
+        "git add",
+        "commit hash",
+        "SHA",
+        "git commit",
+        "git push"
+      ],
+      "prerequisites": [
+        13.1,
+        13.11
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.13",
+      "title": "Folder structure and README — how to organise a professional codebase",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 4,
+      "module_slug": "4-version-control-with-git-and-github",
+      "module_title": "Version Control with Git and GitHub",
+      "topic_slug": "13-13-folder-structure-and-readme-how-to-organise-a-professional-c",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/4-version-control-with-git-and-github/13-13-folder-structure-and-readme-how-to-organise-a-professional-c",
+      "concepts_introduced": [
+        "folder structure",
+        "project layout",
+        "README",
+        "Markdown",
+        "API key",
+        ".gitignore",
+        "requirements.txt"
+      ],
+      "prerequisites": [
+        "13.10",
+        "13.11",
+        "13.12"
+      ],
+      "cross_refs": [
+        "Git",
+        "GitHub",
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.14",
+      "title": ".gitignore — keeping API keys and secrets out of public repositories",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 4,
+      "module_slug": "4-version-control-with-git-and-github",
+      "module_title": "Version Control with Git and GitHub",
+      "topic_slug": "13-14-gitignore-keeping-api-keys-and-secrets-out-of-public-reposit",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/4-version-control-with-git-and-github/13-14-gitignore-keeping-api-keys-and-secrets-out-of-public-reposit",
+      "concepts_introduced": [
+        "secret",
+        "environment variable",
+        ".env file",
+        "python-dotenv",
+        "os.getenv()",
+        "key rotation",
+        ".env.example"
+      ],
+      "prerequisites": [
+        "13.11",
+        "13.12",
+        "13.13"
+      ],
+      "cross_refs": [
+        "Git",
+        "GitHub",
+        "Python"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "13.15",
+      "title": "Commit discipline — one logical change per commit, meaningful commit messages",
+      "week_num": 13,
+      "session_name": "Prompt Engineering and Version Control",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 4,
+      "module_slug": "4-version-control-with-git-and-github",
+      "module_title": "Version Control with Git and GitHub",
+      "topic_slug": "13-15-commit-discipline-one-logical-change-per-commit-meaningful-c",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-13/4-version-control-with-git-and-github/13-15-commit-discipline-one-logical-change-per-commit-meaningful-c",
+      "concepts_introduced": [
+        "atomic commit",
+        "commit message subject line",
+        "imperative mood in commit messages",
+        "50-character subject rule",
+        "72-character body-wrap rule",
+        "commit message body"
+      ],
+      "prerequisites": [
+        13.1,
+        13.11,
+        13.12
+      ],
+      "cross_refs": [
+        "Git",
+        "GitHub"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "14.1",
+      "title": "Vector databases — storing embeddings and enabling similarity search at scale",
+      "week_num": 14,
+      "session_name": "RAG, Vectors, Agents and Production AI",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-retrieval-augmented-generation-rag",
+      "module_title": "Retrieval-Augmented Generation (RAG)",
+      "topic_slug": "14-1-vector-databases-storing-embeddings-and-enabling-similarity",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-14/1-retrieval-augmented-generation-rag/14-1-vector-databases-storing-embeddings-and-enabling-similarity",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "14.2",
+      "title": "The RAG retrieval pipeline — query → embed → similarity search → top-k → inject into prompt",
+      "week_num": 14,
+      "session_name": "RAG, Vectors, Agents and Production AI",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-retrieval-augmented-generation-rag",
+      "module_title": "Retrieval-Augmented Generation (RAG)",
+      "topic_slug": "14-2-the-rag-retrieval-pipeline-query-embed-similarity-search-top",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-14/1-retrieval-augmented-generation-rag/14-2-the-rag-retrieval-pipeline-query-embed-similarity-search-top",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "14.3",
+      "title": "Why RAG reduces hallucination — AI answers from retrieved evidence, not from memory",
+      "week_num": 14,
+      "session_name": "RAG, Vectors, Agents and Production AI",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-retrieval-augmented-generation-rag",
+      "module_title": "Retrieval-Augmented Generation (RAG)",
+      "topic_slug": "14-3-why-rag-reduces-hallucination-ai-answers-from-retrieved-evid",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-14/1-retrieval-augmented-generation-rag/14-3-why-rag-reduces-hallucination-ai-answers-from-retrieved-evid",
+      "concepts_introduced": [
+        "hallucination",
+        "parametric memory",
+        "evidence-grounded generation",
+        "factual grounding",
+        "grounded responses",
+        "graceful degradation",
+        "auditability",
+        "context window"
+      ],
+      "prerequisites": [
+        "14.1",
+        "14.2"
+      ],
+      "cross_refs": [
+        "RAG",
+        "LLMs"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "14.4",
+      "title": "When to use RAG — use it when the answer depends on data the model was not trained on",
+      "week_num": 14,
+      "session_name": "RAG, Vectors, Agents and Production AI",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 1,
+      "module_slug": "1-retrieval-augmented-generation-rag",
+      "module_title": "Retrieval-Augmented Generation (RAG)",
+      "topic_slug": "14-4-when-to-use-rag-use-it-when-the-answer-depends-on-data-the-m",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-14/1-retrieval-augmented-generation-rag/14-4-when-to-use-rag-use-it-when-the-answer-depends-on-data-the-m",
+      "concepts_introduced": [
+        "RAG decision rule",
+        "freshness signal",
+        "private data signal",
+        "precision signal",
+        "cost-benefit trade-off",
+        "fine-tuning",
+        "RAG vs fine-tuning distinction"
+      ],
+      "prerequisites": [
+        14.1,
+        14.2,
+        14.3
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "14.5",
+      "title": "Agent anatomy — LLM plus memory, tools, and a planning loop",
+      "week_num": 14,
+      "session_name": "RAG, Vectors, Agents and Production AI",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 2,
+      "module_slug": "2-ai-agents",
+      "module_title": "AI Agents",
+      "topic_slug": "14-5-agent-anatomy-llm-plus-memory-tools-and-a-planning-loop",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-14/2-ai-agents/14-5-agent-anatomy-llm-plus-memory-tools-and-a-planning-loop",
+      "concepts_introduced": [
+        "AI agent",
+        "LLM core",
+        "short-term memory",
+        "long-term memory",
+        "tool (agent tool)",
+        "planning loop",
+        "ReAct pattern"
+      ],
+      "prerequisites": [
+        "14.1",
+        "14.2",
+        "14.3",
+        "14.4"
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "14.6",
+      "title": "The ReAct pattern — Reason, Act, Observe, Repeat",
+      "week_num": 14,
+      "session_name": "RAG, Vectors, Agents and Production AI",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 2,
+      "module_slug": "2-ai-agents",
+      "module_title": "AI Agents",
+      "topic_slug": "14-6-the-react-pattern-reason-act-observe-repeat",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-14/2-ai-agents/14-6-the-react-pattern-reason-act-observe-repeat",
+      "concepts_introduced": [
+        "ReAct pattern",
+        "Thought step",
+        "Action step",
+        "Observation step",
+        "chain-of-thought reasoning",
+        "grounded reasoning trace",
+        "Final Answer"
+      ],
+      "prerequisites": [
+        14.5
+      ],
+      "cross_refs": [
+        "LangChain",
+        "multi-hop question answering"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "14.7",
+      "title": "Agent vs simpler flow — decision matrix: direct call → chained calls → RAG → agent",
+      "week_num": 14,
+      "session_name": "RAG, Vectors, Agents and Production AI",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 2,
+      "module_slug": "2-ai-agents",
+      "module_title": "AI Agents",
+      "topic_slug": "14-7-agent-vs-simpler-flow-decision-matrix-direct-call-chained-ca",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-14/2-ai-agents/14-7-agent-vs-simpler-flow-decision-matrix-direct-call-chained-ca",
+      "concepts_introduced": [
+        "direct call",
+        "chained calls",
+        "decision matrix",
+        "tier (AI system complexity)",
+        "over-engineering",
+        "under-engineering"
+      ],
+      "prerequisites": [
+        "14.4",
+        "14.5",
+        "14.6"
+      ],
+      "cross_refs": [
+        "LangChain",
+        "Anthropic tool use"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "14.8",
+      "title": "When NOT to use agents — high-stakes or irreversible actions require human oversight",
+      "week_num": 14,
+      "session_name": "RAG, Vectors, Agents and Production AI",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 2,
+      "module_slug": "2-ai-agents",
+      "module_title": "AI Agents",
+      "topic_slug": "14-8-when-not-to-use-agents-high-stakes-or-irreversible-actions-r",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-14/2-ai-agents/14-8-when-not-to-use-agents-high-stakes-or-irreversible-actions-r",
+      "concepts_introduced": [
+        "irreversible action",
+        "high-stakes action",
+        "human-in-the-loop",
+        "human oversight",
+        "autonomy spectrum",
+        "approval gate"
+      ],
+      "prerequisites": [
+        "14.5",
+        "14.6",
+        "14.7"
+      ],
+      "cross_refs": [
+        "EU AI Act",
+        "NIST AI RMF"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "14.9",
+      "title": "Production AI patterns — cost, latency, and reliability trade-offs",
+      "week_num": 14,
+      "session_name": "RAG, Vectors, Agents and Production AI",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 3,
+      "module_slug": "3-production-ai-patterns",
+      "module_title": "Production AI Patterns",
+      "topic_slug": "14-9-production-ai-patterns-cost-latency-and-reliability-trade-of",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-14/3-production-ai-patterns/14-9-production-ai-patterns-cost-latency-and-reliability-trade-of",
+      "concepts_introduced": [
+        "token cost model",
+        "input tokens",
+        "output tokens",
+        "TTFT (time to first token)",
+        "streaming",
+        "prompt caching",
+        "model tier selection",
+        "cost-latency-quality triangle",
+        "exponential backoff",
+        "context window management",
+        "circuit breaker",
+        "rate limits"
+      ],
+      "prerequisites": [
+        "14.5",
+        "14.6",
+        "14.7",
+        "14.8"
+      ],
+      "cross_refs": [
+        "RAG",
+        "AI agent",
+        "Python",
+        "LLM",
+        "MLOps"
+      ],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "14.10",
+      "title": "Writing an architectural decision — choosing the right pattern for your system",
+      "week_num": 14,
+      "session_name": "RAG, Vectors, Agents and Production AI",
+      "course_code": "M5",
+      "course_slug": "m5-python-for-ai-pe-vc-and-rag",
+      "course_title": "Python for AI, PE, VC and RAG",
+      "module_position": 3,
+      "module_slug": "3-production-ai-patterns",
+      "module_title": "Production AI Patterns",
+      "topic_slug": "14-10-writing-an-architectural-decision-choosing-the-right-pattern",
+      "path": "m5-python-for-ai-pe-vc-and-rag/week-14/3-production-ai-patterns/14-10-writing-an-architectural-decision-choosing-the-right-pattern",
+      "concepts_introduced": [
+        "architectural decision record",
+        "ADR Status field",
+        "ADR Context section",
+        "ADR Decision section",
+        "ADR Consequences section",
+        "append-only decision log"
+      ],
+      "prerequisites": [
+        14.4,
+        14.7,
+        14.9
+      ],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "corpus_drafted"
+    },
+    {
+      "id": "15.1",
+      "title": "Writing a formal problem statement and 1-page specification",
+      "week_num": 15,
+      "session_name": "Capstone Build Sprint and Showcase",
+      "course_code": "M6",
+      "course_slug": "m6-capstone-project",
+      "course_title": "Capstone Project",
+      "module_position": 1,
+      "module_slug": "1-specification-and-build",
+      "module_title": "Specification and Build",
+      "topic_slug": "15-1-writing-a-formal-problem-statement-and-1-page-specification",
+      "path": "m6-capstone-project/week-15/1-specification-and-build/15-1-writing-a-formal-problem-statement-and-1-page-specification",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "15.2",
+      "title": "Building the Python orchestration layer",
+      "week_num": 15,
+      "session_name": "Capstone Build Sprint and Showcase",
+      "course_code": "M6",
+      "course_slug": "m6-capstone-project",
+      "course_title": "Capstone Project",
+      "module_position": 1,
+      "module_slug": "1-specification-and-build",
+      "module_title": "Specification and Build",
+      "topic_slug": "15-2-building-the-python-orchestration-layer",
+      "path": "m6-capstone-project/week-15/1-specification-and-build/15-2-building-the-python-orchestration-layer",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "15.3",
+      "title": "Writing a 5-role context-engineered system prompt",
+      "week_num": 15,
+      "session_name": "Capstone Build Sprint and Showcase",
+      "course_code": "M6",
+      "course_slug": "m6-capstone-project",
+      "course_title": "Capstone Project",
+      "module_position": 1,
+      "module_slug": "1-specification-and-build",
+      "module_title": "Specification and Build",
+      "topic_slug": "15-3-writing-a-5-role-context-engineered-system-prompt",
+      "path": "m6-capstone-project/week-15/1-specification-and-build/15-3-writing-a-5-role-context-engineered-system-prompt",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "15.4",
+      "title": "Producing structured JSON output and validating it",
+      "week_num": 15,
+      "session_name": "Capstone Build Sprint and Showcase",
+      "course_code": "M6",
+      "course_slug": "m6-capstone-project",
+      "course_title": "Capstone Project",
+      "module_position": 1,
+      "module_slug": "1-specification-and-build",
+      "module_title": "Specification and Build",
+      "topic_slug": "15-4-producing-structured-json-output-and-validating-it",
+      "path": "m6-capstone-project/week-15/1-specification-and-build/15-4-producing-structured-json-output-and-validating-it",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "15.5",
+      "title": "Building a 5-case evaluation harness",
+      "week_num": 15,
+      "session_name": "Capstone Build Sprint and Showcase",
+      "course_code": "M6",
+      "course_slug": "m6-capstone-project",
+      "course_title": "Capstone Project",
+      "module_position": 2,
+      "module_slug": "2-testing-and-evaluation",
+      "module_title": "Testing and Evaluation",
+      "topic_slug": "15-5-building-a-5-case-evaluation-harness",
+      "path": "m6-capstone-project/week-15/2-testing-and-evaluation/15-5-building-a-5-case-evaluation-harness",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "15.6",
+      "title": "Applying the Judgment Framework — documenting the human override point per component",
+      "week_num": 15,
+      "session_name": "Capstone Build Sprint and Showcase",
+      "course_code": "M6",
+      "course_slug": "m6-capstone-project",
+      "course_title": "Capstone Project",
+      "module_position": 2,
+      "module_slug": "2-testing-and-evaluation",
+      "module_title": "Testing and Evaluation",
+      "topic_slug": "15-6-applying-the-judgment-framework-documenting-the-human-overri",
+      "path": "m6-capstone-project/week-15/2-testing-and-evaluation/15-6-applying-the-judgment-framework-documenting-the-human-overri",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "15.7",
+      "title": "Estimating and documenting API cost and latency",
+      "week_num": 15,
+      "session_name": "Capstone Build Sprint and Showcase",
+      "course_code": "M6",
+      "course_slug": "m6-capstone-project",
+      "course_title": "Capstone Project",
+      "module_position": 2,
+      "module_slug": "2-testing-and-evaluation",
+      "module_title": "Testing and Evaluation",
+      "topic_slug": "15-7-estimating-and-documenting-api-cost-and-latency",
+      "path": "m6-capstone-project/week-15/2-testing-and-evaluation/15-7-estimating-and-documenting-api-cost-and-latency",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "15.8",
+      "title": "Red-teaming your own system — 3 adversarial inputs, results, and mitigations",
+      "week_num": 15,
+      "session_name": "Capstone Build Sprint and Showcase",
+      "course_code": "M6",
+      "course_slug": "m6-capstone-project",
+      "course_title": "Capstone Project",
+      "module_position": 2,
+      "module_slug": "2-testing-and-evaluation",
+      "module_title": "Testing and Evaluation",
+      "topic_slug": "15-8-red-teaming-your-own-system-3-adversarial-inputs-results-and",
+      "path": "m6-capstone-project/week-15/2-testing-and-evaluation/15-8-red-teaming-your-own-system-3-adversarial-inputs-results-and",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "15.9",
+      "title": "Failure handling — what the system returns when the AI call or validation fails",
+      "week_num": 15,
+      "session_name": "Capstone Build Sprint and Showcase",
+      "course_code": "M6",
+      "course_slug": "m6-capstone-project",
+      "course_title": "Capstone Project",
+      "module_position": 2,
+      "module_slug": "2-testing-and-evaluation",
+      "module_title": "Testing and Evaluation",
+      "topic_slug": "15-9-failure-handling-what-the-system-returns-when-the-ai-call-or",
+      "path": "m6-capstone-project/week-15/2-testing-and-evaluation/15-9-failure-handling-what-the-system-returns-when-the-ai-call-or",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "15.10",
+      "title": "Presenting: Problem → Spec → Live Demo → Eval Results → Judgment Framework → Cost → 3 Learnings",
+      "week_num": 15,
+      "session_name": "Capstone Build Sprint and Showcase",
+      "course_code": "M6",
+      "course_slug": "m6-capstone-project",
+      "course_title": "Capstone Project",
+      "module_position": 3,
+      "module_slug": "3-showcase-and-portfolio",
+      "module_title": "Showcase and Portfolio",
+      "topic_slug": "15-10-presenting-problem-spec-live-demo-eval-results-judgment-fram",
+      "path": "m6-capstone-project/week-15/3-showcase-and-portfolio/15-10-presenting-problem-spec-live-demo-eval-results-judgment-fram",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "15.11",
+      "title": "Submitting the GitHub portfolio — notebooks, specs, eval harness, AI Decision Journal, reflection",
+      "week_num": 15,
+      "session_name": "Capstone Build Sprint and Showcase",
+      "course_code": "M6",
+      "course_slug": "m6-capstone-project",
+      "course_title": "Capstone Project",
+      "module_position": 3,
+      "module_slug": "3-showcase-and-portfolio",
+      "module_title": "Showcase and Portfolio",
+      "topic_slug": "15-11-submitting-the-github-portfolio-notebooks-specs-eval-harness",
+      "path": "m6-capstone-project/week-15/3-showcase-and-portfolio/15-11-submitting-the-github-portfolio-notebooks-specs-eval-harness",
+      "concepts_introduced": [],
+      "prerequisites": [],
+      "cross_refs": [],
+      "expected_delivery_minutes": null,
+      "status": "scaffolded"
+    }
+  ]
+}

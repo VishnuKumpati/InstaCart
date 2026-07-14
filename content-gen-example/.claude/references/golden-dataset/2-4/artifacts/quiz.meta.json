@@ -1,0 +1,47 @@
+{
+  "topic_id": "2.4",
+  "generated_at": "2026-06-11T00:00:00Z",
+  "format": "gift",
+  "question_count": 6,
+  "$bias_defense_applied": true,
+  "$shuffle_seed": "0xa0d84c80 (sha256('2.4') mod 2^32, XOR salt 1 after constraint redraw)",
+  "correct_position_distribution": [3, 2, 0, 0, 2, 1],
+  "questions": [
+    {
+      "id": "2.4-Q1",
+      "type": "mcq",
+      "objective_ref": "Explain, in plain language, what a pattern is and what pattern recognition means.",
+      "correct_position": 3
+    },
+    {
+      "id": "2.4-Q2",
+      "type": "mcq",
+      "objective_ref": "Describe the difference between a rule a person writes down and a rule a machine finds by looking at many repeated examples.",
+      "correct_position": 2
+    },
+    {
+      "id": "2.4-Q3",
+      "type": "mcq",
+      "objective_ref": "Walk through the three-step loop — see examples, form a rule, apply the rule to a new case — using an everyday example.",
+      "correct_position": 0
+    },
+    {
+      "id": "2.4-Q4",
+      "type": "mcq",
+      "objective_ref": "Identify everyday systems whose behaviour comes from rules found in repeated data, such as autocomplete and spam filters.",
+      "correct_position": 0
+    },
+    {
+      "id": "2.4-Q5",
+      "type": "mcq",
+      "objective_ref": "Explain why a rule found from examples can be wrong, and why that means machine output needs checking against a clear specification.",
+      "correct_position": 2
+    },
+    {
+      "id": "2.4-Q6",
+      "type": "mcq",
+      "objective_ref": "Explain why a rule found from examples can be wrong, and why that means machine output needs checking against a clear specification.",
+      "correct_position": 1
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "verdict": "pass",
+  "findings": [
+    {
+      "code": "looks_good",
+      "where": "whole canvas",
+      "detail": "Clean TD render, no overlaps or truncation. All five standard shapes present with correct semantics: Start/End ovals (terminator), rectangles (process), diamond (decision) with labelled Yes/No exits, parallelogram for 'Serve the tea' (output — matches corpus worked example exactly), arrows as flowlines. Loop back 'Wait 30 seconds' -> 'Water boiled?' is clearly visible as a circle on the page, mirroring the corpus Loops section. Top-to-bottom flow honours the corpus's own 'flow top-to-bottom' convention."
+    },
+    {
+      "code": "subtitle_inconsistent",
+      "where": "node D (`Wait 30 seconds`)",
+      "detail": "Soft. Subtitle reads 'process — loops back' while every other node uses the `role — shape-name` pattern ('process — rectangle', 'output — parallelogram'). In a notation-teaching diagram a student could parse 'loops back' as a shape name. Fix: change to 'process — rectangle' (the loop is already self-evident from the return arrow)."
+    }
+  ],
+  "stats": {
+    "nodes": 7,
+    "edges": 7,
+    "layout": "flowchart TD",
+    "labels": ["Start", "Switch kettle on", "Water boiled?", "Wait 30 seconds", "Pour water in cup", "Serve the tea", "End"],
+    "png_path": "/Users/jestercharles/Foundations-of-Responsible-AI-Engineering/tmp/eval-run-3/1-8/new/artifacts/diagram.png",
+    "png_bytes": 46210,
+    "preflight": {
+      "mermaid_parse": "ok",
+      "node_count": "7 (within 3-8)",
+      "label_discipline": "all labels <= 4 words",
+      "concept_fidelity": "all labels trace to corpus Core Concepts / Implementation worked example",
+      "shape_semantics": "oval=terminator OK, rectangle=process OK, diamond=decision OK, parallelogram=output OK — no wrong-shape findings"
+    }
+  }
+}
